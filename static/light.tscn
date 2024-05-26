@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcbre0rfs1yvn"]
+
+[ext_resource type="PackedScene" uid="uid://si64a5jq4m7l" path="res://static/static.tscn" id="1_8om0l"]
+
+[node name="light" instance=ExtResource("1_8om0l")]
+title = "Light cycle"
+
+[node name="OptionButton" parent="." index="1"]
+item_count = 2
+popup/item_0/text = "12:12 | Regular"
+popup/item_0/id = 0
+popup/item_1/text = "12:12 | Inverted"
+popup/item_1/id = 1

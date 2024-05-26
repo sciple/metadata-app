@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://devnp8f7e8g6m"]
+
+[node name="project" type="GraphNode"]
+offset_right = 159.0
+offset_bottom = 85.0
+title = "Project"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 0.14902, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+bbcode_enabled = true
+text = "[color=yellow]PROJECT ID[/color]"
+scroll_active = false
