@@ -5,6 +5,7 @@ var experiment_node = load("res://experiment/experiment.tscn")
 var parent_node = load("res://cage/parent_cage.tscn")
 var health_node = load("res://health/health.tscn")
 var comment_node = load("res://comment/comment.tscn")
+var treatment_node = load("res://treatment/treatment.tscn")
 
 
 var initial_position = Vector2(40,40)
@@ -39,6 +40,11 @@ func _on_health_button_pressed():
 
 func _on_comment_button_pressed():
 	var node = comment_node.instantiate()
+	$GraphEdit.add_child(node)
+	node_index += 1
+
+func _on_treatment_button_pressed():
+	var node = treatment_node.instantiate()
 	$GraphEdit.add_child(node)
 	node_index += 1
 

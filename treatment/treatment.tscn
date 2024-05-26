@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b4hhrm7g483n1"]
+
+[node name="treatment" type="GraphNode"]
+custom_minimum_size = Vector2(250, 0)
+offset_right = 212.0
+offset_bottom = 96.0
+title = "Treatment"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
