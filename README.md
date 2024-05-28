@@ -7,6 +7,8 @@ GUI for managing MNMS-compliant metadata
 - Add global layer (save, load, clear, lock)
 - Import data (_.csv_, ._xls_) from AMS export
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
+- offset newly created windows
+- limit number of windows
 
 ### Colors
 
