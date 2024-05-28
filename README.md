@@ -1,6 +1,6 @@
 # Metadata-app
 
-GUI for managing metadata (MNMS-compliant)
+GUI for managing MNMS-compliant metadata
 
 ## TO DO
 
