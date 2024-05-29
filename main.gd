@@ -56,8 +56,8 @@ func save():
 		var to = G.get_node(NodePath(connection_list[i]['to_node']))
 		
 		print(from, '>>>', to)
-		#if result.has_method("report"):
-			#result.report()
+		if to.has_method("report"):
+			to.report()
 		#print(result.get_node("vendor").text)
 
 

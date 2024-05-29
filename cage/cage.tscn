@@ -71,7 +71,7 @@ slot/6/right_icon = null
 slot/6/draw_stylebox = true
 script = ExtResource("1_7xcuj")
 
-[node name="LineEdit6" type="LineEdit" parent="."]
+[node name="cage_id" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "Cage ID"
 alignment = 1
@@ -82,27 +82,27 @@ layout_mode = 2
 text = ". . ."
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="subject_0_id" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "Insert ID"
 alignment = 1
 
-[node name="LineEdit2" type="LineEdit" parent="."]
+[node name="subject_1_id" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "Insert ID"
 alignment = 1
 
-[node name="LineEdit3" type="LineEdit" parent="."]
+[node name="subject_2_id" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "Insert ID"
 alignment = 1
 
-[node name="LineEdit4" type="LineEdit" parent="."]
+[node name="subject_3_id" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "Insert ID"
 alignment = 1
 
-[node name="LineEdit5" type="LineEdit" parent="."]
+[node name="subject_4_id" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "Insert ID"
 alignment = 1
