@@ -58,7 +58,6 @@ func save():
 		print(from, '>>>', to)
 		if to.has_method("report"):
 			to.report()
-		#print(result.get_node("vendor").text)
 
 
 func _on_save_button_pressed():
