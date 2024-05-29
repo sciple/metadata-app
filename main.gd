@@ -12,6 +12,7 @@ var initial_position = Vector2(40,40)
 var node_index = 0
 
 func _ready():
+	OS.low_processor_usage_mode = true
 	var time_it = Time.get_datetime_string_from_system ()
 	print(time_it)
 	print(time_it.md5_text())
@@ -50,8 +51,13 @@ func save():
 	var connection_list = G.get_connection_list()
 	print(connection_list)
 	for i in range(0, connection_list.size()):
-		var result = G.get_node(NodePath(connection_list[i]['from_node']))
-		print(result)
+		# node obtained form the connection list
+		var from = G.get_node(NodePath(connection_list[i]['from_node']))
+		var to = G.get_node(NodePath(connection_list[i]['to_node']))
+		
+		print(from, '>>>', to)
+		#if result.has_method("report"):
+			#result.report()
 		#print(result.get_node("vendor").text)
 
 

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bq86cbc0fq3fp"]
+[gd_scene load_steps=2 format=3 uid="uid://bq86cbc0fq3fp"]
+
+[ext_resource type="Script" path="res://cage/cage.gd" id="1_7xcuj"]
 
 [node name="cage" type="GraphNode"]
 offset_right = 228.0
@@ -67,6 +69,7 @@ slot/6/right_type = 0
 slot/6/right_color = Color(1, 1, 1, 1)
 slot/6/right_icon = null
 slot/6/draw_stylebox = true
+script = ExtResource("1_7xcuj")
 
 [node name="LineEdit6" type="LineEdit" parent="."]
 layout_mode = 2
