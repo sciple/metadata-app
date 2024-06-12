@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=13 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://c2v5j2wbydh16" path="res://static/vendor.tscn" id="2_5mbv3"]
@@ -25,6 +25,9 @@ corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7agy6"]
+bg_color = Color(0.370364, 0.370365, 0.370364, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf0vp"]
 bg_color = Color(0.114075, 0.649625, 0.80176, 1)
@@ -118,6 +121,7 @@ anchor_bottom = 1.0
 offset_top = 54.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7agy6")
 show_grid = false
 right_disconnects = true
 connection_lines_thickness = 0.5

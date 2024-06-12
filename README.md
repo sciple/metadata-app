@@ -33,6 +33,16 @@ The importer reads DVC raw data and creates cages (with start-stop date) and pop
 
 Quality controls could be performed automatically, while follow-up analyses may be composed using the nodegraphs nodes 
 
+### 2024-06-12
+
+#### Highlight downstream information
+
+Clicking on the title of a window highlights all the downstream connected nodes. all nodes downstream of cage nodes then display the number of subjects that get input from the clicked node and the title of the clicked node is displayed in the downstream results.
+
+Multiple selections could be displayed as a popup table
+
+***
+
 ### Colors
 
 - #117c9a | Light blue (Background)
