@@ -14,5 +14,5 @@ func report():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	for i in range(5):
 		var subject = get_node("subject_" + str(i) + "_id")
-		print(cage_id.text, subject.text)
+		print(cage_id.text,'\t',subject.text)
 		file.store_csv_line(PackedStringArray([cage_id.text, subject.text ]))

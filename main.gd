@@ -54,9 +54,12 @@ func save():
 		# node obtained form the connection list
 		var from = G.get_node(NodePath(connection_list[i]['from_node']))
 		var to = G.get_node(NodePath(connection_list[i]['to_node']))
+		print(from.name, ' >>> ', to.name)
 		
-		print(from, '>>>', to)
 		if to.has_method("report"):
+			# the FROM node shouldbe passed to report
+			# then the report should generate an extra column
+			# in the report with the name of the FROM node
 			to.report()
 
 
