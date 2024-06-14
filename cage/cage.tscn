@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://cage/cage.gd" id="1_7xcuj"]
 
-[node name="cage" type="GraphNode"]
+[node name="cage" type="GraphNode" groups=["cage"]]
 offset_right = 228.0
 offset_bottom = 252.0
 title = "Cage ID"

@@ -9,7 +9,9 @@ GUI for managing MNMS-compliant metadata
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
 - Offset newly created windows
 - Limit number of windows that can be created
-- Export the data as JSON-LD
+- Export the data as JSON-LD (principal key is the subject_ID)
+- Duplicate a cage
+- add number of animals to CAGE title
 
 ### 2024-05-25
 

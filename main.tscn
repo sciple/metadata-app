@@ -116,6 +116,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 54.0
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
 show_grid = false
@@ -199,6 +200,45 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_nf0vp")
 text = "0000-0002-3709-5504"
 alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -23.0
+offset_right = -143.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Subjects, Cages"
+
+[node name="subject_count" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -23.0
+offset_right = 3.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="cage_count" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [connection signal="pressed" from="toolbar/cage_button" to="." method="_on_cage_button_pressed"]
 [connection signal="pressed" from="toolbar/experiment_button" to="." method="_on_experiment_button_pressed"]

@@ -8,6 +8,8 @@ var health_index = -1
 var comment_index = -1
 var treatment_index = -1
 
+var total_number_of_subjects = 0
+var cages = {}
 
 var cage_node = load("res://cage/cage.tscn")
 var experiment_node = load("res://experiment/experiment.tscn")
@@ -22,3 +24,13 @@ func create_node(node_name, node_type, node_index):
 	node_index += 1
 	get_node("../Main/GraphEdit").add_child(node)
 	node.name = node_name + "_" + str(node_index)
+
+	
+
+func init_subjects():
+	self.cages = {}
+	self.total_number_of_subjects = 0
+
+
+		
+
