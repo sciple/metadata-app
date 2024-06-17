@@ -21,6 +21,11 @@ func _ready():
 	print(time_it.md5_text())
 	G = $GraphEdit
 
+	for node in G.get_children():
+		if node is GraphNode:
+			var node_position = node.position_offset
+			print (node_position.x, " | ", node_position.y)
+
 
 # -------------------- BUTTONS
 func _on_cage_button_pressed():
