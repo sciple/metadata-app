@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnr0tg0ideh1y"]
+
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="1_a2k51"]
+
+[node name="node_element" type="GraphNode"]
+offset_right = 9.0
+offset_bottom = 55.0
+script = ExtResource("1_a2k51")

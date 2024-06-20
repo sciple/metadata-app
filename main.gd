@@ -17,14 +17,15 @@ var connection_list
 func _ready():
 	OS.low_processor_usage_mode = true
 	var time_it = Time.get_datetime_string_from_system ()
-	print(time_it)
-	print(time_it.md5_text())
+	print(time_it, " | MD5sum encoding: ", time_it.md5_text())
+	print()
 	G = $GraphEdit
 
 	for node in G.get_children():
 		if node is GraphNode:
 			var node_position = node.position_offset
-			print (node_position.x, " | ", node_position.y)
+			print (node.title, " position (x,y): ", node_position.x, " | ", node_position.y)
+	print()
 
 
 # -------------------- BUTTONS
@@ -56,11 +57,13 @@ func _on_graph_edit_disconnection_request(from_node, from_port, to_node, to_port
 
 
 func save():
-	Global.init_subjects()
-	get_cages()
-	print(Global.total_number_of_subjects)
-	print(Global.cages)
-	update_global_stats()
+	#Global.init_subjects()
+	Global.init_node_elements()
+	get_cages() # collects all cages to be pushed to the global store
+	print(Global.node_elements)
+	#update_global_stats()
+	print()
+	
 	#var connection_list = G.get_connection_list()
 	#print(connection_list)
 	#for i in range(0, connection_list.size()):
@@ -78,13 +81,15 @@ func save():
 
 func get_cages():
 	# loop over all cages
+	# this function should be applied independently for all different groups of nodes
 	print('execute: get_cages()')
-	connection_list = G.get_connection_list()
+	connection_list = G.get_connection_list() # get list of all connections
 	for i in connection_list:
-		var n = G.get_node(NodePath(i['to_node']))
-		if n.is_in_group("cage"):
-			n.push_subjects()
-	print(Global.cages)
+		var node_element = G.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
+		if node_element.is_in_group("cage"):
+			node_element.get_subjects()
+			node_element.update_title_id()
+			node_element.update_node()
 	
 	
 func update_global_stats():

@@ -12,6 +12,7 @@ GUI for managing MNMS-compliant metadata
 - Export the data as JSON-LD (principal key is the subject_ID)
 - Duplicate a cage
 - node class: use as template for all other classes
+- cage-to-cage connection should be allowed to enable mouse transfer between cage (or cage splitting)
 
 ### 2024-05-25
 

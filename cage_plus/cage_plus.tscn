@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhaylulokv7we"]
+
+[ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_gpwf0"]
+[ext_resource type="Script" path="res://cage_plus/cage_plus.gd" id="2_gh45n"]
+
+[node name="cage_plus" groups=["cage"] instance=ExtResource("1_gpwf0")]
+offset_right = 222.0
+offset_bottom = 276.0
+title = "Cage ID"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = true
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = true
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = true
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = true
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+slot/4/left_enabled = true
+slot/4/left_type = 0
+slot/4/left_color = Color(1, 1, 1, 1)
+slot/4/left_icon = null
+slot/4/right_enabled = true
+slot/4/right_type = 0
+slot/4/right_color = Color(1, 1, 1, 1)
+slot/4/right_icon = null
+slot/4/draw_stylebox = true
+slot/5/left_enabled = true
+slot/5/left_type = 0
+slot/5/left_color = Color(1, 1, 1, 1)
+slot/5/left_icon = null
+slot/5/right_enabled = true
+slot/5/right_type = 0
+slot/5/right_color = Color(1, 1, 1, 1)
+slot/5/right_icon = null
+slot/5/draw_stylebox = true
+slot/6/left_enabled = true
+slot/6/left_type = 0
+slot/6/left_color = Color(1, 1, 1, 1)
+slot/6/left_icon = null
+slot/6/right_enabled = true
+slot/6/right_type = 0
+slot/6/right_color = Color(1, 1, 1, 1)
+slot/6/right_icon = null
+slot/6/draw_stylebox = true
+script = ExtResource("2_gh45n")
+
+[node name="cage_id" type="LineEdit" parent="." index="1"]
+layout_mode = 2
+placeholder_text = "Cage ID"
+alignment = 1
+
+[node name="Label" type="Label" parent="." index="2"]
+layout_mode = 2
+text = "+ + +"
+horizontal_alignment = 1
+
+[node name="subject_0" type="LineEdit" parent="." index="3"]
+layout_mode = 2
+placeholder_text = "Subject ID"
+alignment = 1
+
+[node name="subject_1" type="LineEdit" parent="." index="4"]
+layout_mode = 2
+placeholder_text = "Subject ID"
+alignment = 1
+
+[node name="subject_2" type="LineEdit" parent="." index="5"]
+layout_mode = 2
+placeholder_text = "Subject ID"
+alignment = 1
+
+[node name="subject_3" type="LineEdit" parent="." index="6"]
+layout_mode = 2
+placeholder_text = "Subject ID"
+alignment = 1
+
+[node name="subject_4" type="LineEdit" parent="." index="7"]
+layout_mode = 2
+placeholder_text = "Subject ID"
+alignment = 1
