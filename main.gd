@@ -85,11 +85,11 @@ func get_cages():
 	print('execute: get_cages()')
 	connection_list = G.get_connection_list() # get list of all connections
 	for i in connection_list:
-		var node_element = G.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
-		if node_element.is_in_group("cage"):
-			node_element.get_subjects()
-			node_element.update_title_id()
-			node_element.update_node()
+		var cage = G.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
+		if cage.is_in_group("cage"):# get only nodes of type: "cage"
+			cage.get_subjects()
+			cage.update_title_id()
+			cage.update_node()
 	
 	
 func update_global_stats():

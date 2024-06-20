@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnr0tg0ideh1y"]
+[gd_scene load_steps=5 format=3 uid="uid://bnr0tg0ideh1y"]
 
+[ext_resource type="StyleBox" uid="uid://cw04rrhvltcjc" path="res://node_element/node_element.tres" id="1_5v8fe"]
 [ext_resource type="Script" path="res://node_element/node_element.gd" id="1_a2k51"]
+[ext_resource type="StyleBox" uid="uid://d172piqgftttr" path="res://node_element/node_element_title_bar.tres" id="2_hp3in"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
+bg_color = Color(0.918382, 0.36762, 0.67474, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_top = 3.0
+expand_margin_bottom = 1.0
 
 [node name="node_element" type="GraphNode"]
-offset_right = 9.0
+offset_right = 7.424
 offset_bottom = 55.0
+theme_override_styles/panel = ExtResource("1_5v8fe")
+theme_override_styles/panel_selected = ExtResource("1_5v8fe")
+theme_override_styles/titlebar = ExtResource("2_hp3in")
+theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
 script = ExtResource("1_a2k51")

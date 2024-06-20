@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca56vxmr4iw6d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d26xn"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+
+[node name="one_line_field" type="LineEdit"]
+offset_right = 67.0625
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.347817, 0.347817, 0.347817, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_constants/caret_width = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+alignment = 1
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+clear_button_enabled = true
+caret_blink = true

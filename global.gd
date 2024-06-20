@@ -12,7 +12,6 @@ var node_elements = {}
 var total_number_of_subjects = 0
 var cages = {}
 
-#var cage_node = load("res://cage/cage.tscn")
 var cage_node = load("res://cage_plus/cage_plus.tscn")
 var experiment_node = load("res://experiment/experiment.tscn")
 var parent_node = load("res://cage/parent_cage.tscn")
@@ -34,6 +33,4 @@ func init_subjects():
 	self.cages = {}
 	self.total_number_of_subjects = 0
 
-
-		
 

@@ -3,4 +3,7 @@
 [node name="button" type="Button"]
 offset_right = 92.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.266667, 0.788235, 0.309804, 1)
 text = "Button"
+flat = true

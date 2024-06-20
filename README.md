@@ -11,8 +11,9 @@ GUI for managing MNMS-compliant metadata
 - Limit number of windows that can be created
 - Export the data as JSON-LD (principal key is the subject_ID)
 - Duplicate a cage
-- node class: use as template for all other classes
+- node class: use as template for all other classes (DONE)
 - cage-to-cage connection should be allowed to enable mouse transfer between cage (or cage splitting)
+- enable random allocation of subjects to condition
 
 ### 2024-05-25
 
@@ -47,6 +48,8 @@ Multiple selections could be displayed as a popup table
 ***
 
 ### Colors
+
+_2024-06-20_ COlor scheme has been changed to `light`
 
 - #117c9a | Light blue (Background)
 - #bc5489 | Pink

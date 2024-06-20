@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=14 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://c2v5j2wbydh16" path="res://static/vendor.tscn" id="2_5mbv3"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dd51kugvn0abf" path="res://static/mnms.tscn" id="3_wcure"]
 [ext_resource type="PackedScene" uid="uid://devnp8f7e8g6m" path="res://project.tscn" id="4_4jkc5"]
 [ext_resource type="PackedScene" uid="uid://birl6tul81nw4" path="res://static/sex.tscn" id="6_hrwq6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31b27"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcq4h"]
 bg_color = Color(1, 1, 1, 1)
@@ -25,6 +28,9 @@ corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eo2x6"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf0vp"]
 bg_color = Color(0.114075, 0.649625, 0.80176, 1)
@@ -52,12 +58,20 @@ theme_override_constants/separation = 8
 
 [node name="license label" type="Label" parent="toolbar"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "License
 "
 
 [node name="license" type="LineEdit" parent="toolbar"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.41598, 0.41598, 0.41598, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_31b27")
+placeholder_text = "ID"
+alignment = 1
+context_menu_enabled = false
+virtual_keyboard_enabled = false
 
 [node name="VSeparator" type="VSeparator" parent="toolbar"]
 layout_mode = 2
@@ -71,7 +85,7 @@ text = "Cage +"
 layout_mode = 2
 text = "Exp +"
 
-[node name="treatment_button" type="Button" parent="toolbar"]
+[node name="treatment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 text = "Treatment +"
 
@@ -119,7 +133,9 @@ offset_top = 54.0
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
-show_grid = false
+theme_override_colors/grid_minor = Color(0.996078, 0.996078, 0.996078, 1)
+theme_override_colors/grid_major = Color(0.994961, 0.99566, 0.99671, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_eo2x6")
 right_disconnects = true
 connection_lines_thickness = 0.5
 minimap_enabled = false

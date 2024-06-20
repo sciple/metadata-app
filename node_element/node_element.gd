@@ -16,6 +16,7 @@ func _ready():
 	print()
 
 
+
 func register_node_creation():
 	Global.node_elements[self.title] = {}
 
