@@ -5,7 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://d172piqgftttr" path="res://node_element/node_element_title_bar.tres" id="2_hp3in"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
-bg_color = Color(0.918382, 0.36762, 0.67474, 1)
+bg_color = Color(0.998417, 0.182963, 0.249426, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 expand_margin_top = 3.0

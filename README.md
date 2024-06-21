@@ -14,6 +14,7 @@ GUI for managing MNMS-compliant metadata
 - node class: use as template for all other classes (DONE)
 - cage-to-cage connection should be allowed to enable mouse transfer between cage (or cage splitting)
 - enable random allocation of subjects to condition
+- CRITICAL: audit logging of changes!
 
 ### 2024-05-25
 
@@ -54,3 +55,7 @@ _2024-06-20_ COlor scheme has been changed to `light`
 - #117c9a | Light blue (Background)
 - #bc5489 | Pink
 - #edf202 | Yellow
+
+### References
+- <https://en.wikipedia.org/wiki/Laboratory_information_management_system>
+- <https://en.wikipedia.org/wiki/List_of_LIMS_software_packages>
