@@ -7,7 +7,6 @@ GUI for managing MNMS-compliant metadata
 > Please review the **code of conduct** (<https://github.com/sciple/metadata-app/blob/main/README.md>) to understand how to behave properly here.
 
 
-
 ## TO DO
 
 - [CRITICAL] Add global layer (save, load, clear, lock)
@@ -24,6 +23,8 @@ GUI for managing MNMS-compliant metadata
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
 - Enable random allocation of subjects to condition
 - Highlight downstream information upon clicking a field
+
+## Notes
 
 ### 2024-05-25
 
