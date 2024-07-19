@@ -4,8 +4,7 @@ GUI for managing MNMS-compliant metadata
 
 ![screenshot of the GUI](screenshot.PNG "Main interface")
 
-> Please review the **code of conduct** (<https://github.com/sciple/metadata-app/blob/main/README.md>) to understand how to behave properly here and follow this link <https://github.com/sciple/metadata-app/blob/main/CONTRIBUTING.md> to understand ho to contribute to this project.
-
+> Please review the [a relative link](CODE_OF_CONDUCT.md) to understand how to behave properly here and follow this link [a relative link](CODE_OF_CONDUCT.md) to understand how to contribute to this project.
 
 ## TO DO
 
