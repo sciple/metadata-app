@@ -4,7 +4,7 @@ GUI for managing MNMS-compliant metadata
 
 ![screenshot of the GUI](screenshot.PNG "Main interface")
 
-> Please review the [a relative link](CODE_OF_CONDUCT.md) to understand how to behave properly here and follow this link [a relative link](CODE_OF_CONDUCT.md) to understand how to contribute to this project.
+> Please review the [the code of conduct](CODE_OF_CONDUCT.md) to understand how to behave properly here and follow the [contributing guidelines](CONTRIBUTING.md).
 
 ## TO DO
 
