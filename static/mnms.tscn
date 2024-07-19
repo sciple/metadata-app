@@ -83,7 +83,7 @@ slot/8/left_color = Color(1, 1, 1, 1)
 slot/8/left_icon = null
 slot/8/right_enabled = true
 slot/8/right_type = 0
-slot/8/right_color = Color(1, 1, 0.184314, 1)
+slot/8/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/8/right_icon = null
 slot/8/draw_stylebox = true
 

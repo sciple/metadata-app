@@ -2,24 +2,27 @@
 
 GUI for managing MNMS-compliant metadata
 
-> Please review the code of conduct (<https://github.com/sciple/metadata-app/blob/main/README.md>) to understand how to behave properly here
+> Please review the **code of conduct** (<https://github.com/sciple/metadata-app/blob/main/README.md>) to understand how to behave properly here.
+
+![screenshot of the GUI](screenshot.PNG "Main interface")
+
 
 ## TO DO
 
 - Add global layer (save, load, clear, lock)
 - Import data (_.csv_, ._xls_) from AMS export
-
 - Offset newly created windows
 - Limit number of windows that can be created
-- Export the data as JSON-LD (principal key is the subject_ID)
+- Export the data as JSON-LD
 - Duplicate a cage
-- cage-to-cage connection should be allowed to enable mouse transfer between cage (or cage splitting)
+- Cage-to-cage connection should be allowed to enable mouse transfer between cages (or cage splitting)
 - CRITICAL: audit logging of changes!
+- Import pyrat data export (_.csv_)
 
 ## Wishlist
-
+- Use llm to SQL for grouping subjects
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
-- enable random allocation of subjects to condition
+- Enable random allocation of subjects to condition
 
 ### 2024-05-25
 
@@ -31,7 +34,7 @@ Hookup a local llm to the inserted data. the data composed via the interface is 
 
 #### Pyrat data importer
 
-the importer creates cages and fills each cage with their respective mouse IDs
+The importer creates cages and fills each cage with their respective mouse IDs
 
 ### 2024-06-01
 
@@ -55,7 +58,7 @@ Multiple selections could be displayed as a popup table
 
 ### Colors
 
-_2024-06-20_ COlor scheme has been changed to `light`
+_2024-06-20_ Color scheme has been changed to `light`
 
 - #117c9a | Light blue (Background)
 - #bc5489 | Pink

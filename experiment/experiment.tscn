@@ -17,11 +17,11 @@ slot/0/right_icon = null
 slot/0/draw_stylebox = true
 slot/1/left_enabled = true
 slot/1/left_type = 1
-slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/1/left_icon = null
 slot/1/right_enabled = true
 slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
 slot/2/left_enabled = false
@@ -35,11 +35,11 @@ slot/2/right_icon = null
 slot/2/draw_stylebox = true
 slot/3/left_enabled = true
 slot/3/left_type = 1
-slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/3/left_icon = null
 slot/3/right_enabled = true
 slot/3/right_type = 0
-slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
 slot/4/left_enabled = false
@@ -78,7 +78,7 @@ placeholder_text = "End date
 
 [node name="OptionButton" type="OptionButton" parent="."]
 layout_mode = 2
-item_count = 4
+item_count = 5
 popup/item_0/text = "DVC"
 popup/item_0/id = 0
 popup/item_1/text = "Y-Maze"
@@ -87,6 +87,8 @@ popup/item_2/text = "Catwalk"
 popup/item_2/id = 2
 popup/item_3/text = "Phenotyper"
 popup/item_3/id = 3
+popup/item_4/text = "NOR"
+popup/item_4/id = 4
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -99,7 +101,7 @@ layout_mode = 2
 
 [node name="find_raw_data" type="Button" parent="."]
 layout_mode = 2
-text = "Raw data"
+text = "Raw data path"
 
 [node name="raw_data_path" type="Label" parent="."]
 layout_mode = 2
