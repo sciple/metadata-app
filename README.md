@@ -2,6 +2,8 @@
 
 GUI for managing MNMS-compliant metadata
 
+> Please review the code of conduct to understand how to behave properly here
+
 ## TO DO
 
 - Add global layer (save, load, clear, lock)
