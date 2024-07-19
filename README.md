@@ -2,21 +2,24 @@
 
 GUI for managing MNMS-compliant metadata
 
-> Please review the code of conduct to understand how to behave properly here
+> Please review the code of conduct (<https://github.com/sciple/metadata-app/blob/main/README.md>) to understand how to behave properly here
 
 ## TO DO
 
 - Add global layer (save, load, clear, lock)
 - Import data (_.csv_, ._xls_) from AMS export
-- Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
+
 - Offset newly created windows
 - Limit number of windows that can be created
 - Export the data as JSON-LD (principal key is the subject_ID)
 - Duplicate a cage
-- node class: use as template for all other classes (DONE)
 - cage-to-cage connection should be allowed to enable mouse transfer between cage (or cage splitting)
-- enable random allocation of subjects to condition
 - CRITICAL: audit logging of changes!
+
+## Wishlist
+
+- Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
+- enable random allocation of subjects to condition
 
 ### 2024-05-25
 
