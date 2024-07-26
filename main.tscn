@@ -1,11 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=12 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
-[ext_resource type="PackedScene" uid="uid://c2v5j2wbydh16" path="res://static/vendor.tscn" id="2_5mbv3"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
-[ext_resource type="PackedScene" uid="uid://dcbre0rfs1yvn" path="res://static/light.tscn" id="3_hmlcq"]
 [ext_resource type="PackedScene" uid="uid://dd51kugvn0abf" path="res://static/mnms.tscn" id="3_wcure"]
-[ext_resource type="PackedScene" uid="uid://devnp8f7e8g6m" path="res://project.tscn" id="4_4jkc5"]
+[ext_resource type="PackedScene" uid="uid://dryeoirtyhc1j" path="res://project/project.tscn" id="6_b43n7"]
 [ext_resource type="PackedScene" uid="uid://birl6tul81nw4" path="res://static/sex.tscn" id="6_hrwq6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31b27"]
@@ -133,6 +131,15 @@ minimap_enabled = false
 show_grid_buttons = false
 show_arrange_button = false
 
+[node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 15.0
+offset_right = 759.0
+offset_bottom = 70.0
+mouse_filter = 1
+position_offset = Vector2(573, 15)
+
 [node name="mnms" parent="GraphEdit" instance=ExtResource("3_wcure")]
 layout_mode = 0
 offset_left = 42.0
@@ -144,43 +151,12 @@ position_offset = Vector2(42, 53)
 
 [node name="sex" parent="GraphEdit" instance=ExtResource("6_hrwq6")]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 387.0
-offset_right = 292.0
-offset_bottom = 490.0
+offset_left = 43.0
+offset_top = 443.0
+offset_right = 293.0
+offset_bottom = 546.0
 mouse_filter = 1
-position_offset = Vector2(42, 387)
-
-[node name="vendor" parent="GraphEdit" instance=ExtResource("2_5mbv3")]
-visible = false
-layout_mode = 0
-offset_left = 40.0
-offset_top = 100.0
-offset_right = 290.0
-offset_bottom = 186.0
-mouse_filter = 1
-position_offset = Vector2(40, 100)
-slot/0/right_color = Color(1, 1, 1, 1)
-
-[node name="light" parent="GraphEdit" instance=ExtResource("3_hmlcq")]
-visible = false
-layout_mode = 0
-offset_left = 40.0
-offset_top = 200.0
-offset_right = 290.0
-offset_bottom = 286.0
-mouse_filter = 1
-position_offset = Vector2(40, 200)
-slot/0/right_color = Color(1, 1, 1, 1)
-
-[node name="project" parent="GraphEdit" instance=ExtResource("4_4jkc5")]
-layout_mode = 1
-offset_left = 400.0
-offset_top = 21.0
-offset_right = 524.0
-offset_bottom = 106.0
-mouse_filter = 1
-position_offset = Vector2(400, 21)
+position_offset = Vector2(43, 443)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -197,8 +173,7 @@ grow_horizontal = 0
 layout_mode = 2
 theme_override_colors/font_color = Color(0.929412, 0.94902, 0.00784314, 1)
 theme_override_font_sizes/font_size = 24
-text = "ORCiD
-"
+text = "ORCiD"
 
 [node name="Orc-ID" type="LineEdit" parent="orcid_container"]
 custom_minimum_size = Vector2(180, 40)

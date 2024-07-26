@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dryeoirtyhc1j"]
+
+[ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_3tcxd"]
+[ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_4xpcx"]
+
+[node name="project" instance=ExtResource("1_3tcxd")]
+offset_right = 186.0
+title = "Project ID"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="one_line_field" parent="." index="1" instance=ExtResource("2_4xpcx")]
+layout_mode = 2
+placeholder_text = "Project ID"

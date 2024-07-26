@@ -39,7 +39,7 @@ func _on_parent_button_pressed():
 	Global.create_node("parent",Global.parent_node, Global.parent_index)
 
 func _on_health_button_pressed():
-	Global.create_node("health",Global.health_node, Global.health_index)
+	Global.create_node("health_plus",Global.health_node, Global.health_index)
 
 func _on_comment_button_pressed():
 	Global.create_node("comment",Global.comment_node, Global.comment_index)

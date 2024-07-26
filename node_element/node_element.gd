@@ -11,6 +11,7 @@ func _ready():
 	print(self.title, " created at: ", created_at)
 	
 	# every inherited node must belong to a group
+	# if no group is available a the moment, just type a random name
 	node_type = self.get_groups()[0]
 	print(self.node_type, " node type: ", node_type)
 	print()

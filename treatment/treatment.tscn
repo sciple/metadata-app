@@ -10,6 +10,7 @@ bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 offset_right = 226.0
 offset_bottom = 139.0
 resizable = true
+title = "Treatment/Group/Factor"
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color(1, 1, 1, 1)

@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://ql7xn8mjuf5i"]
+
+[ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_xbn3q"]
+
+[node name="health_plus" instance=ExtResource("1_xbn3q")]
+offset_right = 205.0
+offset_bottom = 165.0
+title = "Health issue"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+
+[node name="OptionButton" type="OptionButton" parent="." index="1"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "See comments"
+popup/item_0/id = 1
+popup/item_0/separator = true
+popup/item_1/text = "Low body weight"
+popup/item_1/id = 0
+
+[node name="TextEdit" type="TextEdit" parent="." index="2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+placeholder_text = "Comments"
+
+[node name="mail_button" type="Button" parent="." index="3"]
+layout_mode = 2
+text = "Send e-mail"

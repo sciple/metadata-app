@@ -49,7 +49,12 @@ Multiple selections could be displayed as a popup table
 
 _2024-06-20_: Color scheme has been changed to `light`
 
-- to be defined
+- Blue:  #005878
+- Green: #709124
+- Red:   #ff2f40
+- White: #efefef
+- Black: #222222
+
 
 
 ### References
