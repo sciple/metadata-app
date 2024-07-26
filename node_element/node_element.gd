@@ -35,7 +35,3 @@ func update_node():
 	self.register_creation_date()
 	self.register_position()
 	self.register_node_type()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

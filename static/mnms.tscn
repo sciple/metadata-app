@@ -86,6 +86,24 @@ slot/8/right_type = 0
 slot/8/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/8/right_icon = null
 slot/8/draw_stylebox = true
+slot/9/left_enabled = false
+slot/9/left_type = 0
+slot/9/left_color = Color(1, 1, 1, 1)
+slot/9/left_icon = null
+slot/9/right_enabled = false
+slot/9/right_type = 0
+slot/9/right_color = Color(1, 1, 1, 1)
+slot/9/right_icon = null
+slot/9/draw_stylebox = true
+slot/10/left_enabled = false
+slot/10/left_type = 0
+slot/10/left_color = Color(1, 1, 1, 1)
+slot/10/left_icon = null
+slot/10/right_enabled = false
+slot/10/right_type = 0
+slot/10/right_color = Color(1, 1, 1, 1)
+slot/10/right_icon = null
+slot/10/draw_stylebox = true
 
 [node name="vendor_label" type="Label" parent="."]
 layout_mode = 2
@@ -141,6 +159,19 @@ item_count = 2
 popup/item_0/text = "BL6"
 popup/item_0/id = 0
 popup/item_1/text = "DBA"
+popup/item_1/id = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Dietary status"
+horizontal_alignment = 1
+
+[node name="dietary_status" type="OptionButton" parent="."]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Fed"
+popup/item_0/id = 0
+popup/item_1/text = "Fasted"
 popup/item_1/id = 1
 
 [node name="global" type="Label" parent="."]

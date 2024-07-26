@@ -7,6 +7,7 @@ var parent_index = -1
 var health_index = -1
 var comment_index = -1
 var treatment_index = -1
+var operator_index = -1
 var node_elements = {}
 
 var total_number_of_subjects = 0
@@ -18,6 +19,8 @@ var parent_node = load("res://cage/parent_cage.tscn")
 var health_node = load("res://health/health.tscn")
 var comment_node = load("res://comment/comment.tscn")
 var treatment_node = load("res://treatment/treatment.tscn")
+var operator_node = load("res://operator/operator.tscn")
+
 
 
 func create_node(node_name, node_type, node_index):

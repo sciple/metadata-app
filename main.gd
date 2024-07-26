@@ -47,6 +47,9 @@ func _on_comment_button_pressed():
 func _on_treatment_button_pressed():
 	Global.create_node("treatment",Global.treatment_node, Global.treatment_index)
 
+func _on_operator_button_pressed():
+	Global.create_node("operator",Global.operator_node, Global.operator_index)
+
 
 # -------------------- GLOBAL FUNCTIONS
 func _on_graph_edit_connection_request(from_node, from_port, to_node, to_port):
@@ -100,3 +103,6 @@ func update_global_stats():
 
 func _on_save_button_pressed():
 	save()
+
+
+

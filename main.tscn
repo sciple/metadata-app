@@ -103,6 +103,10 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_kns2f")
 text = "   !   "
 
+[node name="operator_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Operator +"
+
 [node name="VSeparator2" type="VSeparator" parent="toolbar"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
@@ -110,19 +114,6 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 [node name="save_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 text = "Save"
-
-[node name="ask_button" parent="toolbar" instance=ExtResource("2_iovf6")]
-texture_filter = 1
-layout_mode = 2
-text = "          "
-icon_alignment = 1
-expand_icon = true
-
-[node name="Polygon2D" type="Polygon2D" parent="toolbar/ask_button"]
-position = Vector2(1.99998, 33)
-scale = Vector2(0.672095, 0.75807)
-color = Color(1, 1, 1, 0.737255)
-polygon = PackedVector2Array(13.391, -30.3402, 13.391, -10.5531, 28.2699, -10.5531, 27.6774, -1.11538, 37.1971, -10.5531, 53.5638, -10.5531, 53.5638, -30.3402)
 
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
@@ -147,7 +138,7 @@ layout_mode = 0
 offset_left = 42.0
 offset_top = 53.0
 offset_right = 292.0
-offset_bottom = 375.0
+offset_bottom = 433.0
 mouse_filter = 1
 position_offset = Vector2(42, 53)
 
@@ -262,6 +253,7 @@ grow_vertical = 0
 [connection signal="pressed" from="toolbar/parent_button" to="." method="_on_parent_button_pressed"]
 [connection signal="pressed" from="toolbar/health_button" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="toolbar/comment_button" to="." method="_on_comment_button_pressed"]
+[connection signal="pressed" from="toolbar/operator_button" to="." method="_on_operator_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
