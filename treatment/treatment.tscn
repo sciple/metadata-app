@@ -2,9 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_nvefy"]
 [ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_pnud6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uyqt"]
-bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+[ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="3_2cn8d"]
 
 [node name="treatment" groups=["treatment"] instance=ExtResource("1_nvefy")]
 offset_right = 236.0
@@ -33,14 +31,5 @@ slot/1/draw_stylebox = true
 [node name="one_line_field" parent="." index="1" instance=ExtResource("2_pnud6")]
 layout_mode = 2
 
-[node name="TextEdit" type="TextEdit" parent="." index="2"]
-custom_minimum_size = Vector2(0, 90)
+[node name="comments" parent="." index="2" instance=ExtResource("3_2cn8d")]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_2uyqt")
-placeholder_text = "comments"
-context_menu_enabled = false
-shortcut_keys_enabled = false
-virtual_keyboard_enabled = false
-wrap_mode = 1

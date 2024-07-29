@@ -132,39 +132,39 @@ position_offset = Vector2(573, 15)
 
 [node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
 layout_mode = 0
-offset_left = 126.0
-offset_top = 446.0
-offset_right = 282.0
-offset_bottom = 535.0
+offset_left = 348.0
+offset_top = 458.0
+offset_right = 504.0
+offset_bottom = 547.0
 mouse_filter = 1
-position_offset = Vector2(126, 446)
+position_offset = Vector2(348, 458)
 
 [node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
 layout_mode = 1
-offset_left = 70.0
-offset_top = 108.0
-offset_right = 280.0
-offset_bottom = 423.0
+offset_left = 94.0
+offset_top = 67.0
+offset_right = 304.0
+offset_bottom = 453.0
 mouse_filter = 1
-position_offset = Vector2(70, 108)
+position_offset = Vector2(94, 67)
 
 [node name="log" parent="GraphEdit" instance=ExtResource("6_oagim")]
 layout_mode = 0
-offset_left = 952.0
-offset_top = 15.0
-offset_right = 1042.0
-offset_bottom = 78.0
+offset_left = 958.0
+offset_top = 10.0
+offset_right = 1064.0
+offset_bottom = 73.0
 mouse_filter = 1
-position_offset = Vector2(952, 15)
+position_offset = Vector2(958, 10)
 
 [node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
 layout_mode = 0
-offset_left = 132.0
-offset_top = 36.0
-offset_right = 261.0
-offset_bottom = 91.0
+offset_left = 379.0
+offset_top = 15.0
+offset_right = 508.0
+offset_bottom = 70.0
 mouse_filter = 1
-position_offset = Vector2(132, 36)
+position_offset = Vector2(379, 15)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
