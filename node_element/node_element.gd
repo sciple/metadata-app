@@ -38,3 +38,8 @@ func update_node():
 	self.register_node_type()
 
 
+# used for LOG entry addition
+func _on_log_button_pressed():
+	var node = load("res://log/log_entry.tscn")
+	var log_entry = node.instantiate()
+	$VBoxContainer.add_child(log_entry)

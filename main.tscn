@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=13 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
 [ext_resource type="PackedScene" uid="uid://dd51kugvn0abf" path="res://static/mnms.tscn" id="3_wcure"]
 [ext_resource type="PackedScene" uid="uid://dekk1mjqa7kgg" path="res://static/sex_plus.tscn" id="5_ijwid"]
 [ext_resource type="PackedScene" uid="uid://dryeoirtyhc1j" path="res://project/project.tscn" id="6_b43n7"]
+[ext_resource type="PackedScene" uid="uid://twciulaq6gja" path="res://log/log.tscn" id="6_oagim"]
+[ext_resource type="PackedScene" uid="uid://bk0takadqfg68" path="res://operator/operator.tscn" id="7_gjysb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31b27"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -145,6 +147,24 @@ offset_right = 280.0
 offset_bottom = 423.0
 mouse_filter = 1
 position_offset = Vector2(70, 108)
+
+[node name="log" parent="GraphEdit" instance=ExtResource("6_oagim")]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 15.0
+offset_right = 1042.0
+offset_bottom = 78.0
+mouse_filter = 1
+position_offset = Vector2(952, 15)
+
+[node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 36.0
+offset_right = 261.0
+offset_bottom = 91.0
+mouse_filter = 1
+position_offset = Vector2(132, 36)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1

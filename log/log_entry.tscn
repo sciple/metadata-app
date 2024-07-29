@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctvy1casmpes6"]
+
+[ext_resource type="Script" path="res://log/log_entry.gd" id="1_ahi7s"]
+[ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="1_nqnjq"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 114.0
+offset_bottom = 117.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ahi7s")
+
+[node name="HSeparator" type="HSeparator" parent="."]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="entry_date" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "this is the date"
+
+[node name="comments" parent="." instance=ExtResource("1_nqnjq")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
