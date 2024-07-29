@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ql7xn8mjuf5i"]
+[gd_scene load_steps=4 format=3 uid="uid://ql7xn8mjuf5i"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_xbn3q"]
+[ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="2_au02f"]
 
 [sub_resource type="GDScript" id="GDScript_03bs6"]
 script/source = "extends Button
@@ -41,15 +42,11 @@ slot/2/right_color = Color(1, 1, 1, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
 
-[node name="OptionButton" type="OptionButton" parent="." index="1"]
+[node name="option_button" parent="." index="1" instance=ExtResource("2_au02f")]
 layout_mode = 2
 item_count = 2
-selected = 0
-popup/item_0/text = "See comments"
-popup/item_0/id = 1
-popup/item_0/separator = true
 popup/item_1/text = "Low body weight"
-popup/item_1/id = 0
+popup/item_1/id = 1
 
 [node name="TextEdit" type="TextEdit" parent="." index="2"]
 custom_minimum_size = Vector2(0, 60)

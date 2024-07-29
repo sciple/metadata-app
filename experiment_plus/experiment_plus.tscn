@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://nkdn7ujn3iv2"]
+[gd_scene load_steps=5 format=3 uid="uid://nkdn7ujn3iv2"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_wfbhc"]
 [ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_nwgkf"]
 [ext_resource type="Script" path="res://experiment_plus/find_raw_data.gd" id="3_yub4b"]
+[ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="4_1srum"]
 
 [node name="experiment_plus" instance=ExtResource("1_wfbhc")]
 offset_right = 279.0
@@ -37,7 +38,7 @@ slot/2/right_color = Color(1, 1, 1, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
 slot/3/left_enabled = true
-slot/3/left_type = 0
+slot/3/left_type = 1
 slot/3/left_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/3/left_icon = null
 slot/3/right_enabled = false
@@ -80,19 +81,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 placeholder_text = "stop date"
 
-[node name="OptionButton" type="OptionButton" parent="." index="2"]
+[node name="option_button" parent="." index="2" instance=ExtResource("4_1srum")]
 layout_mode = 2
-item_count = 4
-selected = 0
-popup/item_0/text = "Select"
-popup/item_0/id = 0
-popup/item_0/separator = true
+item_count = 3
 popup/item_1/text = "Y maze"
 popup/item_1/id = 1
 popup/item_2/text = "Western Blot"
 popup/item_2/id = 2
-popup/item_3/text = "Spontaneous Behavior"
-popup/item_3/id = 3
 
 [node name="Label" type="Label" parent="." index="3"]
 modulate = Color(0.259294, 0.259294, 0.259294, 1)

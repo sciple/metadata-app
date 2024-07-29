@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0qq2mo0de8cu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lwad"]
+bg_color = Color(0.111747, 0.534092, 0.722951, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qcgd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y61af"]
+bg_color = Color(0.317647, 0.498039, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnj8d"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wayaf"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxdn0"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm6do"]
+bg_color = Color(0.199563, 0.560937, 0.817641, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc0o8"]
+bg_color = Color(0.202698, 0.548856, 0.84226, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2un0"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="option_button" type="OptionButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -993.0
+offset_bottom = -604.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_constants/h_separation = 4
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+item_count = 1
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
