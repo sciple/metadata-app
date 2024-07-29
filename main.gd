@@ -31,6 +31,7 @@ func _ready():
 # -------------------- BUTTONS
 func _on_cage_button_pressed():
 	Global.create_node("cage", Global.cage_node, Global.cage_index)
+	
 
 func _on_experiment_button_pressed():
 	Global.create_node("experiment",Global.experiment_node, Global.experiment_index)

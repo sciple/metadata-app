@@ -1,7 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://ql7xn8mjuf5i"]
+[gd_scene load_steps=8 format=3 uid="uid://ql7xn8mjuf5i"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_xbn3q"]
 [ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="2_au02f"]
+[ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="3_2gbfq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erurg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqd2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svu5e"]
+bg_color = Color(1, 0.184314, 0.25098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="GDScript" id="GDScript_03bs6"]
 script/source = "extends Button
@@ -41,6 +55,33 @@ slot/2/right_type = 0
 slot/2/right_color = Color(1, 1, 1, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color(1, 1, 1, 1)
+slot/4/left_icon = null
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color(1, 1, 1, 1)
+slot/4/right_icon = null
+slot/4/draw_stylebox = true
+slot/5/left_enabled = false
+slot/5/left_type = 0
+slot/5/left_color = Color(1, 1, 1, 1)
+slot/5/left_icon = null
+slot/5/right_enabled = false
+slot/5/right_type = 0
+slot/5/right_color = Color(1, 1, 1, 1)
+slot/5/right_icon = null
+slot/5/draw_stylebox = true
 
 [node name="option_button" parent="." index="1" instance=ExtResource("2_au02f")]
 layout_mode = 2
@@ -48,15 +89,28 @@ item_count = 2
 popup/item_1/text = "Low body weight"
 popup/item_1/id = 1
 
-[node name="TextEdit" type="TextEdit" parent="." index="2"]
-custom_minimum_size = Vector2(0, 60)
+[node name="HSeparator3" type="HSeparator" parent="." index="2"]
+custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
-theme_override_colors/background_color = Color(1, 1, 1, 1)
-placeholder_text = "Comments"
+theme_override_styles/separator = SubResource("StyleBoxFlat_erurg")
 
-[node name="mail_button" type="Button" parent="." index="3"]
+[node name="comments" parent="." index="3" instance=ExtResource("3_2gbfq")]
 layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="." index="4"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_oqd2m")
+
+[node name="mail_button" type="Button" parent="." index="5"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_svu5e")
 text = "Send e-mail"
 script = SubResource("GDScript_03bs6")
+
+[node name="HSeparator2" type="HSeparator" parent="." index="6"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_oqd2m")
 
 [connection signal="pressed" from="mail_button" to="mail_button" method="_on_pressed"]

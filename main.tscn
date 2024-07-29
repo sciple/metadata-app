@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=11 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
@@ -12,13 +12,6 @@ bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcq4h"]
 bg_color = Color(1, 1, 1, 1)
 border_width_right = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlvsm"]
-bg_color = Color(0.737028, 0.330899, 0.538815, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kns2f"]
 bg_color = Color(0.862745, 0.172549, 0.176471, 1)
@@ -75,6 +68,10 @@ virtual_keyboard_enabled = false
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 
+[node name="operator_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Operator +"
+
 [node name="cage_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 text = "Cage +"
@@ -89,17 +86,12 @@ text = "Treatment +"
 
 [node name="health_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_rlvsm")
 text = " Health + "
 
 [node name="comment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_kns2f")
 text = "   !   "
-
-[node name="operator_button" parent="toolbar" instance=ExtResource("2_iovf6")]
-layout_mode = 2
-text = "Operator +"
 
 [node name="VSeparator2" type="VSeparator" parent="toolbar"]
 layout_mode = 2
@@ -218,12 +210,12 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 
+[connection signal="pressed" from="toolbar/operator_button" to="." method="_on_operator_button_pressed"]
 [connection signal="pressed" from="toolbar/cage_button" to="." method="_on_cage_button_pressed"]
 [connection signal="pressed" from="toolbar/experiment_button" to="." method="_on_experiment_button_pressed"]
 [connection signal="pressed" from="toolbar/treatment_button" to="." method="_on_treatment_button_pressed"]
 [connection signal="pressed" from="toolbar/health_button" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="toolbar/comment_button" to="." method="_on_comment_button_pressed"]
-[connection signal="pressed" from="toolbar/operator_button" to="." method="_on_operator_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
