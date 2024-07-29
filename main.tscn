@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
 [ext_resource type="PackedScene" uid="uid://dd51kugvn0abf" path="res://static/mnms.tscn" id="3_wcure"]
+[ext_resource type="PackedScene" uid="uid://dekk1mjqa7kgg" path="res://static/sex_plus.tscn" id="5_ijwid"]
 [ext_resource type="PackedScene" uid="uid://dryeoirtyhc1j" path="res://project/project.tscn" id="6_b43n7"]
-[ext_resource type="PackedScene" uid="uid://birl6tul81nw4" path="res://static/sex.tscn" id="6_hrwq6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31b27"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -149,14 +149,14 @@ offset_bottom = 433.0
 mouse_filter = 1
 position_offset = Vector2(42, 53)
 
-[node name="sex" parent="GraphEdit" instance=ExtResource("6_hrwq6")]
+[node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 443.0
-offset_right = 293.0
-offset_bottom = 546.0
+offset_left = 126.0
+offset_top = 446.0
+offset_right = 282.0
+offset_bottom = 535.0
 mouse_filter = 1
-position_offset = Vector2(43, 443)
+position_offset = Vector2(126, 446)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
