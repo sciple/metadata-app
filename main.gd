@@ -35,9 +35,6 @@ func _on_cage_button_pressed():
 func _on_experiment_button_pressed():
 	Global.create_node("experiment",Global.experiment_node, Global.experiment_index)
 
-func _on_parent_button_pressed():
-	Global.create_node("parent",Global.parent_node, Global.parent_index)
-
 func _on_health_button_pressed():
 	Global.create_node("health_plus",Global.health_node, Global.health_index)
 

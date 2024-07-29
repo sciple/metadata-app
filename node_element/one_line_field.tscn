@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ca56vxmr4iw6d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d26xn"]
-bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+bg_color = Color(1, 1, 1, 1)
 
 [node name="one_line_field" type="LineEdit"]
 offset_right = 67.0625

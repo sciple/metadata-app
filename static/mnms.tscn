@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://dd51kugvn0abf"]
+[gd_scene load_steps=3 format=3 uid="uid://dd51kugvn0abf"]
 
-[node name="mnms" type="GraphNode"]
-custom_minimum_size = Vector2(250, 0)
-offset_right = 246.0
-offset_bottom = 100.0
+[ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_vah2h"]
+[ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="2_quu13"]
+
+[node name="MNMS" instance=ExtResource("1_vah2h")]
+offset_right = 210.0
+offset_bottom = 315.0
 title = "MNMS"
 slot/0/left_enabled = false
 slot/0/left_type = 0
@@ -83,7 +85,7 @@ slot/8/left_color = Color(1, 1, 1, 1)
 slot/8/left_icon = null
 slot/8/right_enabled = false
 slot/8/right_type = 0
-slot/8/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/8/right_color = Color(1, 1, 1, 1)
 slot/8/right_icon = null
 slot/8/draw_stylebox = true
 slot/9/left_enabled = false
@@ -99,84 +101,102 @@ slot/10/left_enabled = false
 slot/10/left_type = 0
 slot/10/left_color = Color(1, 1, 1, 1)
 slot/10/left_icon = null
-slot/10/right_enabled = true
+slot/10/right_enabled = false
 slot/10/right_type = 0
-slot/10/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/10/right_color = Color(1, 1, 1, 1)
 slot/10/right_icon = null
 slot/10/draw_stylebox = true
+slot/11/left_enabled = false
+slot/11/left_type = 0
+slot/11/left_color = Color(1, 1, 1, 1)
+slot/11/left_icon = null
+slot/11/right_enabled = true
+slot/11/right_type = 0
+slot/11/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/11/right_icon = null
+slot/11/draw_stylebox = true
 
-[node name="vendor_label" type="Label" parent="."]
+[node name="vendor2" type="Label" parent="." index="1"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 text = "Vendor"
 horizontal_alignment = 1
 
-[node name="vendor" type="OptionButton" parent="."]
+[node name="vendor_option" parent="." index="2" instance=ExtResource("2_quu13")]
 layout_mode = 2
-item_count = 3
-popup/item_0/text = "Janvier"
-popup/item_0/id = 0
-popup/item_1/text = "Jackson"
+item_count = 4
+popup/item_1/text = "in-house breeding"
 popup/item_1/id = 1
-popup/item_2/text = "DNF breeding"
+popup/item_2/text = "Charles River"
 popup/item_2/id = 2
+popup/item_3/text = "Harlan"
+popup/item_3/id = 3
 
-[node name="light_label" type="Label" parent="."]
+[node name="Strain" type="Label" parent="." index="3"]
 layout_mode = 2
-text = "Light cycle
-"
-horizontal_alignment = 1
-
-[node name="light" type="OptionButton" parent="."]
-layout_mode = 2
-item_count = 2
-popup/item_0/text = "12:12 | Regular"
-popup/item_0/id = 0
-popup/item_1/text = "12:12 | Inverted"
-popup/item_1/id = 1
-
-[node name="enrichment_label" type="Label" parent="."]
-layout_mode = 2
-text = "Enrichment
-"
-horizontal_alignment = 1
-
-[node name="enrichment" type="OptionButton" parent="."]
-layout_mode = 2
-item_count = 2
-popup/item_0/text = "True"
-popup/item_0/id = 0
-popup/item_1/text = "False"
-popup/item_1/id = 1
-
-[node name="strain_label" type="Label" parent="."]
-layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 text = "Strain"
 horizontal_alignment = 1
 
-[node name="strain" type="OptionButton" parent="."]
+[node name="strain_option" parent="." index="4" instance=ExtResource("2_quu13")]
 layout_mode = 2
-item_count = 2
-popup/item_0/text = "BL6"
-popup/item_0/id = 0
-popup/item_1/text = "DBA"
+item_count = 4
+popup/item_1/text = "C57BL/6J"
 popup/item_1/id = 1
+popup/item_2/text = "C57BL/6J"
+popup/item_2/id = 2
+popup/item_3/text = "DBA/2"
+popup/item_3/id = 3
 
-[node name="Label" type="Label" parent="."]
+[node name="Light cycle" type="Label" parent="." index="5"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+text = "Light cycle"
+horizontal_alignment = 1
+
+[node name="light_cycle_option" parent="." index="6" instance=ExtResource("2_quu13")]
+layout_mode = 2
+item_count = 4
+popup/item_1/text = "07:00-19:00 Light"
+popup/item_1/id = 1
+popup/item_2/text = "09:00-21:00 Light"
+popup/item_2/id = 2
+popup/item_3/text = "07:00-19:00 Dark"
+popup/item_3/id = 3
+
+[node name="enrichment" type="Label" parent="." index="7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+text = "Enrichment"
+horizontal_alignment = 1
+
+[node name="enrichment_option" parent="." index="8" instance=ExtResource("2_quu13")]
+layout_mode = 2
+item_count = 3
+popup/item_1/text = "True"
+popup/item_1/id = 1
+popup/item_2/text = "False"
+popup/item_2/id = 2
+
+[node name="diet" type="Label" parent="." index="9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 text = "Dietary status"
 horizontal_alignment = 1
 
-[node name="dietary_status" type="OptionButton" parent="."]
+[node name="diet_option" parent="." index="10" instance=ExtResource("2_quu13")]
 layout_mode = 2
-item_count = 2
-popup/item_0/text = "Fed"
-popup/item_0/id = 0
-popup/item_1/text = "Fasted"
+item_count = 3
+popup/item_1/text = "Fed"
 popup/item_1/id = 1
+popup/item_2/text = "Fasted"
+popup/item_2/id = 2
 
-[node name="global" type="Label" parent="."]
-custom_minimum_size = Vector2(0, 35)
+[node name="HSeparator" type="HSeparator" parent="." index="11"]
 layout_mode = 2
-text = "GLOBAL"
+
+[node name="vendor" type="Label" parent="." index="12"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+text = "Global Apply"
 horizontal_alignment = 1
-vertical_alignment = 1
