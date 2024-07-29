@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ql7xn8mjuf5i"]
+[gd_scene load_steps=3 format=3 uid="uid://ql7xn8mjuf5i"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_xbn3q"]
+
+[sub_resource type="GDScript" id="GDScript_03bs6"]
+script/source = "extends Button
+
+func _on_pressed():
+	OS.shell_open(\"mailto:email_address_here?to=email_address_here&body=AAA&subject=BBB\")
+"
 
 [node name="health_plus" instance=ExtResource("1_xbn3q")]
 offset_right = 205.0
@@ -53,3 +60,6 @@ placeholder_text = "Comments"
 [node name="mail_button" type="Button" parent="." index="3"]
 layout_mode = 2
 text = "Send e-mail"
+script = SubResource("GDScript_03bs6")
+
+[connection signal="pressed" from="mail_button" to="mail_button" method="_on_pressed"]

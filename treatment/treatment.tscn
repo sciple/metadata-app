@@ -7,8 +7,8 @@
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 
 [node name="treatment" groups=["treatment"] instance=ExtResource("1_nvefy")]
-offset_right = 226.0
-offset_bottom = 139.0
+offset_right = 236.0
+offset_bottom = 154.0
 resizable = true
 title = "Treatment/Group/Factor"
 slot/0/left_enabled = false
@@ -34,8 +34,9 @@ slot/1/draw_stylebox = true
 layout_mode = 2
 
 [node name="TextEdit" type="TextEdit" parent="." index="2"]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2uyqt")
 placeholder_text = "comments"

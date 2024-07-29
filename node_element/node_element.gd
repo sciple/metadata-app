@@ -36,3 +36,5 @@ func update_node():
 	self.register_creation_date()
 	self.register_position()
 	self.register_node_type()
+
+
