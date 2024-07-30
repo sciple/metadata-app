@@ -6,7 +6,7 @@
 [node name="operator" instance=ExtResource("1_4wxmx")]
 offset_right = 129.0
 title = "Operator"
-slot/0/left_enabled = true
+slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/0/left_icon = null

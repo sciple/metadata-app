@@ -22,6 +22,7 @@ GUI for managing MNMS-compliant metadata
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
 - Enable random allocation of subjects to condition
 - Highlight downstream information upon clicking a field
+- [PRIORITY] context menu to create node on the fly in specific positions
 
 ## Notes
 

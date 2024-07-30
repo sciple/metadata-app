@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://iufb3w30nvnw"]
+[gd_scene load_steps=5 format=3 uid="uid://iufb3w30nvnw"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_nvefy"]
 [ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_pnud6"]
 [ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="3_2cn8d"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo3n1"]
+
 [node name="treatment" groups=["treatment"] instance=ExtResource("1_nvefy")]
 offset_right = 236.0
-offset_bottom = 154.0
+offset_bottom = 171.0
 resizable = true
 title = "Treatment/Group/Factor"
 slot/0/left_enabled = false
@@ -27,9 +29,48 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
 
-[node name="one_line_field" parent="." index="1" instance=ExtResource("2_pnud6")]
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
 layout_mode = 2
 
-[node name="comments" parent="." index="2" instance=ExtResource("3_2cn8d")]
+[node name="one_line_field" parent="HBoxContainer" index="0" instance=ExtResource("2_pnud6")]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Start date"
+
+[node name="one_line_field2" parent="HBoxContainer" index="1" instance=ExtResource("2_pnud6")]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Stop date"
+
+[node name="HSeparator" type="HSeparator" parent="." index="2"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_vo3n1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="3"]
+layout_mode = 2
+
+[node name="common_name" parent="VBoxContainer" index="0" instance=ExtResource("2_pnud6")]
+layout_mode = 2
+placeholder_text = "Common name"
+
+[node name="CAS number" parent="VBoxContainer" index="1" instance=ExtResource("2_pnud6")]
+layout_mode = 2
+placeholder_text = "CAS number"
+
+[node name="dose" parent="VBoxContainer" index="2" instance=ExtResource("2_pnud6")]
+layout_mode = 2
+placeholder_text = "Dose + unit (i.e. mg/kg)"
+
+[node name="comments" parent="VBoxContainer" index="3" instance=ExtResource("3_2cn8d")]
 layout_mode = 2
