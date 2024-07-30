@@ -2,6 +2,9 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a03yh"]
 bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_right = 10
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5224"]
 bg_color = Color(0, 0.345098, 0.470588, 1)
