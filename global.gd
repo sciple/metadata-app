@@ -24,11 +24,11 @@ var treatment_node = load("res://treatment/treatment.tscn")
 var operator_node = load("res://operator/operator.tscn")
 
 
-
-func create_node(node_name, node_type, node_index):
+func create_node(node_name, node_type, node_index, node_position=Vector2(50,50)):
 	var node = node_type.instantiate()
 	node_index += 1
 	get_node("../Main/GraphEdit").add_child(node)
+	node.position_offset = node_position
 	node.name = node_name + "_" + str(node_index)
 
 func init_node_elements():
@@ -37,5 +37,3 @@ func init_node_elements():
 func init_subjects():
 	self.cages = {}
 	self.total_number_of_subjects = 0
-
-

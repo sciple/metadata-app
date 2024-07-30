@@ -11,10 +11,12 @@ GUI for managing MNMS-compliant metadata
 - [CRITICAL] Add global layer (save, load, clear, lock)
 - [CRITICAL] Audit logging of changes!
 - [2024-05-28] Import data (_.csv_, ._xls_) from AMS export
+- connect cage IDs to assign the cages to the same group/treatment
 - Export the data as JSON-LD
 - Offset newly created windows
 - Limit number of windows that can be created
 - Duplicate a cage
+- right click to delete node
 - Cage-to-cage connection should be allowed to enable mouse transfer between cages (or cage splitting)
 
 ## Wishlist
@@ -23,6 +25,7 @@ GUI for managing MNMS-compliant metadata
 - Enable random allocation of subjects to condition
 - Highlight downstream information upon clicking a field
 - [PRIORITY] context menu to create node on the fly in specific positions
+
 
 ## Notes
 
@@ -61,3 +64,4 @@ _2024-06-20_: Color scheme has been changed to `light`
 ### References
 - <https://en.wikipedia.org/wiki/Laboratory_information_management_system>
 - <https://en.wikipedia.org/wiki/List_of_LIMS_software_packages>
+- excellent resource for graphnodes: <https://gdscript.com/solutions/godot-graphnode-and-graphedit-tutorial/>

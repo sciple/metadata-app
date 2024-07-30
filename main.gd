@@ -102,5 +102,27 @@ func update_global_stats():
 func _on_save_button_pressed():
 	save()
 
+func _input(event):
+	if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_RIGHT:
+		print("Mouse Click/Unclick at: ", event.position)
+		print(G.zoom)
+		print(event.position)
+		print(event.position / G.zoom)
+		#tmp.position = (G.scroll_offset + G.size / 2) / G.zoom - node.size / 2;
+		var tmp_position = (G.scroll_offset + G.size / 2) / G.zoom
+		Global.create_node("cage", Global.cage_node, Global.cage_index, tmp_position)
+		#Global.create_node("cage", Global.cage_node, Global.cage_index, event.position * G.zoom)
 
+var selected_nodes = {}
 
+func _on_graph_edit_node_selected(node):
+	selected_nodes[node] = true
+
+func _on_graph_edit_node_deselected(node):
+	selected_nodes[node] = false
+
+func _on_graph_edit_delete_nodes_request(nodes):
+	for node in selected_nodes.keys():
+		if selected_nodes[node]:
+			node.queue_free()
+	selected_nodes = {}
