@@ -56,10 +56,10 @@ _2024-06-20_: Color scheme has been changed to `light`
 - Gray:  #dddddd (panel background)
 - White: #ffffff (empty fields)
 - Red:   #ff2f40 (highlight/alert)
+- Black: #222222
 
 ##### Optional
 - Green: #709124
-- Black: #222222
 
 
 

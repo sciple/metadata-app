@@ -40,7 +40,7 @@ func _on_health_button_pressed():
 	Global.create_node("health_plus",Global.health_node, Global.health_index)
 
 func _on_comment_button_pressed():
-	Global.create_node("comment",Global.comment_node, Global.comment_index)
+	Global.create_node("comment_plus",Global.comment_node, Global.comment_index)
 
 func _on_treatment_button_pressed():
 	Global.create_node("treatment",Global.treatment_node, Global.treatment_index)

@@ -14,12 +14,9 @@ var total_number_of_subjects = 0
 var cages = {}
 
 var cage_node = load("res://cage_plus/cage_plus.tscn")
-#var experiment_node = load("res://experiment/experiment.tscn")
 var experiment_node = load("res://experiment_plus/experiment_plus.tscn")
-var parent_node = load("res://cage/parent_cage.tscn")
-#var health_node = load("res://health/health.tscn")
 var health_node = load("res://health_plus/health_plus.tscn")
-var comment_node = load("res://comment/comment.tscn")
+var comment_node = load("res://comment_plus/comment_plus.tscn")
 var treatment_node = load("res://treatment/treatment.tscn")
 var operator_node = load("res://operator/operator.tscn")
 
