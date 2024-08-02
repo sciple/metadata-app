@@ -10,21 +10,19 @@ GUI for managing MNMS-compliant metadata
 
 - [CRITICAL] Add global layer (save, load, clear, lock)
 - [CRITICAL] Audit logging of changes!
-- [2024-05-28] Import data (_.csv_, ._xls_) from AMS export
-- connect cage IDs to assign the cages to the same group/treatment
+- [CRITICAL] connect cage IDs to assign the cages to the same group/treatment
+- [CRITICAL] Import data (_.csv_, ._xls_) from AMS export
+- Duplicate a cage
 - Export the data as JSON-LD
 - Offset newly created windows
 - Limit number of windows that can be created
-- Duplicate a cage
-- right click to delete node
-- Cage-to-cage connection should be allowed to enable mouse transfer between cages (or cage splitting)
 
 ## Wishlist
-- Use llm-to-SQL for grouping subjects
+- [PRIORITY] Highlight downstream information upon clicking a field
+- [PRIORITY] Context menu to create node on the fly in specific positions
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
 - Enable random allocation of subjects to condition
-- Highlight downstream information upon clicking a field
-- [PRIORITY] context menu to create node on the fly in specific positions
+- Use llm-to-SQL for grouping subjects
 
 
 ## Notes
@@ -53,10 +51,14 @@ Multiple selections could be displayed as a popup table
 
 _2024-06-20_: Color scheme has been changed to `light`
 
-- Blue:  #005878
+#### Light color scheme
+- Blue:  #005878 (title bar)
+- Gray:  #dddddd (panel background)
+- White: #ffffff (empty fields)
+- Red:   #ff2f40 (highlight/alert)
+
+##### Optional
 - Green: #709124
-- Red:   #ff2f40
-- White: #efefef
 - Black: #222222
 
 
