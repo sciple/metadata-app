@@ -160,6 +160,15 @@ offset_bottom = 551.0
 mouse_filter = 1
 position_offset = Vector2(200, 458)
 
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="GraphEdit"]
+initial_position = 2
+size = Vector2i(203, 90)
+unresizable = true
+borderless = true
+always_on_top = true
+ok_button_text = "Delete"
+dialog_text = "Delete selected node(s)?"
+
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 1
@@ -240,3 +249,5 @@ grow_vertical = 0
 [connection signal="node_deselected" from="GraphEdit" to="." method="_on_graph_edit_node_deselected"]
 [connection signal="node_selected" from="GraphEdit" to="." method="_on_graph_edit_node_selected"]
 [connection signal="paste_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_paste_nodes_request"]
+[connection signal="canceled" from="GraphEdit/ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="GraphEdit/ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

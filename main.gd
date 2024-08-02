@@ -122,7 +122,14 @@ func _on_graph_edit_node_deselected(node):
 	selected_nodes[node] = false
 
 func _on_graph_edit_delete_nodes_request(nodes):
+	get_node("GraphEdit/ConfirmationDialog").visible=true
+
+func _on_confirmation_dialog_confirmed():
 	for node in selected_nodes.keys():
 		if selected_nodes[node]:
 			node.queue_free()
+	selected_nodes = {}
+
+
+func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
