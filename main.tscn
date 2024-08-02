@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=12 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
@@ -14,13 +14,6 @@ bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcq4h"]
 bg_color = Color(1, 1, 1, 1)
 border_width_right = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kns2f"]
-bg_color = Color(0.862745, 0.172549, 0.176471, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eo2x6"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -92,7 +85,6 @@ text = " Health + "
 
 [node name="comment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_kns2f")
 text = "   !   "
 
 [node name="VSeparator2" type="VSeparator" parent="toolbar"]

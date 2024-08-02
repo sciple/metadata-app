@@ -138,9 +138,10 @@ slot/13/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/13/right_icon = null
 slot/13/draw_stylebox = true
 
-[node name="vendor2" type="Label" parent="." index="1"]
+[node name="vendor" type="Label" parent="." index="1"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Vendor"
 horizontal_alignment = 1
 
