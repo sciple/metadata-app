@@ -113,50 +113,52 @@ minimap_enabled = false
 show_grid_buttons = false
 show_arrange_button = false
 
+[node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 12.0
+offset_right = 354.0
+offset_bottom = 433.0
+mouse_filter = 1
+position_offset = Vector2(144, 12)
+
 [node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
 layout_mode = 0
-offset_left = 573.0
-offset_top = 15.0
-offset_right = 759.0
-offset_bottom = 160.0
+offset_left = 584.0
+offset_top = 12.0
+offset_right = 770.0
+offset_bottom = 174.0
 mouse_filter = 1
-position_offset = Vector2(573, 15)
-
-[node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
-layout_mode = 0
-offset_left = 348.0
-offset_top = 458.0
-offset_right = 504.0
-offset_bottom = 547.0
-mouse_filter = 1
-position_offset = Vector2(348, 458)
-
-[node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
-layout_mode = 1
-offset_left = 94.0
-offset_top = 67.0
-offset_right = 304.0
-offset_bottom = 453.0
-mouse_filter = 1
-position_offset = Vector2(94, 67)
+position_offset = Vector2(584, 12)
+draggable = false
+selectable = false
 
 [node name="log" parent="GraphEdit" instance=ExtResource("6_oagim")]
 layout_mode = 0
 offset_left = 958.0
 offset_top = 10.0
 offset_right = 1064.0
-offset_bottom = 73.0
+offset_bottom = 82.0
 mouse_filter = 1
 position_offset = Vector2(958, 10)
 
 [node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
 layout_mode = 0
-offset_left = 379.0
-offset_top = 15.0
-offset_right = 508.0
-offset_bottom = 70.0
+offset_left = 404.0
+offset_top = 12.0
+offset_right = 533.0
+offset_bottom = 82.0
 mouse_filter = 1
-position_offset = Vector2(379, 15)
+position_offset = Vector2(404, 12)
+
+[node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 458.0
+offset_right = 356.0
+offset_bottom = 551.0
+mouse_filter = 1
+position_offset = Vector2(200, 458)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
