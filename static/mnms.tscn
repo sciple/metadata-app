@@ -145,7 +145,6 @@ text = "Vendor"
 
 [node name="vendor_option" parent="." index="2" instance=ExtResource("2_quu13")]
 layout_mode = 2
-alignment = 1
 item_count = 4
 popup/item_1/text = "in-house breeding"
 popup/item_1/id = 1
@@ -162,7 +161,6 @@ text = "Strain"
 
 [node name="strain_option" parent="." index="4" instance=ExtResource("2_quu13")]
 layout_mode = 2
-alignment = 1
 item_count = 4
 popup/item_1/text = "C57BL/6J"
 popup/item_1/id = 1
@@ -179,7 +177,6 @@ text = "Light cycle"
 
 [node name="light_cycle_option" parent="." index="6" instance=ExtResource("2_quu13")]
 layout_mode = 2
-alignment = 1
 item_count = 4
 popup/item_1/text = "07:00-19:00 Light"
 popup/item_1/id = 1
@@ -196,7 +193,6 @@ text = "Enrichment"
 
 [node name="enrichment_option" parent="." index="8" instance=ExtResource("2_quu13")]
 layout_mode = 2
-alignment = 1
 item_count = 3
 popup/item_1/text = "True"
 popup/item_1/id = 1
@@ -209,7 +205,6 @@ text = "Diet"
 
 [node name="diet_option" parent="." index="10" instance=ExtResource("2_quu13")]
 layout_mode = 2
-alignment = 1
 item_count = 3
 popup/item_1/text = "Fed"
 popup/item_1/id = 1

@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://nkdn7ujn3iv2"]
+[gd_scene load_steps=8 format=3 uid="uid://nkdn7ujn3iv2"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_wfbhc"]
 [ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_nwgkf"]
 [ext_resource type="Script" path="res://experiment_plus/find_raw_data.gd" id="3_yub4b"]
 [ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="4_1srum"]
+[ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="4_8ff7e"]
+[ext_resource type="PackedScene" uid="uid://jpdmj2inuyk1" path="res://UI/label.tscn" id="5_7rd3j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53jfp"]
 
 [node name="experiment_plus" instance=ExtResource("1_wfbhc")]
 offset_right = 279.0
-offset_bottom = 279.0
+offset_bottom = 286.0
 resizable = true
 title = "Experiment"
 slot/0/left_enabled = false
@@ -64,8 +68,24 @@ slot/5/right_type = 0
 slot/5/right_color = Color(1, 1, 1, 1)
 slot/5/right_icon = null
 slot/5/draw_stylebox = true
+slot/6/left_enabled = false
+slot/6/left_type = 0
+slot/6/left_color = Color(1, 1, 1, 1)
+slot/6/left_icon = null
+slot/6/right_enabled = false
+slot/6/right_type = 0
+slot/6/right_color = Color(1, 1, 1, 1)
+slot/6/right_icon = null
+slot/6/draw_stylebox = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
+[node name="FileDialog" type="FileDialog" parent="." index="1"]
+title = "Open a File"
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -81,7 +101,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 placeholder_text = "stop date"
 
-[node name="option_button" parent="." index="2" instance=ExtResource("4_1srum")]
+[node name="option_button" parent="." index="3" instance=ExtResource("4_1srum")]
 layout_mode = 2
 item_count = 3
 popup/item_1/text = "Y maze"
@@ -89,36 +109,30 @@ popup/item_1/id = 1
 popup/item_2/text = "Western Blot"
 popup/item_2/id = 2
 
-[node name="Label" type="Label" parent="." index="3"]
-modulate = Color(0.259294, 0.259294, 0.259294, 1)
+[node name="HSeparator" type="HSeparator" parent="." index="4"]
 layout_mode = 2
-text = "Custom experiment"
-horizontal_alignment = 1
-
-[node name="TextEdit" type="TextEdit" parent="." index="4"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/background_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
-theme_override_colors/font_placeholder_color = Color(0.733333, 0.733333, 0.733333, 1)
-placeholder_text = "Description, SOP ID, protocol ..."
+theme_override_constants/separation = 13
+theme_override_styles/separator = SubResource("StyleBoxFlat_53jfp")
 
 [node name="find_raw_data" type="Button" parent="." index="5"]
 layout_mode = 2
 text = "Raw data path"
 script = ExtResource("3_yub4b")
 
-[node name="raw_data_path" type="Label" parent="." index="6"]
+[node name="raw_data_path" parent="." index="6" instance=ExtResource("5_7rd3j")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 14
+text = "..."
 
-[node name="FileDialog" type="FileDialog" parent="." index="7"]
-title = "Open a File"
-ok_button_text = "Open"
-file_mode = 0
-access = 2
-use_native_dialog = true
+[node name="Label" type="Label" parent="." index="7"]
+modulate = Color(0.259294, 0.259294, 0.259294, 1)
+layout_mode = 2
+text = "Custom experiment"
+horizontal_alignment = 1
 
-[connection signal="pressed" from="find_raw_data" to="find_raw_data" method="_on_pressed"]
+[node name="comments" parent="." index="8" instance=ExtResource("4_8ff7e")]
+layout_mode = 2
+placeholder_text = "Description, SOP ID, protocol ..."
+
 [connection signal="file_selected" from="FileDialog" to="find_raw_data" method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="find_raw_data" to="find_raw_data" method="_on_pressed"]

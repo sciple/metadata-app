@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctvy1casmpes6"]
+[gd_scene load_steps=4 format=3 uid="uid://ctvy1casmpes6"]
 
 [ext_resource type="Script" path="res://log/log_entry.gd" id="1_ahi7s"]
 [ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="1_nqnjq"]
+[ext_resource type="PackedScene" uid="uid://jpdmj2inuyk1" path="res://UI/label.tscn" id="2_wp4vs"]
 
 [node name="VBoxContainer" type="VBoxContainer"]
 offset_right = 114.0
@@ -14,11 +15,8 @@ script = ExtResource("1_ahi7s")
 custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
 
-[node name="entry_date" type="Label" parent="."]
+[node name="entry_date" parent="." instance=ExtResource("2_wp4vs")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
-text = "this is the date"
 
 [node name="comments" parent="." instance=ExtResource("1_nqnjq")]
 layout_mode = 2
