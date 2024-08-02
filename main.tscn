@@ -65,23 +65,23 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 
 [node name="operator_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Operator +"
+text = "Operator"
 
 [node name="cage_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Cage +"
+text = "Cage"
 
 [node name="experiment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Exp +"
+text = "Experiment"
 
 [node name="treatment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Treatment +"
+text = "Treatment"
 
 [node name="health_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = " Health + "
+text = " Health"
 
 [node name="comment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2

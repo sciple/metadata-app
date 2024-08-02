@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd51kugvn0abf"]
+[gd_scene load_steps=6 format=3 uid="uid://dd51kugvn0abf"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_vah2h"]
 [ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="2_quu13"]
+[ext_resource type="PackedScene" uid="uid://jpdmj2inuyk1" path="res://UI/label.tscn" id="2_wtea6"]
 [ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="3_u1an4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6oo42"]
@@ -138,15 +139,13 @@ slot/13/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/13/right_icon = null
 slot/13/draw_stylebox = true
 
-[node name="vendor" type="Label" parent="." index="1"]
+[node name="vendor" parent="." index="1" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.266667, 0.266667, 0.266667, 1)
-theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Vendor"
-horizontal_alignment = 1
 
 [node name="vendor_option" parent="." index="2" instance=ExtResource("2_quu13")]
 layout_mode = 2
+alignment = 1
 item_count = 4
 popup/item_1/text = "in-house breeding"
 popup/item_1/id = 1
@@ -155,14 +154,15 @@ popup/item_2/id = 2
 popup/item_3/text = "Harlan"
 popup/item_3/id = 3
 
-[node name="Strain" type="Label" parent="." index="3"]
+[node name="strain" parent="." index="3" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Strain"
-horizontal_alignment = 1
 
 [node name="strain_option" parent="." index="4" instance=ExtResource("2_quu13")]
 layout_mode = 2
+alignment = 1
 item_count = 4
 popup/item_1/text = "C57BL/6J"
 popup/item_1/id = 1
@@ -171,14 +171,15 @@ popup/item_2/id = 2
 popup/item_3/text = "DBA/2"
 popup/item_3/id = 3
 
-[node name="Light cycle" type="Label" parent="." index="5"]
+[node name="light_cycle" parent="." index="5" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Light cycle"
-horizontal_alignment = 1
 
 [node name="light_cycle_option" parent="." index="6" instance=ExtResource("2_quu13")]
 layout_mode = 2
+alignment = 1
 item_count = 4
 popup/item_1/text = "07:00-19:00 Light"
 popup/item_1/id = 1
@@ -187,40 +188,37 @@ popup/item_2/id = 2
 popup/item_3/text = "07:00-19:00 Dark"
 popup/item_3/id = 3
 
-[node name="enrichment" type="Label" parent="." index="7"]
+[node name="enrichment" parent="." index="7" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Enrichment"
-horizontal_alignment = 1
 
 [node name="enrichment_option" parent="." index="8" instance=ExtResource("2_quu13")]
 layout_mode = 2
+alignment = 1
 item_count = 3
 popup/item_1/text = "True"
 popup/item_1/id = 1
 popup/item_2/text = "False"
 popup/item_2/id = 2
 
-[node name="diet" type="Label" parent="." index="9"]
+[node name="diet" parent="." index="9" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
-text = "Dietary status"
-horizontal_alignment = 1
+text = "Diet"
 
 [node name="diet_option" parent="." index="10" instance=ExtResource("2_quu13")]
 layout_mode = 2
+alignment = 1
 item_count = 3
 popup/item_1/text = "Fed"
 popup/item_1/id = 1
 popup/item_2/text = "Fasted"
 popup/item_2/id = 2
 
-[node name="handling" type="Label" parent="." index="11"]
+[node name="handling" parent="." index="11" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
-text = "Handling
-"
-horizontal_alignment = 1
+text = "Handling"
 
 [node name="comments" parent="." index="12" instance=ExtResource("3_u1an4")]
 custom_minimum_size = Vector2(90, 50)
