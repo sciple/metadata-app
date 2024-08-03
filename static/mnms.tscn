@@ -155,8 +155,6 @@ popup/item_3/id = 3
 
 [node name="strain" parent="." index="3" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
-theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Strain"
 
 [node name="strain_option" parent="." index="4" instance=ExtResource("2_quu13")]
@@ -171,8 +169,6 @@ popup/item_3/id = 3
 
 [node name="light_cycle" parent="." index="5" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
-theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Light cycle"
 
 [node name="light_cycle_option" parent="." index="6" instance=ExtResource("2_quu13")]
@@ -187,8 +183,6 @@ popup/item_3/id = 3
 
 [node name="enrichment" parent="." index="7" instance=ExtResource("2_wtea6")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
-theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Enrichment"
 
 [node name="enrichment_option" parent="." index="8" instance=ExtResource("2_quu13")]
