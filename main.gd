@@ -32,7 +32,6 @@ func _ready():
 func _on_cage_button_pressed():
 	Global.create_node("cage", Global.cage_node, Global.cage_index)
 	
-
 func _on_experiment_button_pressed():
 	Global.create_node("experiment",Global.experiment_node, Global.experiment_index)
 
@@ -47,6 +46,9 @@ func _on_treatment_button_pressed():
 
 func _on_operator_button_pressed():
 	Global.create_node("operator",Global.operator_node, Global.operator_index)
+
+func _on_genotype_button_pressed():
+	Global.create_node("genotype",Global.genotype_node, Global.genotype_index)
 
 
 # -------------------- GLOBAL FUNCTIONS
@@ -133,3 +135,6 @@ func _on_confirmation_dialog_confirmed():
 
 func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
+
+
+

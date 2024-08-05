@@ -8,6 +8,7 @@ var health_index = -1
 var comment_index = -1
 var treatment_index = -1
 var operator_index = -1
+var genotype_index = -1
 var node_elements = {}
 
 var total_number_of_subjects = 0
@@ -19,6 +20,7 @@ var health_node = load("res://health_plus/health_plus.tscn")
 var comment_node = load("res://comment_plus/comment_plus.tscn")
 var treatment_node = load("res://treatment/treatment.tscn")
 var operator_node = load("res://operator/operator.tscn")
+var genotype_node = load("res://genotype/genotype.tscn")
 
 
 func create_node(node_name, node_type, node_index, node_position=Vector2(50,50)):

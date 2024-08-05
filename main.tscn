@@ -68,6 +68,10 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 layout_mode = 2
 text = "Operator"
 
+[node name="genotype_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Genotype"
+
 [node name="cage_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 text = "Cage"
@@ -116,21 +120,21 @@ show_arrange_button = false
 
 [node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 12.0
-offset_right = 354.0
-offset_bottom = 433.0
+offset_left = 11.0
+offset_top = 50.0
+offset_right = 221.0
+offset_bottom = 471.0
 mouse_filter = 1
-position_offset = Vector2(144, 12)
+position_offset = Vector2(11, 50)
 
 [node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
 layout_mode = 0
-offset_left = 584.0
-offset_top = 12.0
-offset_right = 770.0
-offset_bottom = 174.0
+offset_left = 445.0
+offset_top = 18.0
+offset_right = 631.0
+offset_bottom = 180.0
 mouse_filter = 1
-position_offset = Vector2(584, 12)
+position_offset = Vector2(445, 18)
 draggable = false
 selectable = false
 
@@ -145,21 +149,21 @@ position_offset = Vector2(958, 10)
 
 [node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
 layout_mode = 0
-offset_left = 404.0
-offset_top = 12.0
-offset_right = 533.0
-offset_bottom = 82.0
+offset_left = 268.0
+offset_top = 18.0
+offset_right = 397.0
+offset_bottom = 88.0
 mouse_filter = 1
-position_offset = Vector2(404, 12)
+position_offset = Vector2(268, 18)
 
 [node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 458.0
-offset_right = 356.0
-offset_bottom = 551.0
+offset_left = 268.0
+offset_top = 104.0
+offset_right = 397.0
+offset_bottom = 197.0
 mouse_filter = 1
-position_offset = Vector2(200, 458)
+position_offset = Vector2(268, 104)
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="GraphEdit"]
 initial_position = 2
@@ -171,11 +175,8 @@ ok_button_text = "Delete"
 dialog_text = "Delete selected node(s)?"
 
 [node name="timeline" parent="GraphEdit" instance=ExtResource("8_t677l")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 488.0
-offset_bottom = 155.0
+layout_mode = 1
+offset_left = -352.0
 mouse_filter = 1
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
@@ -245,6 +246,7 @@ grow_vertical = 0
 [node name="PopupMenu" type="PopupMenu" parent="."]
 
 [connection signal="pressed" from="toolbar/operator_button" to="." method="_on_operator_button_pressed"]
+[connection signal="pressed" from="toolbar/genotype_button" to="." method="_on_genotype_button_pressed"]
 [connection signal="pressed" from="toolbar/cage_button" to="." method="_on_cage_button_pressed"]
 [connection signal="pressed" from="toolbar/experiment_button" to="." method="_on_experiment_button_pressed"]
 [connection signal="pressed" from="toolbar/treatment_button" to="." method="_on_treatment_button_pressed"]
