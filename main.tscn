@@ -127,17 +127,6 @@ offset_bottom = 471.0
 mouse_filter = 1
 position_offset = Vector2(11, 50)
 
-[node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
-layout_mode = 0
-offset_left = 445.0
-offset_top = 18.0
-offset_right = 631.0
-offset_bottom = 180.0
-mouse_filter = 1
-position_offset = Vector2(445, 18)
-draggable = false
-selectable = false
-
 [node name="log" parent="GraphEdit" instance=ExtResource("6_oagim")]
 layout_mode = 0
 offset_left = 958.0
@@ -165,6 +154,15 @@ offset_bottom = 197.0
 mouse_filter = 1
 position_offset = Vector2(268, 104)
 
+[node name="timeline" parent="GraphEdit" instance=ExtResource("8_t677l")]
+layout_mode = 1
+offset_left = -360.0
+offset_top = -142.0
+offset_right = -8.0
+offset_bottom = -5.0
+mouse_filter = 1
+position_offset = Vector2(792, 426)
+
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="GraphEdit"]
 initial_position = 2
 size = Vector2i(203, 90)
@@ -174,10 +172,14 @@ always_on_top = true
 ok_button_text = "Delete"
 dialog_text = "Delete selected node(s)?"
 
-[node name="timeline" parent="GraphEdit" instance=ExtResource("8_t677l")]
-layout_mode = 1
-offset_left = -352.0
+[node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 23.0
+offset_right = 658.0
+offset_bottom = 135.0
 mouse_filter = 1
+position_offset = Vector2(472, 23)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
