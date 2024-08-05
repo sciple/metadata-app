@@ -118,7 +118,7 @@ minimap_enabled = false
 show_grid_buttons = false
 show_arrange_button = false
 
-[node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
+[node name="MNMS" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("3_wcure")]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 50.0
@@ -127,7 +127,7 @@ offset_bottom = 471.0
 mouse_filter = 1
 position_offset = Vector2(11, 50)
 
-[node name="log" parent="GraphEdit" instance=ExtResource("6_oagim")]
+[node name="log" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("6_oagim")]
 layout_mode = 0
 offset_left = 958.0
 offset_top = 10.0
@@ -136,7 +136,7 @@ offset_bottom = 82.0
 mouse_filter = 1
 position_offset = Vector2(958, 10)
 
-[node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
+[node name="operator" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("7_gjysb")]
 layout_mode = 0
 offset_left = 268.0
 offset_top = 18.0
@@ -145,7 +145,7 @@ offset_bottom = 88.0
 mouse_filter = 1
 position_offset = Vector2(268, 18)
 
-[node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
+[node name="sex_plus" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("5_ijwid")]
 layout_mode = 0
 offset_left = 268.0
 offset_top = 104.0
@@ -154,7 +154,7 @@ offset_bottom = 197.0
 mouse_filter = 1
 position_offset = Vector2(268, 104)
 
-[node name="timeline" parent="GraphEdit" instance=ExtResource("8_t677l")]
+[node name="timeline" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("8_t677l")]
 layout_mode = 1
 offset_left = -360.0
 offset_top = -142.0
@@ -172,7 +172,7 @@ always_on_top = true
 ok_button_text = "Delete"
 dialog_text = "Delete selected node(s)?"
 
-[node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
+[node name="project" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("6_b43n7")]
 layout_mode = 0
 offset_left = 472.0
 offset_top = 23.0

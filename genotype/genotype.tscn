@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="2_y2mrw"]
 [ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="3_oyywl"]
 
-[node name="genotype" instance=ExtResource("1_at6b1")]
+[node name="genotype" groups=["genotype"] instance=ExtResource("1_at6b1")]
 offset_right = 202.0
 title = "Genotype"
 slot/0/left_enabled = false

@@ -74,3 +74,5 @@ placeholder_text = "Dose + unit (i.e. mg/kg)"
 
 [node name="comments" parent="VBoxContainer" index="3" instance=ExtResource("3_2cn8d")]
 layout_mode = 2
+
+[connection signal="node_selected" from="." to="." method="_on_node_selected"]

@@ -9,7 +9,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53jfp"]
 
-[node name="experiment_plus" instance=ExtResource("1_wfbhc")]
+[node name="experiment_plus" groups=["experiment"] instance=ExtResource("1_wfbhc")]
 offset_right = 279.0
 offset_bottom = 286.0
 resizable = true

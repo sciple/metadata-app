@@ -24,7 +24,7 @@ func _on_pressed():
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erurg"]
 
-[node name="health_plus" instance=ExtResource("1_xbn3q")]
+[node name="health_plus" groups=["health"] instance=ExtResource("1_xbn3q")]
 offset_right = 205.0
 offset_bottom = 165.0
 title = "Health issue"

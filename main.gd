@@ -27,28 +27,29 @@ func _ready():
 			print (node.title, " position (x,y): ", node_position.x, " | ", node_position.y)
 	print()
 
+# the button must assign also the group to each cage
 
 # -------------------- BUTTONS
 func _on_cage_button_pressed():
-	Global.create_node("cage", Global.cage_node, Global.cage_index)
+	Global.create_node("cage", Global.cage_node, Global.cage_index, Vector2(50,50), "cage")
 	
 func _on_experiment_button_pressed():
-	Global.create_node("experiment",Global.experiment_node, Global.experiment_index)
+	Global.create_node("experiment",Global.experiment_node, Global.experiment_index, Vector2(50,50), "experiment")
 
 func _on_health_button_pressed():
-	Global.create_node("health_plus",Global.health_node, Global.health_index)
+	Global.create_node("health_plus",Global.health_node, Global.health_index, Vector2(50,50), "health")
 
 func _on_comment_button_pressed():
-	Global.create_node("comment_plus",Global.comment_node, Global.comment_index)
+	Global.create_node("comment_plus",Global.comment_node, Global.comment_index, Vector2(50,50), "comment")
 
 func _on_treatment_button_pressed():
-	Global.create_node("treatment",Global.treatment_node, Global.treatment_index)
+	Global.create_node("treatment",Global.treatment_node, Global.treatment_index, Vector2(50,50), "treatment")
 
 func _on_operator_button_pressed():
-	Global.create_node("operator",Global.operator_node, Global.operator_index)
+	Global.create_node("operator",Global.operator_node, Global.operator_index, Vector2(50,50), "operator")
 
 func _on_genotype_button_pressed():
-	Global.create_node("genotype",Global.genotype_node, Global.genotype_index)
+	Global.create_node("genotype",Global.genotype_node, Global.genotype_index, Vector2(50,50), "genotype")
 
 
 # -------------------- GLOBAL FUNCTIONS

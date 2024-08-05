@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_4wxmx"]
 [ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_prsj8"]
 
-[node name="operator" instance=ExtResource("1_4wxmx")]
+[node name="operator" groups=["operator"] instance=ExtResource("1_4wxmx")]
 offset_right = 129.0
 title = "Operator"
 slot/0/left_enabled = false

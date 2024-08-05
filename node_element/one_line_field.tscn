@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca56vxmr4iw6d"]
+[gd_scene load_steps=3 format=3 uid="uid://ca56vxmr4iw6d"]
+
+[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="1_ascio"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d26xn"]
 content_margin_left = 2.0
@@ -25,3 +27,4 @@ context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+script = ExtResource("1_ascio")

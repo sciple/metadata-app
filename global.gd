@@ -23,12 +23,13 @@ var operator_node = load("res://operator/operator.tscn")
 var genotype_node = load("res://genotype/genotype.tscn")
 
 
-func create_node(node_name, node_type, node_index, node_position=Vector2(50,50)):
+func create_node(node_name, node_type, node_index, node_position=Vector2(50,50), node_group="generic"):
 	var node = node_type.instantiate()
 	node_index += 1
 	get_node("../Main/GraphEdit").add_child(node)
 	node.position_offset = node_position
 	node.name = node_name + "_" + str(node_index)
+	node.add_to_group(node_group)
 
 func init_node_elements():
 	self.node_elements = {}

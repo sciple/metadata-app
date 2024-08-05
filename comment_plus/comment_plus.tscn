@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_n6the"]
 [ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="2_av1jk"]
 
-[node name="comment_plus" instance=ExtResource("1_n6the")]
+[node name="comment_plus" groups=["comment"] instance=ExtResource("1_n6the")]
 offset_right = 191.0
 offset_bottom = 145.0
 title = "Note"

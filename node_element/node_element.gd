@@ -42,3 +42,11 @@ func _on_log_button_pressed():
 	var node = load("res://log/log_entry.tscn")
 	var log_entry = node.instantiate()
 	$VBoxContainer.add_child(log_entry)
+
+
+func _on_node_selected():
+	# Gather all the connected nodes
+	# if node is in "cage" group:
+	# for each one_line_edit in downstreamt connected cage
+	# activate highlight funciton form the one_line_edit
+	pass # Replace with function body.
