@@ -118,15 +118,6 @@ minimap_enabled = false
 show_grid_buttons = false
 show_arrange_button = false
 
-[node name="MNMS" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("3_wcure")]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 50.0
-offset_right = 221.0
-offset_bottom = 471.0
-mouse_filter = 1
-position_offset = Vector2(11, 50)
-
 [node name="log" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("6_oagim")]
 layout_mode = 0
 offset_left = 958.0
@@ -138,21 +129,21 @@ position_offset = Vector2(958, 10)
 
 [node name="operator" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("7_gjysb")]
 layout_mode = 0
-offset_left = 268.0
-offset_top = 18.0
-offset_right = 397.0
-offset_bottom = 88.0
+offset_left = 176.0
+offset_top = 356.0
+offset_right = 305.0
+offset_bottom = 426.0
 mouse_filter = 1
-position_offset = Vector2(268, 18)
+position_offset = Vector2(176, 356)
 
 [node name="sex_plus" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("5_ijwid")]
 layout_mode = 0
-offset_left = 268.0
-offset_top = 104.0
-offset_right = 397.0
-offset_bottom = 197.0
+offset_left = 176.0
+offset_top = 442.0
+offset_right = 305.0
+offset_bottom = 535.0
 mouse_filter = 1
-position_offset = Vector2(268, 104)
+position_offset = Vector2(176, 442)
 
 [node name="timeline" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("8_t677l")]
 layout_mode = 1
@@ -180,6 +171,15 @@ offset_right = 658.0
 offset_bottom = 135.0
 mouse_filter = 1
 position_offset = Vector2(472, 23)
+
+[node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 50.0
+offset_right = 305.0
+offset_bottom = 322.0
+mouse_filter = 1
+position_offset = Vector2(11, 50)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1

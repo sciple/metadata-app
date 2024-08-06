@@ -1,16 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd51kugvn0abf"]
+[gd_scene load_steps=5 format=3 uid="uid://dd51kugvn0abf"]
 
 [ext_resource type="PackedScene" uid="uid://bnr0tg0ideh1y" path="res://node_element/node_element.tscn" id="1_vah2h"]
 [ext_resource type="PackedScene" uid="uid://b0qq2mo0de8cu" path="res://node_element/option_button.tscn" id="2_quu13"]
 [ext_resource type="PackedScene" uid="uid://jpdmj2inuyk1" path="res://UI/label.tscn" id="2_wtea6"]
 [ext_resource type="PackedScene" uid="uid://2ef7xpk2mjkj" path="res://node_element/comments.tscn" id="3_u1an4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6oo42"]
-
-[node name="MNMS" instance=ExtResource("1_vah2h")]
-offset_right = 210.0
-offset_bottom = 421.0
-resizable = true
+[node name="MNMS" groups=["mnms"] instance=ExtResource("1_vah2h")]
+offset_right = 294.0
+offset_bottom = 266.0
 title = "MNMS"
 slot/0/left_enabled = false
 slot/0/left_type = 0
@@ -39,42 +36,6 @@ slot/2/right_type = 0
 slot/2/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
-slot/3/left_enabled = false
-slot/3/left_type = 0
-slot/3/left_color = Color(1, 1, 1, 1)
-slot/3/left_icon = null
-slot/3/right_enabled = false
-slot/3/right_type = 0
-slot/3/right_color = Color(0.133333, 0.133333, 0.133333, 1)
-slot/3/right_icon = null
-slot/3/draw_stylebox = true
-slot/4/left_enabled = false
-slot/4/left_type = 0
-slot/4/left_color = Color(1, 1, 1, 1)
-slot/4/left_icon = null
-slot/4/right_enabled = false
-slot/4/right_type = 0
-slot/4/right_color = Color(0.133333, 0.133333, 0.133333, 1)
-slot/4/right_icon = null
-slot/4/draw_stylebox = true
-slot/5/left_enabled = false
-slot/5/left_type = 0
-slot/5/left_color = Color(1, 1, 1, 1)
-slot/5/left_icon = null
-slot/5/right_enabled = false
-slot/5/right_type = 0
-slot/5/right_color = Color(0.133333, 0.133333, 0.133333, 1)
-slot/5/right_icon = null
-slot/5/draw_stylebox = true
-slot/6/left_enabled = false
-slot/6/left_type = 0
-slot/6/left_color = Color(1, 1, 1, 1)
-slot/6/left_icon = null
-slot/6/right_enabled = false
-slot/6/right_type = 0
-slot/6/right_color = Color(0.133333, 0.133333, 0.133333, 1)
-slot/6/right_icon = null
-slot/6/draw_stylebox = true
 
 [node name="global" type="Label" parent="." index="1"]
 layout_mode = 2
@@ -82,14 +43,38 @@ theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 text = "Global Apply"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." index="2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
 layout_mode = 2
 
-[node name="vendor" parent="VBoxContainer" index="0" instance=ExtResource("2_wtea6")]
+[node name="VBoxContainer_left" type="VBoxContainer" parent="HBoxContainer" index="0"]
 layout_mode = 2
+
+[node name="vendor" parent="HBoxContainer/VBoxContainer_left" index="0" instance=ExtResource("2_wtea6")]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Vendor"
 
-[node name="vendor_option" parent="VBoxContainer" index="1" instance=ExtResource("2_quu13")]
+[node name="strain" parent="HBoxContainer/VBoxContainer_left" index="1" instance=ExtResource("2_wtea6")]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Strain"
+
+[node name="light_cycle" parent="HBoxContainer/VBoxContainer_left" index="2" instance=ExtResource("2_wtea6")]
+layout_mode = 2
+text = "Light cycle"
+
+[node name="enrichment" parent="HBoxContainer/VBoxContainer_left" index="3" instance=ExtResource("2_wtea6")]
+layout_mode = 2
+text = "Enrichment"
+
+[node name="diet" parent="HBoxContainer/VBoxContainer_left" index="4" instance=ExtResource("2_wtea6")]
+layout_mode = 2
+text = "Diet"
+
+[node name="VBoxContainer_right" type="VBoxContainer" parent="HBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="vendor_option" parent="HBoxContainer/VBoxContainer_right" index="0" instance=ExtResource("2_quu13")]
 layout_mode = 2
 item_count = 4
 popup/item_1/text = "in-house breeding"
@@ -99,15 +84,9 @@ popup/item_2/id = 2
 popup/item_3/text = "Harlan"
 popup/item_3/id = 3
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="." index="3"]
+[node name="strain_option" parent="HBoxContainer/VBoxContainer_right" index="1" instance=ExtResource("2_quu13")]
 layout_mode = 2
-
-[node name="strain" parent="VBoxContainer2" index="0" instance=ExtResource("2_wtea6")]
-layout_mode = 2
-text = "Strain"
-
-[node name="strain_option" parent="VBoxContainer2" index="1" instance=ExtResource("2_quu13")]
-layout_mode = 2
+size_flags_horizontal = 3
 item_count = 4
 popup/item_1/text = "C57BL/6J"
 popup/item_1/id = 1
@@ -116,14 +95,7 @@ popup/item_2/id = 2
 popup/item_3/text = "DBA/2"
 popup/item_3/id = 3
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="." index="4"]
-layout_mode = 2
-
-[node name="light_cycle" parent="VBoxContainer3" index="0" instance=ExtResource("2_wtea6")]
-layout_mode = 2
-text = "Light cycle"
-
-[node name="light_cycle_option" parent="VBoxContainer3" index="1" instance=ExtResource("2_quu13")]
+[node name="light_cycle_option" parent="HBoxContainer/VBoxContainer_right" index="2" instance=ExtResource("2_quu13")]
 layout_mode = 2
 item_count = 4
 popup/item_1/text = "07:00-19:00 Light"
@@ -133,14 +105,7 @@ popup/item_2/id = 2
 popup/item_3/text = "07:00-19:00 Dark"
 popup/item_3/id = 3
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="." index="5"]
-layout_mode = 2
-
-[node name="enrichment" parent="VBoxContainer4" index="0" instance=ExtResource("2_wtea6")]
-layout_mode = 2
-text = "Enrichment"
-
-[node name="enrichment_option" parent="VBoxContainer4" index="1" instance=ExtResource("2_quu13")]
+[node name="enrichment_option" parent="HBoxContainer/VBoxContainer_right" index="3" instance=ExtResource("2_quu13")]
 layout_mode = 2
 item_count = 3
 popup/item_1/text = "True"
@@ -148,14 +113,7 @@ popup/item_1/id = 1
 popup/item_2/text = "False"
 popup/item_2/id = 2
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="." index="6"]
-layout_mode = 2
-
-[node name="diet" parent="VBoxContainer5" index="0" instance=ExtResource("2_wtea6")]
-layout_mode = 2
-text = "Diet"
-
-[node name="diet_option" parent="VBoxContainer5" index="1" instance=ExtResource("2_quu13")]
+[node name="diet_option" parent="HBoxContainer/VBoxContainer_right" index="4" instance=ExtResource("2_quu13")]
 layout_mode = 2
 item_count = 3
 popup/item_1/text = "Fed"
@@ -163,16 +121,12 @@ popup/item_1/id = 1
 popup/item_2/text = "Fasted"
 popup/item_2/id = 2
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="." index="7"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="3"]
 layout_mode = 2
 
-[node name="handling" parent="VBoxContainer6" index="0" instance=ExtResource("2_wtea6")]
+[node name="handling" parent="VBoxContainer" index="0" instance=ExtResource("2_wtea6")]
 layout_mode = 2
 text = "Handling"
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer6" index="1"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_6oo42")
-
-[node name="comments" parent="VBoxContainer6" index="2" instance=ExtResource("3_u1an4")]
+[node name="comments" parent="VBoxContainer" index="1" instance=ExtResource("3_u1an4")]
 layout_mode = 2
