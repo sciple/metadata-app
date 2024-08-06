@@ -25,7 +25,7 @@ var genotype_node = load("res://genotype/genotype.tscn")
 var main_graph
 
 var red_color = Color.hex(0xff2f40ff)
-var blue_color = Color.hex(0x709124ff)
+var blue_color = Color.hex(0x005878ff)
 
 
 func _ready():
