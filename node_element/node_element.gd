@@ -14,6 +14,13 @@ func _ready():
 	node_type = self.get_groups()[0]
 	print(self.node_type, " node type: ", node_type)
 	print("--------------------------------------")
+	
+	if self.node_type == "treatment":
+		print("node to change!")
+		var new_stylebox_normal = self.get_theme_stylebox("normal").duplicate()
+		var tmp = new_stylebox_normal.get_property_list()
+		new_stylebox_normal.bg_color = Color(Global.red_color)
+		self.add_theme_stylebox_override("normal", new_stylebox_normal)
 
 
 
@@ -47,18 +54,23 @@ func _on_log_button_pressed():
 func _on_node_selected():
 	var connected_cages = []
 	var downstream_node
+	var upstream_node
+	
 	# Gather all the connected nodes
 	var connection_list = Global.main_graph.get_connection_list() # get list of all connections
 	print("List of all connections", connection_list)
 	for i in connection_list:
 		downstream_node = Global.main_graph.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
+		upstream_node = Global.main_graph.get_node(NodePath(i['from_node'])) # only nodes that are connected (i.e. receive a connection on the left)
+		
 		# if node is in "cage" group:
 		if downstream_node.is_in_group("cage"):# get only nodes of type: "cage"
-			print("Connections to cages: ", i["to_port"])
-			connected_cages.append(i["to_port"])
-			# activate highlight function in the cage_plus node the one_line_edit
-			downstream_node.change_subject_color(i["to_port"])
-	print(connected_cages)
+			if upstream_node.is_in_group("treatment"):
+				print("Connections to cages: ", i["to_port"])
+				connected_cages.append(i["to_port"])
+				# activate highlight function in the cage_plus node the one_line_edit
+				downstream_node.change_subject_color(i["to_port"])
+		print(connected_cages)
 
 
 func _on_node_deselected():

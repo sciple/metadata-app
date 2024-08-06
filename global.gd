@@ -26,6 +26,9 @@ var main_graph
 
 var red_color = Color.hex(0xff2f40ff)
 var blue_color = Color.hex(0x005878ff)
+var green_color = Color.hex(0x709124ff)
+
+var color_list = [red_color, blue_color, green_color]
 
 
 func _ready():
