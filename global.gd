@@ -22,6 +22,16 @@ var treatment_node = load("res://treatment/treatment.tscn")
 var operator_node = load("res://operator/operator.tscn")
 var genotype_node = load("res://genotype/genotype.tscn")
 
+var main_graph
+
+var red_color = Color.hex(0xff2f40ff)
+var blue_color = Color.hex(0x709124ff)
+
+
+func _ready():
+	# get the main node graph to enable foreign access
+	var tmp = get_tree().root.get_node("Main")
+	main_graph = tmp.get_node("GraphEdit")
 
 func create_node(node_name, node_type, node_index, node_position=Vector2(50,50), node_group="generic"):
 	var node = node_type.instantiate()

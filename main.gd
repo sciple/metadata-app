@@ -1,33 +1,19 @@
 extends Control
 
-#var cage_node = load("res://cage/cage.tscn")
-#var experiment_node = load("res://experiment/experiment.tscn")
-#var parent_node = load("res://cage/parent_cage.tscn")
-#var health_node = load("res://health/health.tscn")
-#var comment_node = load("res://comment/comment.tscn")
-#var treatment_node = load("res://treatment/treatment.tscn")
-
-# object that holds the graphedit object
-var G
-
-var initial_position = Vector2(40,40)
 var node_index = 0
 var connection_list
 
 func _ready():
 	OS.low_processor_usage_mode = true
 	var time_it = Time.get_datetime_string_from_system ()
-	print(time_it, " | MD5sum encoding: ", time_it.md5_text())
 	print()
-	G = $GraphEdit
+	print(time_it, " | MD5sum encoding: ", time_it.md5_text())
 
-	for node in G.get_children():
+	for node in Global.main_graph.get_children():
 		if node is GraphNode:
 			var node_position = node.position_offset
 			print (node.title, " position (x,y): ", node_position.x, " | ", node_position.y)
 	print()
-
-# the button must assign also the group to each cage
 
 # -------------------- BUTTONS
 func _on_cage_button_pressed():
@@ -87,9 +73,9 @@ func get_cages():
 	# loop over all cages
 	# this function should be applied independently for all different groups of nodes
 	print('execute: get_cages()')
-	connection_list = G.get_connection_list() # get list of all connections
+	connection_list = Global.main_graph.get_connection_list() # get list of all connections
 	for i in connection_list:
-		var cage = G.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
+		var cage = Global.main_graph.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
 		if cage.is_in_group("cage"):# get only nodes of type: "cage"
 			cage.get_subjects()
 			cage.update_title_id()
@@ -108,11 +94,11 @@ func _on_save_button_pressed():
 func _input(event):
 	if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_RIGHT:
 		print("Mouse Click/Unclick at: ", event.position)
-		print(G.zoom)
+		print(Global.main_graph.zoom)
 		print(event.position)
-		print(event.position / G.zoom)
+		print(event.position / Global.main_graph.zoom)
 		#tmp.position = (G.scroll_offset + G.size / 2) / G.zoom - node.size / 2;
-		var tmp_position = (G.scroll_offset + G.size / 2) / G.zoom
+		var tmp_position = (Global.main_graph.scroll_offset + Global.main_graph.size / 2) / Global.main_graph.zoom
 		Global.create_node("cage", Global.cage_node, Global.cage_index, tmp_position)
 		#Global.create_node("cage", Global.cage_node, Global.cage_index, event.position * G.zoom)
 
@@ -132,7 +118,6 @@ func _on_confirmation_dialog_confirmed():
 		if selected_nodes[node]:
 			node.queue_free()
 	selected_nodes = {}
-
 
 func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
