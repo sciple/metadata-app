@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NodeData" load_steps=2 format=3 uid="uid://cnl0tebjka120"]
+
+[ext_resource type="Script" path="res://node_data.gd" id="1_hvs51"]
+
+[resource]
+script = ExtResource("1_hvs51")
+name = ""
+type = ""
+offset = Vector2(0, 0)
+data = {}
