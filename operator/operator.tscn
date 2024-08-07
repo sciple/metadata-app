@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ca56vxmr4iw6d" path="res://node_element/one_line_field.tscn" id="2_prsj8"]
 
 [node name="operator" groups=["operator"] instance=ExtResource("1_4wxmx")]
-offset_right = 129.0
+offset_right = 215.0
+offset_bottom = 70.0
 title = "Operator"
 slot/0/left_enabled = false
 slot/0/left_type = 0
