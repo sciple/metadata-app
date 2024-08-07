@@ -63,8 +63,8 @@ func save_data(file_name):
 		print("Error saving graph_data")
 
 
-func load_data("save.res"):
-	if ResourceLoader.exists("save.res"):
+func load_data(file_name):
+	if ResourceLoader.exists(file_name):
 		var graph_data = ResourceLoader.load(file_name)
 		if graph_data is GraphData:
 			init_graph(graph_data)
