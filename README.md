@@ -24,6 +24,7 @@ GUI for managing MNMS-compliant metadata
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
 - Enable random allocation of subjects to condition
 - Use llm-to-SQL for grouping subjects
+- connecting experiments to timeline node automatically sets the gantt chart
 
 
 ## Notes
