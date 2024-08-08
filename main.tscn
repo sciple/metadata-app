@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=11 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
 [ext_resource type="PackedScene" uid="uid://dd51kugvn0abf" path="res://static/mnms.tscn" id="3_wcure"]
 [ext_resource type="PackedScene" uid="uid://dekk1mjqa7kgg" path="res://static/sex_plus.tscn" id="5_ijwid"]
 [ext_resource type="PackedScene" uid="uid://dryeoirtyhc1j" path="res://project/project.tscn" id="6_b43n7"]
-[ext_resource type="PackedScene" uid="uid://twciulaq6gja" path="res://log/log.tscn" id="6_oagim"]
 [ext_resource type="PackedScene" uid="uid://bk0takadqfg68" path="res://operator/operator.tscn" id="7_gjysb"]
 [ext_resource type="PackedScene" uid="uid://ca1808hb6f38m" path="res://timeline/timeline.tscn" id="8_t677l"]
 
@@ -18,13 +17,6 @@ border_width_right = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eo2x6"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf0vp"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -50,7 +42,7 @@ text = "License
 "
 
 [node name="license" type="LineEdit" parent="toolbar"]
-custom_minimum_size = Vector2(80, 0)
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.41598, 0.41598, 0.41598, 1)
@@ -72,6 +64,10 @@ text = "Operator"
 layout_mode = 2
 text = "Genotype"
 
+[node name="treatment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Treatment"
+
 [node name="cage_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 text = "Cage"
@@ -79,10 +75,6 @@ text = "Cage"
 [node name="experiment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
 text = "Experiment"
-
-[node name="treatment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
-layout_mode = 2
-text = "Treatment"
 
 [node name="health_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
@@ -119,26 +111,18 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_eo2x6")
 right_disconnects = true
 connection_lines_thickness = 0.5
 minimap_enabled = false
+show_menu = false
 show_grid_buttons = false
 show_arrange_button = false
 
-[node name="log" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("6_oagim")]
-layout_mode = 0
-offset_left = 958.0
-offset_top = 10.0
-offset_right = 1064.0
-offset_bottom = 82.0
-mouse_filter = 1
-position_offset = Vector2(958, 10)
-
 [node name="sex_plus" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("5_ijwid")]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 442.0
-offset_right = 305.0
-offset_bottom = 535.0
+offset_left = 172.0
+offset_top = 450.0
+offset_right = 301.0
+offset_bottom = 543.0
 mouse_filter = 1
-position_offset = Vector2(176, 442)
+position_offset = Vector2(172, 450)
 
 [node name="timeline" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("8_t677l")]
 layout_mode = 1
@@ -149,67 +133,32 @@ offset_bottom = -5.0
 mouse_filter = 1
 position_offset = Vector2(792, 426)
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="GraphEdit"]
-initial_position = 2
-size = Vector2i(203, 90)
-unresizable = true
-borderless = true
-always_on_top = true
-ok_button_text = "Delete"
-dialog_text = "Delete selected node(s)?"
-
 [node name="project" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("6_b43n7")]
 layout_mode = 0
-offset_left = 472.0
-offset_top = 23.0
-offset_right = 658.0
-offset_bottom = 135.0
+offset_left = 416.0
+offset_top = 12.0
+offset_right = 602.0
+offset_bottom = 124.0
 mouse_filter = 1
-position_offset = Vector2(472, 23)
+position_offset = Vector2(416, 12)
 
 [node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 50.0
+offset_top = 12.0
 offset_right = 305.0
-offset_bottom = 326.0
+offset_bottom = 307.0
 mouse_filter = 1
-position_offset = Vector2(11, 50)
+position_offset = Vector2(11, 12)
 
 [node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
 layout_mode = 0
 offset_left = 88.0
-offset_top = 346.0
+offset_top = 322.0
 offset_right = 303.0
-offset_bottom = 416.0
+offset_bottom = 432.0
 mouse_filter = 1
-position_offset = Vector2(88, 346)
-
-[node name="orcid_container" type="HBoxContainer" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -248.0
-offset_top = 8.0
-offset_right = -20.0
-offset_bottom = 48.0
-grow_horizontal = 0
-
-[node name="orcid label" type="Label" parent="orcid_container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.929412, 0.94902, 0.00784314, 1)
-theme_override_font_sizes/font_size = 24
-text = "ORCiD"
-
-[node name="Orc-ID" type="LineEdit" parent="orcid_container"]
-custom_minimum_size = Vector2(180, 40)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_nf0vp")
-text = "0000-0002-3709-5504"
-alignment = 1
+position_offset = Vector2(88, 322)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -250,13 +199,22 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+initial_position = 2
+size = Vector2i(203, 90)
+unresizable = true
+borderless = true
+always_on_top = true
+ok_button_text = "Delete"
+dialog_text = "Delete selected node(s)?"
+
 [node name="PopupMenu" type="PopupMenu" parent="."]
 
 [connection signal="pressed" from="toolbar/operator_button" to="." method="_on_operator_button_pressed"]
 [connection signal="pressed" from="toolbar/genotype_button" to="." method="_on_genotype_button_pressed"]
+[connection signal="pressed" from="toolbar/treatment_button" to="." method="_on_treatment_button_pressed"]
 [connection signal="pressed" from="toolbar/cage_button" to="." method="_on_cage_button_pressed"]
 [connection signal="pressed" from="toolbar/experiment_button" to="." method="_on_experiment_button_pressed"]
-[connection signal="pressed" from="toolbar/treatment_button" to="." method="_on_treatment_button_pressed"]
 [connection signal="pressed" from="toolbar/health_button" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="toolbar/comment_button" to="." method="_on_comment_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
@@ -268,5 +226,5 @@ grow_vertical = 0
 [connection signal="node_deselected" from="GraphEdit" to="." method="_on_graph_edit_node_deselected"]
 [connection signal="node_selected" from="GraphEdit" to="." method="_on_graph_edit_node_selected"]
 [connection signal="paste_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_paste_nodes_request"]
-[connection signal="canceled" from="GraphEdit/ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
-[connection signal="confirmed" from="GraphEdit/ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

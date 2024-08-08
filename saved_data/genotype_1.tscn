@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_ff1ss"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_3h3qk"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_ttjdg"]
-[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="4_lydut"]
-[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="5_hkurv"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_0v7t5"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_jf6gp"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_ujpuq"]
+[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="4_kj0ix"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="5_5yrd1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -40,18 +40,18 @@ bg_color = Color(0.202698, 0.548856, 0.84226, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2un0"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="genotype_0" type="GraphNode" groups=["genotype"]]
+[node name="genotype_1" type="GraphNode" groups=["genotype"]]
 layout_mode = 0
 offset_left = 620.0
-offset_top = 200.0
+offset_top = 80.0
 offset_right = 822.0
-offset_bottom = 306.0
+offset_bottom = 186.0
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_ff1ss")
-theme_override_styles/panel_selected = ExtResource("1_ff1ss")
-theme_override_styles/titlebar = ExtResource("2_3h3qk")
+theme_override_styles/panel = ExtResource("1_0v7t5")
+theme_override_styles/panel_selected = ExtResource("1_0v7t5")
+theme_override_styles/titlebar = ExtResource("2_jf6gp")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(620, 200)
+position_offset = Vector2(620, 80)
 title = "Genotype"
 slot/0/left_enabled = false
 slot/0/left_type = 0
@@ -62,12 +62,12 @@ slot/0/right_type = 0
 slot/0/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
-script = ExtResource("3_ttjdg")
+script = ExtResource("3_ujpuq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="option_button" type="OptionButton" parent="VBoxContainer" instance=ExtResource("4_lydut")]
+[node name="option_button" type="OptionButton" parent="VBoxContainer" instance=ExtResource("4_kj0ix")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -86,7 +86,7 @@ popup/item_0/text = "Select"
 popup/item_0/id = 0
 popup/item_0/separator = true
 
-[node name="comments" type="TextEdit" parent="VBoxContainer" instance=ExtResource("5_hkurv")]
+[node name="comments" type="TextEdit" parent="VBoxContainer" instance=ExtResource("5_5yrd1")]
 custom_minimum_size = Vector2(90, 40)
 layout_mode = 2
 size_flags_horizontal = 3

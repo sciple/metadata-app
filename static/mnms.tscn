@@ -48,22 +48,17 @@ slot/3/right_color = Color(1, 1, 1, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
 
-[node name="global" type="Label" parent="." index="1"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
-text = "Global Apply"
-horizontal_alignment = 2
-
-[node name="HSeparator" type="HSeparator" parent="." index="2"]
+[node name="HSeparator" type="HSeparator" parent="." index="1"]
 layout_mode = 2
 theme_override_constants/separation = 10
 theme_override_styles/separator = SubResource("StyleBoxFlat_l854b")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." index="3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
 layout_mode = 2
 
 [node name="VBoxContainer_left" type="VBoxContainer" parent="HBoxContainer" index="0"]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="vendor" parent="HBoxContainer/VBoxContainer_left" index="0" instance=ExtResource("2_wtea6")]
 layout_mode = 2
@@ -89,6 +84,7 @@ text = "Diet"
 
 [node name="VBoxContainer_right" type="VBoxContainer" parent="HBoxContainer" index="1"]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="vendor_option" parent="HBoxContainer/VBoxContainer_right" index="0" instance=ExtResource("2_quu13")]
 layout_mode = 2
@@ -136,6 +132,11 @@ popup/item_1/text = "Fed"
 popup/item_1/id = 1
 popup/item_2/text = "Fasted"
 popup/item_2/id = 2
+
+[node name="HSeparator2" type="HSeparator" parent="." index="3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_l854b")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="4"]
 layout_mode = 2

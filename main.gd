@@ -64,7 +64,7 @@ func save_data():
 			print("saved: ", node_to_save.name)
 		else:
 			print("Error saving graph_data")
-
+	# the following may be needed to enable saving of downstream nodes
 	#for sub_node in node_to_save.get_children():
 		#sub_node.owner = node_to_save
 
@@ -75,17 +75,6 @@ func save_connections():
 	save_file.store_line(json_string)
 	print(json_string)
 	
-#func init_graph(graph_data: GraphData):
-	#clear_graph()
-	#for node in graph_data.nodes:
-		## Get new node from factory autoload (singleton)
-		#var gnode = PartFactory.get_node(node.type)
-		#gnode.offset = node.offset
-		#gnode.name = node.name
-		#get_node("Graph").add_child(gnode)
-	#for con in graph_data.connections:
-		#var _e = get_node("Graph").connect_node(con.from, con.from_port, con.to, con.to_port)
-
 
 func load_data():
 	print("--------------- LOAD function --------------- ")
@@ -121,9 +110,7 @@ func restore_connections():
 			print(con)
 			var _e = Global.main_graph.connect_node(con.from_node, con.from_port, con.to_node, con.to_port)
 	
-	
-	
-	
+
 func clear_graph():
 	Global.main_graph.clear_connections()
 	var nodes = Global.main_graph.get_children()
@@ -201,7 +188,8 @@ func _on_graph_edit_node_deselected(node):
 	selected_nodes[node] = false
 
 func _on_graph_edit_delete_nodes_request(nodes):
-	get_node("GraphEdit/ConfirmationDialog").visible=true
+	$ConfirmationDialog.visible = true
+	#get_node("GraphEdit/ConfirmationDialog").visible=true
 
 func _on_confirmation_dialog_confirmed():
 	for node in selected_nodes.keys():
