@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_64gf1"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_tidbh"]
-[ext_resource type="Script" path="res://cage_plus/cage_plus.gd" id="3_i2al8"]
-[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_lg1g3"]
-[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_ayp6d"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_nijsm"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_b6w3y"]
+[ext_resource type="Script" path="res://cage_plus/cage_plus.gd" id="3_4pjta"]
+[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_ug4s0"]
+[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_3n4u3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -13,7 +13,7 @@ corner_radius_top_right = 3
 expand_margin_top = 3.0
 expand_margin_bottom = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hax6w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w6i5"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -24,7 +24,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bfx8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrxbo"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -35,7 +35,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2oci"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdcck"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -46,7 +46,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whw7e"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bfr0"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -57,7 +57,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qycv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8p6g"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -68,7 +68,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkofj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hghj2"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -81,16 +81,17 @@ corner_radius_bottom_left = 3
 
 [node name="cage_0" type="GraphNode" groups=["cage"]]
 layout_mode = 0
-offset_left = 800.0
-offset_top = 220.0
-offset_right = 952.0
-offset_bottom = 480.0
+offset_left = 832.648
+offset_top = 334.095
+offset_right = 984.648
+offset_bottom = 594.096
+scale = Vector2(0.879409, 0.879409)
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_64gf1")
-theme_override_styles/panel_selected = ExtResource("1_64gf1")
-theme_override_styles/titlebar = ExtResource("2_tidbh")
+theme_override_styles/panel = ExtResource("1_nijsm")
+theme_override_styles/panel_selected = ExtResource("1_nijsm")
+theme_override_styles/titlebar = ExtResource("2_b6w3y")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(800, 220)
+position_offset = Vector2(800, 340)
 title = "Cage ID"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -155,99 +156,99 @@ slot/6/right_type = 0
 slot/6/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/6/right_icon = null
 slot/6/draw_stylebox = true
-script = ExtResource("3_i2al8")
+script = ExtResource("3_4pjta")
 
-[node name="cage_id" type="LineEdit" parent="." instance=ExtResource("4_lg1g3")]
+[node name="cage_id" type="LineEdit" parent="." instance=ExtResource("4_ug4s0")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_hax6w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5w6i5")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_ayp6d")
+script = ExtResource("5_3n4u3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
 text = "+ + +"
 horizontal_alignment = 1
 
-[node name="subject_1" type="LineEdit" parent="." instance=ExtResource("4_lg1g3")]
+[node name="subject_1" type="LineEdit" parent="." instance=ExtResource("4_ug4s0")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_6bfx8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yrxbo")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_ayp6d")
+script = ExtResource("5_3n4u3")
 
-[node name="subject_2" type="LineEdit" parent="." instance=ExtResource("4_lg1g3")]
+[node name="subject_2" type="LineEdit" parent="." instance=ExtResource("4_ug4s0")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_w2oci")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vdcck")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_ayp6d")
+script = ExtResource("5_3n4u3")
 
-[node name="subject_3" type="LineEdit" parent="." instance=ExtResource("4_lg1g3")]
+[node name="subject_3" type="LineEdit" parent="." instance=ExtResource("4_ug4s0")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_whw7e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6bfr0")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_ayp6d")
+script = ExtResource("5_3n4u3")
 
-[node name="subject_4" type="LineEdit" parent="." instance=ExtResource("4_lg1g3")]
+[node name="subject_4" type="LineEdit" parent="." instance=ExtResource("4_ug4s0")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_4qycv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w8p6g")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_ayp6d")
+script = ExtResource("5_3n4u3")
 
-[node name="subject_5" type="LineEdit" parent="." instance=ExtResource("4_lg1g3")]
+[node name="subject_5" type="LineEdit" parent="." instance=ExtResource("4_ug4s0")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_rkofj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hghj2")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_ayp6d")
+script = ExtResource("5_3n4u3")

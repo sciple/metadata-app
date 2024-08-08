@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_hayy4"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_m5pxh"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_244k7"]
-[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="4_kivmr"]
-[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="5_qmm0f"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_krufc"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_5s6r0"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_4o8fc"]
+[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="4_3t7fw"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="5_1p2pi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -62,16 +62,17 @@ func _on_pressed():
 
 [node name="health_plus_0" type="GraphNode" groups=["health"]]
 layout_mode = 0
-offset_left = 780.0
-offset_top = 780.0
-offset_right = 985.0
-offset_bottom = 945.0
+offset_left = 744.707
+offset_top = 70.2729
+offset_right = 949.707
+offset_bottom = 235.273
+scale = Vector2(0.879409, 0.879409)
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_hayy4")
-theme_override_styles/panel_selected = ExtResource("1_hayy4")
-theme_override_styles/titlebar = ExtResource("2_m5pxh")
+theme_override_styles/panel = ExtResource("1_krufc")
+theme_override_styles/panel_selected = ExtResource("1_krufc")
+theme_override_styles/titlebar = ExtResource("2_5s6r0")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(780, 780)
+position_offset = Vector2(700, 40)
 title = "Health issue"
 slot/0/left_enabled = false
 slot/0/left_type = 0
@@ -118,9 +119,9 @@ slot/4/right_type = 0
 slot/4/right_color = Color(1, 1, 1, 1)
 slot/4/right_icon = null
 slot/4/draw_stylebox = true
-script = ExtResource("3_244k7")
+script = ExtResource("3_4o8fc")
 
-[node name="option_button" type="OptionButton" parent="." instance=ExtResource("4_kivmr")]
+[node name="option_button" type="OptionButton" parent="." instance=ExtResource("4_3t7fw")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -157,7 +158,7 @@ custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_erurg")
 
-[node name="comments" type="TextEdit" parent="." instance=ExtResource("5_qmm0f")]
+[node name="comments" type="TextEdit" parent="." instance=ExtResource("5_1p2pi")]
 custom_minimum_size = Vector2(90, 40)
 layout_mode = 2
 size_flags_horizontal = 3

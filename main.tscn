@@ -96,6 +96,14 @@ text = "Save"
 layout_mode = 2
 text = "Load"
 
+[node name="VSeparator3" type="VSeparator" parent="toolbar"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
+
+[node name="export_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Export"
+
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -110,6 +118,9 @@ theme_override_colors/grid_major = Color(0.994961, 0.99566, 0.99671, 1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_eo2x6")
 right_disconnects = true
 connection_lines_thickness = 0.5
+zoom_min = 0.5
+zoom_max = 1.0
+zoom_step = 1.0
 minimap_enabled = false
 show_menu = false
 show_grid_buttons = false
