@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_8700q"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_skcyw"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_gavif"]
-[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_7et08"]
-[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_7qjvl"]
-[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_v65j7"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_w3eb3"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_cqqra"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_le30f"]
+[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_ilmtf"]
+[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_4btd8"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_qawsi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -32,9 +32,9 @@ offset_top = 23.0
 offset_right = 658.0
 offset_bottom = 135.0
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_8700q")
-theme_override_styles/panel_selected = ExtResource("1_8700q")
-theme_override_styles/titlebar = ExtResource("2_skcyw")
+theme_override_styles/panel = ExtResource("1_w3eb3")
+theme_override_styles/panel_selected = ExtResource("1_w3eb3")
+theme_override_styles/titlebar = ExtResource("2_cqqra")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
 position_offset = Vector2(472, 23)
 resizable = true
@@ -57,9 +57,9 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
-script = ExtResource("3_gavif")
+script = ExtResource("3_le30f")
 
-[node name="one_line_field" type="LineEdit" parent="." instance=ExtResource("4_7et08")]
+[node name="one_line_field" type="LineEdit" parent="." instance=ExtResource("4_ilmtf")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
@@ -67,17 +67,17 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
-text = "awerer"
+text = "asd"
 placeholder_text = "Project ID"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-caret_column = 6
-script = ExtResource("5_7qjvl")
+caret_column = 3
+script = ExtResource("5_4btd8")
 
-[node name="comments" type="TextEdit" parent="." instance=ExtResource("6_v65j7")]
+[node name="comments" type="TextEdit" parent="." instance=ExtResource("6_qawsi")]
 custom_minimum_size = Vector2(90, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -88,6 +88,5 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/selection_color = Color(0.486407, 0.828254, 1, 1)
 theme_override_colors/caret_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/word_highlighted_color = Color(0, 0.345098, 0.470588, 1)
-text = "fasdfads"
 placeholder_text = "Comments"
 wrap_mode = 1

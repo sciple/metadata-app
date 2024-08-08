@@ -63,17 +63,18 @@ func _on_graph_edit_disconnection_request(from_node, from_port, to_node, to_port
 		#print("Error saving graph_data")
 
 
-func save_data(file_name):
+func save_data():
 	var packed_scene = PackedScene.new()
-	var node_to_save = Global.main_graph.get_children()[4]
+	var nodes_to_save = Global.main_graph.get_children()
+	for node_to_save in nodes_to_save:
+		packed_scene.pack(node_to_save)
+		if ResourceSaver.save(packed_scene, "res://saved_data/" + node_to_save.name + ".tscn") == OK:
+			print("saved")
+		else:
+			print("Error saving graph_data")
+
 	#for sub_node in node_to_save.get_children():
 		#sub_node.owner = node_to_save
-	packed_scene.pack(node_to_save)
-	if ResourceSaver.save(packed_scene, file_name) == OK:
-		print("saved")
-	else:
-		print("Error saving graph_data")
-		
 
 #
 #func load_data(file_name):
@@ -152,7 +153,7 @@ func update_global_stats():
 	$cage_count.text = ", " + str(Global.cages.size())
 
 func _on_save_button_pressed():
-	save_data("save.tscn")
+	save_data()
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_RIGHT:

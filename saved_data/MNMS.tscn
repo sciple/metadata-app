@@ -1,0 +1,293 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_s7o1v"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_js05y"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_2bxj5"]
+[ext_resource type="PackedScene" path="res://UI/label.tscn" id="4_xmo4o"]
+[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="5_4wk1w"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_ql10l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
+bg_color = Color(0.998417, 0.182963, 0.249426, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_top = 3.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l854b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lwad"]
+bg_color = Color(0.111747, 0.534092, 0.722951, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qcgd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y61af"]
+bg_color = Color(0.317647, 0.498039, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnj8d"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wayaf"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxdn0"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm6do"]
+bg_color = Color(0.199563, 0.560937, 0.817641, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc0o8"]
+bg_color = Color(0.202698, 0.548856, 0.84226, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2un0"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="MNMS" type="GraphNode" groups=["mnms"]]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 50.0
+offset_right = 305.0
+offset_bottom = 326.0
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("1_s7o1v")
+theme_override_styles/panel_selected = ExtResource("1_s7o1v")
+theme_override_styles/titlebar = ExtResource("2_js05y")
+theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
+position_offset = Vector2(11, 50)
+title = "MNMS"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+script = ExtResource("3_2bxj5")
+
+[node name="global" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.404511, 0.404511, 0.404511, 1)
+text = "Global Apply"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_l854b")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer_left" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="vendor" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
+text = "Vendor"
+
+[node name="strain" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
+text = "Strain"
+
+[node name="light_cycle" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
+text = "Light cycle"
+
+[node name="enrichment" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
+text = "Enrichment"
+
+[node name="diet" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
+text = "Diet"
+
+[node name="VBoxContainer_right" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="vendor_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+alignment = 1
+item_count = 4
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "in-house breeding"
+popup/item_1/id = 1
+popup/item_2/text = "Charles River"
+popup/item_2/id = 2
+popup/item_3/text = "Harlan"
+popup/item_3/id = 3
+
+[node name="strain_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+alignment = 1
+item_count = 4
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "C57BL/6J"
+popup/item_1/id = 1
+popup/item_2/text = "C57BL/6n"
+popup/item_2/id = 2
+popup/item_3/text = "DBA/2"
+popup/item_3/id = 3
+
+[node name="light_cycle_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+alignment = 1
+item_count = 4
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "07:00-19:00 Light"
+popup/item_1/id = 1
+popup/item_2/text = "09:00-21:00 Light"
+popup/item_2/id = 2
+popup/item_3/text = "07:00-19:00 Dark"
+popup/item_3/id = 3
+
+[node name="enrichment_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "True"
+popup/item_1/id = 1
+popup/item_2/text = "False"
+popup/item_2/id = 2
+
+[node name="diet_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "Fed"
+popup/item_1/id = 1
+popup/item_2/text = "Fasted"
+popup/item_2/id = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="handling" type="Label" parent="VBoxContainer" instance=ExtResource("4_xmo4o")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
+text = "Handling"
+
+[node name="comments" type="TextEdit" parent="VBoxContainer" instance=ExtResource("6_ql10l")]
+custom_minimum_size = Vector2(90, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/selection_color = Color(0.486407, 0.828254, 1, 1)
+theme_override_colors/caret_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/word_highlighted_color = Color(0, 0.345098, 0.470588, 1)
+text = "do it!"
+placeholder_text = "Comments"
+wrap_mode = 1
