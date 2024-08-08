@@ -45,63 +45,77 @@ func _on_graph_edit_connection_request(from_node, from_port, to_node, to_port):
 func _on_graph_edit_disconnection_request(from_node, from_port, to_node, to_port):
 	$GraphEdit.disconnect_node(from_node, from_port, to_node, to_port)
 
+#func save_data(file_name):
+	#var graph_data = GraphData.new()
+	#graph_data.connections = Global.main_graph.get_connection_list()
+	#for node in Global.main_graph.get_children():
+		#if node is GraphNode:
+			#print(node)
+			#var node_data = NodeData.new()
+			#node_data.name = node.name
+			##node_data.group = node.group
+			#node_data.position_offset = node.position_offset
+			##node_data.data = node.data
+			#graph_data.nodes.append(node_data)
+	#if ResourceSaver.save(graph_data, file_name) == OK:
+		#print("saved")
+	#else:
+		#print("Error saving graph_data")
+
+
 func save_data(file_name):
-	var graph_data = GraphData.new()
-	graph_data.connections = Global.main_graph.get_connection_list()
-	for node in Global.main_graph.get_children():
-		if node is GraphNode:
-			print(node)
-			var node_data = NodeData.new()
-			node_data.name = node.name
-			#node_data.type = node.type
-			node_data.position_offset = node.position_offset
-			#node_data.data = node.data
-			graph_data.nodes.append(node_data)
-	if ResourceSaver.save(graph_data, file_name) == OK:
+	var packed_scene = PackedScene.new()
+	var node_to_save = Global.main_graph.get_children()[4]
+	#for sub_node in node_to_save.get_children():
+		#sub_node.owner = node_to_save
+	packed_scene.pack(node_to_save)
+	if ResourceSaver.save(packed_scene, file_name) == OK:
 		print("saved")
 	else:
 		print("Error saving graph_data")
+		
+
+#
+#func load_data(file_name):
+	#if ResourceLoader.exists(file_name):
+		#var graph_data = ResourceLoader.load(file_name)
+		#if graph_data is GraphData:
+			#init_graph(graph_data)
+		#else:
+			## Error loading data
+			#pass
+	#else:
+		## File not found
+		#pass
+#
+#
+#func init_graph(graph_data: GraphData):
+	#clear_graph()
+	#for node in graph_data.nodes:
+		## Get new node from factory autoload (singleton)
+		#var gnode = PartFactory.get_node(node.type)
+		#gnode.offset = node.offset
+		#gnode.name = node.name
+		#get_node("Graph").add_child(gnode)
+	#for con in graph_data.connections:
+		#var _e = get_node("Graph").connect_node(con.from, con.from_port, con.to, con.to_port)
+#
+#
+#func clear_graph():
+	#Global.main_graph.clear_connections()
+	#var nodes = Global.main_graph.get_children()
+	#for node in nodes:
+		#if node is GraphNode:
+			#node.queue_free()
 
 
-func load_data(file_name):
-	if ResourceLoader.exists(file_name):
-		var graph_data = ResourceLoader.load(file_name)
-		if graph_data is GraphData:
-			init_graph(graph_data)
-		else:
-			# Error loading data
-			pass
-	else:
-		# File not found
-		pass
-
-
-func init_graph(graph_data: GraphData):
-	clear_graph()
-	for node in graph_data.nodes:
-		# Get new node from factory autoload (singleton)
-		var gnode = PartFactory.get_node(node.type)
-		gnode.offset = node.offset
-		gnode.name = node.name
-		get_node("Graph").add_child(gnode)
-	for con in graph_data.connections:
-		var _e = get_node("Graph").connect_node(con.from, con.from_port, con.to, con.to_port)
-
-func clear_graph():
-	get_node("Graph").clear_connections()
-	var nodes = get_node("Graph").get_children()
-	for node in nodes:
-		if node is GraphNode:
-			node.queue_free()
-
-
-func save():
+#func save():
 	#Global.init_subjects()
-	Global.init_node_elements()
-	get_cages() # collects all cages to be pushed to the global store
-	print(Global.node_elements)
+	#Global.init_node_elements()
+	#get_cages() # collects all cages to be pushed to the global store
+	#print(Global.node_elements)
 	#update_global_stats()
-	print()
+	#print()
 	
 	#var connection_list = G.get_connection_list()
 	#print(connection_list)
@@ -138,7 +152,7 @@ func update_global_stats():
 	$cage_count.text = ", " + str(Global.cages.size())
 
 func _on_save_button_pressed():
-	save_data("save.res")
+	save_data("save.tscn")
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_RIGHT:
