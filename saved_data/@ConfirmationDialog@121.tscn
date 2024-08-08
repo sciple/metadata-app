@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[node name="@ConfirmationDialog@121" type="ConfirmationDialog"]
+initial_position = 2
+size = Vector2i(203, 90)
+unresizable = true
+borderless = true
+always_on_top = true
+ok_button_text = "Delete"
+dialog_text = "Delete selected node(s)?"

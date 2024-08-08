@@ -45,50 +45,26 @@ func _on_graph_edit_connection_request(from_node, from_port, to_node, to_port):
 func _on_graph_edit_disconnection_request(from_node, from_port, to_node, to_port):
 	$GraphEdit.disconnect_node(from_node, from_port, to_node, to_port)
 
-#func save_data(file_name):
-	#var graph_data = GraphData.new()
-	#graph_data.connections = Global.main_graph.get_connection_list()
-	#for node in Global.main_graph.get_children():
-		#if node is GraphNode:
-			#print(node)
-			#var node_data = NodeData.new()
-			#node_data.name = node.name
-			##node_data.group = node.group
-			#node_data.position_offset = node.position_offset
-			##node_data.data = node.data
-			#graph_data.nodes.append(node_data)
-	#if ResourceSaver.save(graph_data, file_name) == OK:
-		#print("saved")
-	#else:
-		#print("Error saving graph_data")
-
 
 func save_data():
+	# empty directory before saving to avoid duplicates
+	var dir = DirAccess.open("res://saved_data/")
+	var nodes_to_erase = dir.get_files()
+	for node_to_erase in nodes_to_erase:
+		dir.remove("res://saved_data/" + node_to_erase)
+		
 	var packed_scene = PackedScene.new()
 	var nodes_to_save = Global.main_graph.get_children()
 	for node_to_save in nodes_to_save:
 		packed_scene.pack(node_to_save)
 		if ResourceSaver.save(packed_scene, "res://saved_data/" + node_to_save.name + ".tscn") == OK:
-			print("saved")
+			print("saved: ", node_to_save.name)
 		else:
 			print("Error saving graph_data")
 
 	#for sub_node in node_to_save.get_children():
 		#sub_node.owner = node_to_save
 
-#
-#func load_data(file_name):
-	#if ResourceLoader.exists(file_name):
-		#var graph_data = ResourceLoader.load(file_name)
-		#if graph_data is GraphData:
-			#init_graph(graph_data)
-		#else:
-			## Error loading data
-			#pass
-	#else:
-		## File not found
-		#pass
-#
 #
 #func init_graph(graph_data: GraphData):
 	#clear_graph()
@@ -100,14 +76,27 @@ func save_data():
 		#get_node("Graph").add_child(gnode)
 	#for con in graph_data.connections:
 		#var _e = get_node("Graph").connect_node(con.from, con.from_port, con.to, con.to_port)
-#
-#
-#func clear_graph():
-	#Global.main_graph.clear_connections()
-	#var nodes = Global.main_graph.get_children()
-	#for node in nodes:
-		#if node is GraphNode:
-			#node.queue_free()
+
+
+func load_data():
+	print("--------------- LOAD function --------------- ")
+	var dir = DirAccess.open("res://saved_data/")
+	if dir:
+		clear_graph()
+		var nodes_to_load = dir.get_files()
+		for node_to_load in nodes_to_load:
+			var path_to_node = "res://saved_data/" + node_to_load
+			var packed_scene = load(path_to_node)
+			var my_scene = packed_scene.instantiate()
+			Global.main_graph.add_child(my_scene)
+
+
+func clear_graph():
+	Global.main_graph.clear_connections()
+	var nodes = Global.main_graph.get_children()
+	for node in nodes:
+		if node is GraphNode:
+			node.queue_free()
 
 
 #func save():
@@ -155,6 +144,9 @@ func update_global_stats():
 func _on_save_button_pressed():
 	save_data()
 
+func _on_load_button_pressed():
+	load_data()
+
 func _input(event):
 	if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_RIGHT:
 		print("Mouse Click/Unclick at: ", event.position)
@@ -185,6 +177,3 @@ func _on_confirmation_dialog_confirmed():
 
 func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
-
-
-

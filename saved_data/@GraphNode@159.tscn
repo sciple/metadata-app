@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_s7o1v"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_js05y"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_2bxj5"]
-[ext_resource type="PackedScene" path="res://UI/label.tscn" id="4_xmo4o"]
-[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="5_4wk1w"]
-[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_ql10l"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_jja64"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_jy8gg"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_7ae7y"]
+[ext_resource type="PackedScene" path="res://UI/label.tscn" id="4_d40go"]
+[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="5_rdpot"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_eosgf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -43,18 +43,18 @@ bg_color = Color(0.202698, 0.548856, 0.84226, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2un0"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="MNMS" type="GraphNode" groups=["mnms"]]
+[node name="@GraphNode@159" type="GraphNode" groups=["mnms"]]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 50.0
-offset_right = 305.0
-offset_bottom = 326.0
+offset_left = 120.0
+offset_top = 60.0
+offset_right = 414.0
+offset_bottom = 336.0
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_s7o1v")
-theme_override_styles/panel_selected = ExtResource("1_s7o1v")
-theme_override_styles/titlebar = ExtResource("2_js05y")
+theme_override_styles/panel = ExtResource("1_jja64")
+theme_override_styles/panel_selected = ExtResource("1_jja64")
+theme_override_styles/titlebar = ExtResource("2_jy8gg")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(11, 50)
+position_offset = Vector2(120, 60)
 title = "MNMS"
 slot/0/left_enabled = false
 slot/0/left_type = 0
@@ -92,7 +92,7 @@ slot/3/right_type = 0
 slot/3/right_color = Color(1, 1, 1, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
-script = ExtResource("3_2bxj5")
+script = ExtResource("3_7ae7y")
 
 [node name="global" type="Label" parent="."]
 layout_mode = 2
@@ -111,33 +111,33 @@ layout_mode = 2
 [node name="VBoxContainer_left" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="vendor" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+[node name="vendor" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_d40go")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Vendor"
 
-[node name="strain" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+[node name="strain" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_d40go")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Strain"
 
-[node name="light_cycle" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+[node name="light_cycle" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_d40go")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Light cycle"
 
-[node name="enrichment" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+[node name="enrichment" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_d40go")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Enrichment"
 
-[node name="diet" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_xmo4o")]
+[node name="diet" type="Label" parent="HBoxContainer/VBoxContainer_left" instance=ExtResource("4_d40go")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -146,7 +146,7 @@ text = "Diet"
 [node name="VBoxContainer_right" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="vendor_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+[node name="vendor_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_rdpot")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -171,7 +171,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Harlan"
 popup/item_3/id = 3
 
-[node name="strain_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+[node name="strain_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_rdpot")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
@@ -197,7 +197,7 @@ popup/item_2/id = 2
 popup/item_3/text = "DBA/2"
 popup/item_3/id = 3
 
-[node name="light_cycle_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+[node name="light_cycle_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_rdpot")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -222,7 +222,7 @@ popup/item_2/id = 2
 popup/item_3/text = "07:00-19:00 Dark"
 popup/item_3/id = 3
 
-[node name="enrichment_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+[node name="enrichment_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_rdpot")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -245,7 +245,7 @@ popup/item_1/id = 1
 popup/item_2/text = "False"
 popup/item_2/id = 2
 
-[node name="diet_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_4wk1w")]
+[node name="diet_option" type="OptionButton" parent="HBoxContainer/VBoxContainer_right" instance=ExtResource("5_rdpot")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -271,13 +271,13 @@ popup/item_2/id = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="handling" type="Label" parent="VBoxContainer" instance=ExtResource("4_xmo4o")]
+[node name="handling" type="Label" parent="VBoxContainer" instance=ExtResource("4_d40go")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 text = "Handling"
 
-[node name="comments" type="TextEdit" parent="VBoxContainer" instance=ExtResource("6_ql10l")]
+[node name="comments" type="TextEdit" parent="VBoxContainer" instance=ExtResource("6_eosgf")]
 custom_minimum_size = Vector2(90, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -288,6 +288,5 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/selection_color = Color(0.486407, 0.828254, 1, 1)
 theme_override_colors/caret_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/word_highlighted_color = Color(0, 0.345098, 0.470588, 1)
-text = "do it!"
 placeholder_text = "Comments"
 wrap_mode = 1

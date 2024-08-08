@@ -100,6 +100,9 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 layout_mode = 2
 text = "Save"
 
+[node name="load_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -182,6 +185,7 @@ mouse_filter = 1
 position_offset = Vector2(88, 346)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -255,6 +259,7 @@ grow_vertical = 0
 [connection signal="pressed" from="toolbar/health_button" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="toolbar/comment_button" to="." method="_on_comment_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="toolbar/load_button" to="." method="_on_load_button_pressed"]
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
 [connection signal="copy_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_copy_nodes_request"]
 [connection signal="delete_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_delete_nodes_request"]
