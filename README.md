@@ -9,12 +9,12 @@ GUI for managing MNMS-compliant metadata
 ## TO DO
 
 - [PRIORITY] Highlight downstream information upon clicking a field
+- [PRIORITY] Experiment timeline design (connect treatment and experiment to visualize timeline)
 - [CRITICAL] Add global layer (save, load, clear, lock)
 - [CRITICAL] Audit logging of changes
 - [CRITICAL] connect cage IDs to assign the cages to the same group/treatment
 - [CRITICAL] Import data (_.csv_, ._xls_) from AMS export
 - Global stats (cages/subjects per treatment/experiment)
-- Experiment timeline design (node)
 - Export the data as JSON-LD
 - Offset newly created windows
 - Limit number of windows that can be created
@@ -24,7 +24,7 @@ GUI for managing MNMS-compliant metadata
 - Connect to ontology lookup service (<https://www.ebi.ac.uk/ols4>) or OntoBee (<https://ontobee.org/>)
 - Enable random allocation of subjects to condition
 - Use llm-to-SQL for grouping subjects
-- connecting experiments to timeline node automatically sets the gantt chart
+
 
 
 ## Notes

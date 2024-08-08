@@ -123,7 +123,7 @@ layout_mode = 2
 
 [node name="Label3" parent="HSplitContainer4" index="0" instance=ExtResource("2_vhvn2")]
 layout_mode = 2
-text = "Experiment 4"
+text = "Treatment 1"
 horizontal_alignment = 1
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="HSplitContainer4" index="1"]

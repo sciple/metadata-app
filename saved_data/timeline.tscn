@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_inm7d"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_dm0bu"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_sjsm1"]
-[ext_resource type="PackedScene" path="res://UI/label.tscn" id="4_ixmc6"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_32ct7"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_vdboq"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_ipr5n"]
+[ext_resource type="PackedScene" path="res://UI/label.tscn" id="4_q867f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -19,22 +19,20 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -594.883
-offset_top = -906.727
-offset_right = -242.883
-offset_bottom = -769.727
+offset_left = -810.0
+offset_top = -902.0
+offset_right = -458.0
+offset_bottom = -765.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(0.879409, 0.879409)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_inm7d")
-theme_override_styles/panel_selected = ExtResource("1_inm7d")
-theme_override_styles/titlebar = ExtResource("2_dm0bu")
+theme_override_styles/panel = ExtResource("1_32ct7")
+theme_override_styles/panel_selected = ExtResource("1_32ct7")
+theme_override_styles/titlebar = ExtResource("2_vdboq")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(1360, 40)
-selected = true
+position_offset = Vector2(1080, 40)
 title = "Timeline"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -72,13 +70,13 @@ slot/3/right_type = 0
 slot/3/right_color = Color(1, 1, 1, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
-script = ExtResource("3_sjsm1")
+script = ExtResource("3_ipr5n")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 2
-split_offset = 168
+split_offset = 133
 
-[node name="Label" type="Label" parent="HSplitContainer" instance=ExtResource("4_ixmc6")]
+[node name="Label" type="Label" parent="HSplitContainer" instance=ExtResource("4_q867f")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -87,7 +85,7 @@ horizontal_alignment = 1
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="HSplitContainer"]
 layout_mode = 2
-split_offset = 105
+split_offset = 108
 
 [node name="ColorRect2" type="ColorRect" parent="HSplitContainer/HSplitContainer2"]
 custom_minimum_size = Vector2(20, 20)
@@ -101,9 +99,9 @@ color = Color(1, 1, 1, 0)
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="."]
 layout_mode = 2
-split_offset = 205
+split_offset = 178
 
-[node name="Label3" type="Label" parent="HSplitContainer2" instance=ExtResource("4_ixmc6")]
+[node name="Label3" type="Label" parent="HSplitContainer2" instance=ExtResource("4_q867f")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -112,7 +110,7 @@ horizontal_alignment = 1
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="HSplitContainer2"]
 layout_mode = 2
-split_offset = 43
+split_offset = 61
 
 [node name="ColorRect2" type="ColorRect" parent="HSplitContainer2/HSplitContainer2"]
 custom_minimum_size = Vector2(20, 20)
@@ -126,9 +124,9 @@ color = Color(1, 1, 1, 0)
 
 [node name="HSplitContainer3" type="HSplitContainer" parent="."]
 layout_mode = 2
-split_offset = 173
+split_offset = 239
 
-[node name="Label2" type="Label" parent="HSplitContainer3" instance=ExtResource("4_ixmc6")]
+[node name="Label2" type="Label" parent="HSplitContainer3" instance=ExtResource("4_q867f")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -137,7 +135,7 @@ horizontal_alignment = 1
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="HSplitContainer3"]
 layout_mode = 2
-split_offset = 74
+split_offset = 45
 
 [node name="ColorRect2" type="ColorRect" parent="HSplitContainer3/HSplitContainer2"]
 custom_minimum_size = Vector2(20, 20)
@@ -151,17 +149,18 @@ color = Color(1, 1, 1, 0)
 
 [node name="HSplitContainer4" type="HSplitContainer" parent="."]
 layout_mode = 2
-split_offset = 264
+split_offset = 135
 
-[node name="Label3" type="Label" parent="HSplitContainer4" instance=ExtResource("4_ixmc6")]
+[node name="Label3" type="Label" parent="HSplitContainer4" instance=ExtResource("4_q867f")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
-text = "Experiment 4"
+text = "Treatment 1"
 horizontal_alignment = 1
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="HSplitContainer4"]
 layout_mode = 2
+split_offset = 149
 
 [node name="ColorRect2" type="ColorRect" parent="HSplitContainer4/HSplitContainer2"]
 custom_minimum_size = Vector2(20, 20)

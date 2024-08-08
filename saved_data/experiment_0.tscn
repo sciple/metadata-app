@@ -1,14 +1,14 @@
 [gd_scene load_steps=22 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_b6oec"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_aagwo"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_tqaob"]
-[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_kwd3l"]
-[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_u2r23"]
-[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="6_4byi2"]
-[ext_resource type="Script" path="res://experiment_plus/find_raw_data.gd" id="7_ty3pb"]
-[ext_resource type="PackedScene" path="res://UI/label.tscn" id="8_lv6f2"]
-[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="9_e05f3"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_2rib0"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_j606u"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_82ayw"]
+[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_0v2cy"]
+[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_3bhri"]
+[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="6_dltft"]
+[ext_resource type="Script" path="res://experiment_plus/find_raw_data.gd" id="7_w5j0f"]
+[ext_resource type="PackedScene" path="res://UI/label.tscn" id="8_28jqr"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="9_64o2o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -59,17 +59,16 @@ bg_color = Color(1, 1, 1, 1)
 
 [node name="experiment_0" type="GraphNode" groups=["experiment"]]
 layout_mode = 0
-offset_left = 1202.0
-offset_top = 334.095
-offset_right = 1481.0
-offset_bottom = 620.095
-scale = Vector2(0.879409, 0.879409)
+offset_left = 1190.0
+offset_top = 295.0
+offset_right = 1469.0
+offset_bottom = 581.0
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_b6oec")
-theme_override_styles/panel_selected = ExtResource("1_b6oec")
-theme_override_styles/titlebar = ExtResource("2_aagwo")
+theme_override_styles/panel = ExtResource("1_2rib0")
+theme_override_styles/panel_selected = ExtResource("1_2rib0")
+theme_override_styles/titlebar = ExtResource("2_j606u")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(1220, 340)
+position_offset = Vector2(1160, 260)
 resizable = true
 title = "Experiment"
 slot/0/left_enabled = true
@@ -144,13 +143,13 @@ slot/7/right_type = 0
 slot/7/right_color = Color(1, 1, 1, 1)
 slot/7/right_icon = null
 slot/7/draw_stylebox = true
-script = ExtResource("3_tqaob")
+script = ExtResource("3_82ayw")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="start_date" type="LineEdit" parent="HBoxContainer" instance=ExtResource("4_kwd3l")]
+[node name="start_date" type="LineEdit" parent="HBoxContainer" instance=ExtResource("4_0v2cy")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -166,9 +165,9 @@ context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_u2r23")
+script = ExtResource("5_3bhri")
 
-[node name="stop_date" type="LineEdit" parent="HBoxContainer" instance=ExtResource("4_kwd3l")]
+[node name="stop_date" type="LineEdit" parent="HBoxContainer" instance=ExtResource("4_0v2cy")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -184,9 +183,9 @@ context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-script = ExtResource("5_u2r23")
+script = ExtResource("5_3bhri")
 
-[node name="option_button" type="OptionButton" parent="." instance=ExtResource("6_4byi2")]
+[node name="option_button" type="OptionButton" parent="." instance=ExtResource("6_dltft")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
@@ -217,9 +216,9 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_53jfp")
 [node name="find_raw_data" type="Button" parent="."]
 layout_mode = 2
 text = "Raw data path"
-script = ExtResource("7_ty3pb")
+script = ExtResource("7_w5j0f")
 
-[node name="raw_data_path" type="Label" parent="." instance=ExtResource("8_lv6f2")]
+[node name="raw_data_path" type="Label" parent="." instance=ExtResource("8_28jqr")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -237,7 +236,7 @@ layout_mode = 2
 text = "Custom experiment"
 horizontal_alignment = 1
 
-[node name="comments" type="TextEdit" parent="." instance=ExtResource("9_e05f3")]
+[node name="comments" type="TextEdit" parent="." instance=ExtResource("9_64o2o")]
 custom_minimum_size = Vector2(90, 40)
 layout_mode = 2
 size_flags_horizontal = 3

@@ -40,3 +40,28 @@ func revert_subject_color(subject_number):
 		for i in range(1,6):
 			var subject = get_node("subject_" + str(i))
 			subject.revert_color()
+
+#---------- update title bar upon inseritng data in the fields
+
+func _on_cage_id_text_changed(new_text):
+	update_title_id()
+
+func _on_subject_1_text_changed(new_text):
+	get_subjects()
+	update_title_id()
+	
+func _on_subject_2_text_changed(new_text):
+	get_subjects()
+	update_title_id()
+
+func _on_subject_3_text_changed(new_text):
+	get_subjects()
+	update_title_id()
+
+func _on_subject_4_text_changed(new_text):
+	get_subjects()
+	update_title_id()
+
+func _on_subject_5_text_changed(new_text):
+	get_subjects()
+	update_title_id()
