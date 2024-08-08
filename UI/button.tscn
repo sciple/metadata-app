@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhysbk4yk0uax"]
+[gd_scene load_steps=5 format=3 uid="uid://dhysbk4yk0uax"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a03yh"]
 bg_color = Color(1, 1, 1, 1)
@@ -13,6 +13,12 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5gty"]
+bg_color = Color(0, 0.345098, 0.470588, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okv2b"]
+bg_color = Color(0, 0.345098, 0.470588, 1)
+
 [node name="button" type="Button"]
 offset_right = 92.0
 offset_bottom = 23.0
@@ -20,4 +26,6 @@ theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_a03yh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o5224")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k5gty")
+theme_override_styles/focus = SubResource("StyleBoxFlat_okv2b")
 text = "Button"

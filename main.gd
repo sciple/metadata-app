@@ -14,6 +14,7 @@ func _ready():
 			var node_position = node.position_offset
 			print (node.title, " position (x,y): ", node_position.x, " | ", node_position.y)
 	print()
+	
 
 # -------------------- BUTTONS
 func _on_cage_button_pressed():
@@ -52,7 +53,9 @@ func save_data():
 	var nodes_to_erase = dir.get_files()
 	for node_to_erase in nodes_to_erase:
 		dir.remove("res://saved_data/" + node_to_erase)
-		
+	
+	save_connections()
+	
 	var packed_scene = PackedScene.new()
 	var nodes_to_save = Global.main_graph.get_children()
 	for node_to_save in nodes_to_save:
@@ -65,7 +68,13 @@ func save_data():
 	#for sub_node in node_to_save.get_children():
 		#sub_node.owner = node_to_save
 
-#
+func save_connections():
+	var connections = Global.main_graph.get_connection_list()
+	var save_file = FileAccess.open("res://saved_data/connections/connections.save", FileAccess.WRITE)
+	var json_string = JSON.stringify(connections)
+	save_file.store_line(json_string)
+	print(json_string)
+	
 #func init_graph(graph_data: GraphData):
 	#clear_graph()
 	#for node in graph_data.nodes:
@@ -89,14 +98,39 @@ func load_data():
 			var packed_scene = load(path_to_node)
 			var my_scene = packed_scene.instantiate()
 			Global.main_graph.add_child(my_scene)
+		restore_connections()
+		
+		
+func restore_connections():
+	var save_file = FileAccess.open("res://saved_data/connections/connections.save", FileAccess.READ)
+	while save_file.get_position() < save_file.get_length():
+		var json_string = save_file.get_line()
+		
+		# Creates the helper class to interact with JSON
+		var json = JSON.new()
 
+		# Check if there is any error while parsing the JSON string, skip in case of failure
+		var parse_result = json.parse(json_string)
+		if not parse_result == OK:
+			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+			continue
 
+		# Get the data from the JSON object
+		var connection_data = json.get_data()
+		for con in connection_data:
+			print(con)
+			var _e = Global.main_graph.connect_node(con.from_node, con.from_port, con.to_node, con.to_port)
+	
+	
+	
+	
 func clear_graph():
 	Global.main_graph.clear_connections()
 	var nodes = Global.main_graph.get_children()
 	for node in nodes:
 		if node is GraphNode:
 			node.queue_free()
+			node.free()
 
 
 #func save():
