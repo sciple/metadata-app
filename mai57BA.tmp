@@ -1,26 +1,32 @@
-[gd_scene load_steps=11 format=3 uid="uid://dycx4ynqcglq2"]
+[gd_scene load_steps=13 format=3 uid="uid://dycx4ynqcglq2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i5265"]
-[ext_resource type="PackedScene" uid="uid://c2v5j2wbydh16" path="res://static/vendor.tscn" id="2_5mbv3"]
 [ext_resource type="PackedScene" uid="uid://dhysbk4yk0uax" path="res://UI/button.tscn" id="2_iovf6"]
-[ext_resource type="PackedScene" uid="uid://dcbre0rfs1yvn" path="res://static/light.tscn" id="3_hmlcq"]
 [ext_resource type="PackedScene" uid="uid://dd51kugvn0abf" path="res://static/mnms.tscn" id="3_wcure"]
-[ext_resource type="PackedScene" uid="uid://devnp8f7e8g6m" path="res://project.tscn" id="4_4jkc5"]
-[ext_resource type="PackedScene" uid="uid://birl6tul81nw4" path="res://static/sex.tscn" id="6_hrwq6"]
+[ext_resource type="PackedScene" uid="uid://dekk1mjqa7kgg" path="res://static/sex_plus.tscn" id="5_ijwid"]
+[ext_resource type="PackedScene" uid="uid://dryeoirtyhc1j" path="res://project/project.tscn" id="6_b43n7"]
+[ext_resource type="PackedScene" uid="uid://twciulaq6gja" path="res://log/log.tscn" id="6_oagim"]
+[ext_resource type="PackedScene" uid="uid://bk0takadqfg68" path="res://operator/operator.tscn" id="7_gjysb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31b27"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcq4h"]
 bg_color = Color(1, 1, 1, 1)
 border_width_right = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlvsm"]
-bg_color = Color(0.737028, 0.330899, 0.538815, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kns2f"]
+bg_color = Color(0.862745, 0.172549, 0.176471, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eo2x6"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf0vp"]
-bg_color = Color(0.114075, 0.649625, 0.80176, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -45,16 +51,28 @@ theme_override_constants/separation = 8
 
 [node name="license label" type="Label" parent="toolbar"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "License
 "
 
 [node name="license" type="LineEdit" parent="toolbar"]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.41598, 0.41598, 0.41598, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_31b27")
+placeholder_text = "ID"
+alignment = 1
+context_menu_enabled = false
+virtual_keyboard_enabled = false
 
 [node name="VSeparator" type="VSeparator" parent="toolbar"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
+
+[node name="operator_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Operator +"
 
 [node name="cage_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
@@ -62,19 +80,19 @@ text = "Cage +"
 
 [node name="experiment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Experiment +"
+text = "Exp +"
 
-[node name="parent_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+[node name="treatment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Parent cage +"
+text = "Treatment +"
 
 [node name="health_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_rlvsm")
-text = "Health report+"
+text = " Health + "
 
 [node name="comment_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kns2f")
 text = "   !   "
 
 [node name="VSeparator2" type="VSeparator" parent="toolbar"]
@@ -91,63 +109,62 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 54.0
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
-show_grid = false
+theme_override_colors/grid_minor = Color(0.996078, 0.996078, 0.996078, 1)
+theme_override_colors/grid_major = Color(0.994961, 0.99566, 0.99671, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_eo2x6")
 right_disconnects = true
-connection_lines_thickness = 1.0
+connection_lines_thickness = 0.5
 minimap_enabled = false
 show_grid_buttons = false
 show_arrange_button = false
 
-[node name="mnms" parent="GraphEdit" instance=ExtResource("3_wcure")]
+[node name="project" parent="GraphEdit" instance=ExtResource("6_b43n7")]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 53.0
-offset_right = 292.0
-offset_bottom = 375.0
+offset_left = 573.0
+offset_top = 15.0
+offset_right = 759.0
+offset_bottom = 160.0
 mouse_filter = 1
-position_offset = Vector2(42, 53)
+position_offset = Vector2(573, 15)
 
-[node name="sex" parent="GraphEdit" instance=ExtResource("6_hrwq6")]
+[node name="sex_plus" parent="GraphEdit" instance=ExtResource("5_ijwid")]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 387.0
-offset_right = 292.0
-offset_bottom = 490.0
+offset_left = 348.0
+offset_top = 458.0
+offset_right = 504.0
+offset_bottom = 547.0
 mouse_filter = 1
-position_offset = Vector2(42, 387)
+position_offset = Vector2(348, 458)
 
-[node name="vendor" parent="GraphEdit" instance=ExtResource("2_5mbv3")]
-visible = false
-layout_mode = 0
-offset_left = 40.0
-offset_top = 100.0
-offset_right = 290.0
-offset_bottom = 186.0
-mouse_filter = 1
-position_offset = Vector2(40, 100)
-slot/0/right_color = Color(1, 1, 1, 1)
-
-[node name="light" parent="GraphEdit" instance=ExtResource("3_hmlcq")]
-visible = false
-layout_mode = 0
-offset_left = 40.0
-offset_top = 200.0
-offset_right = 290.0
-offset_bottom = 286.0
-mouse_filter = 1
-position_offset = Vector2(40, 200)
-slot/0/right_color = Color(1, 1, 1, 1)
-
-[node name="project" parent="GraphEdit" instance=ExtResource("4_4jkc5")]
+[node name="MNMS" parent="GraphEdit" instance=ExtResource("3_wcure")]
 layout_mode = 1
-offset_left = 400.0
-offset_top = 21.0
-offset_right = 524.0
-offset_bottom = 106.0
+offset_left = 94.0
+offset_top = 67.0
+offset_right = 304.0
+offset_bottom = 453.0
 mouse_filter = 1
-position_offset = Vector2(400, 21)
+position_offset = Vector2(94, 67)
+
+[node name="log" parent="GraphEdit" instance=ExtResource("6_oagim")]
+layout_mode = 0
+offset_left = 958.0
+offset_top = 10.0
+offset_right = 1064.0
+offset_bottom = 73.0
+mouse_filter = 1
+position_offset = Vector2(958, 10)
+
+[node name="operator" parent="GraphEdit" instance=ExtResource("7_gjysb")]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 15.0
+offset_right = 508.0
+offset_bottom = 70.0
+mouse_filter = 1
+position_offset = Vector2(379, 15)
 
 [node name="orcid_container" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -164,8 +181,7 @@ grow_horizontal = 0
 layout_mode = 2
 theme_override_colors/font_color = Color(0.929412, 0.94902, 0.00784314, 1)
 theme_override_font_sizes/font_size = 24
-text = "ORCiD
-"
+text = "ORCiD"
 
 [node name="Orc-ID" type="LineEdit" parent="orcid_container"]
 custom_minimum_size = Vector2(180, 40)
@@ -175,9 +191,51 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_nf0vp")
 text = "0000-0002-3709-5504"
 alignment = 1
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -23.0
+offset_right = -143.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Subjects, Cages"
+
+[node name="subject_count" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -23.0
+offset_right = 3.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="cage_count" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+
+[connection signal="pressed" from="toolbar/operator_button" to="." method="_on_operator_button_pressed"]
 [connection signal="pressed" from="toolbar/cage_button" to="." method="_on_cage_button_pressed"]
 [connection signal="pressed" from="toolbar/experiment_button" to="." method="_on_experiment_button_pressed"]
-[connection signal="pressed" from="toolbar/parent_button" to="." method="_on_parent_button_pressed"]
+[connection signal="pressed" from="toolbar/treatment_button" to="." method="_on_treatment_button_pressed"]
 [connection signal="pressed" from="toolbar/health_button" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="toolbar/comment_button" to="." method="_on_comment_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
