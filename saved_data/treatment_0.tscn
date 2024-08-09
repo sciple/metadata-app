@@ -29,10 +29,10 @@ corner_radius_bottom_left = 3
 
 [node name="treatment_0" type="GraphNode" groups=["treatment"]]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 415.0
-offset_right = 646.0
-offset_bottom = 646.0
+offset_left = 380.0
+offset_top = 380.0
+offset_right = 616.0
+offset_bottom = 611.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_oc2lr")
 theme_override_styles/panel_selected = ExtResource("1_oc2lr")

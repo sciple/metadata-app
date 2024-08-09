@@ -70,17 +70,17 @@ corner_radius_bottom_left = 3
 
 [node name="cage_0" type="GraphNode" groups=["cage"]]
 layout_mode = 0
-offset_left = 870.0
-offset_top = 335.0
-offset_right = 1022.0
-offset_bottom = 595.0
+offset_left = 840.0
+offset_top = 300.0
+offset_right = 1003.0
+offset_bottom = 560.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_0afj2")
 theme_override_styles/panel_selected = ExtResource("1_0afj2")
 theme_override_styles/titlebar = ExtResource("2_i6n7s")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
 position_offset = Vector2(840, 300)
-title = "Cage ID"
+title = "Cage ID: ear 1234 (3)"
 slot/0/left_enabled = true
 slot/0/left_type = 0
 slot/0/left_color = Color(0.133333, 0.133333, 0.133333, 1)
@@ -154,11 +154,13 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+text = "ear 1234"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 8
 script = ExtResource("5_p8hda")
 
 [node name="Label" type="Label" parent="."]
@@ -174,11 +176,13 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_26l2x")
+text = "764"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 3
 script = ExtResource("5_p8hda")
 
 [node name="subject_2" type="LineEdit" parent="." instance=ExtResource("4_dguu6")]
@@ -189,11 +193,13 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_n432h")
+text = "2345"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 4
 script = ExtResource("5_p8hda")
 
 [node name="subject_3" type="LineEdit" parent="." instance=ExtResource("4_dguu6")]
@@ -204,11 +210,13 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_ejcn4")
+text = "5432"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 4
 script = ExtResource("5_p8hda")
 
 [node name="subject_4" type="LineEdit" parent="." instance=ExtResource("4_dguu6")]
