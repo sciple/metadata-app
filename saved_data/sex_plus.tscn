@@ -13,16 +13,16 @@ expand_margin_bottom = 1.0
 
 [node name="sex_plus" type="GraphNode" groups=["generic_group"]]
 layout_mode = 0
-offset_left = 172.0
-offset_top = 450.0
-offset_right = 301.0
-offset_bottom = 543.0
+offset_left = 187.0
+offset_top = 475.0
+offset_right = 316.0
+offset_bottom = 568.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_t7omr")
 theme_override_styles/panel_selected = ExtResource("1_t7omr")
 theme_override_styles/titlebar = ExtResource("2_ipnrf")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(172, 450)
+position_offset = Vector2(180, 460)
 title = "Sex"
 slot/0/left_enabled = false
 slot/0/left_type = 0

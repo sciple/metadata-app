@@ -84,6 +84,10 @@ text = " Health"
 layout_mode = 2
 text = "   !   "
 
+[node name="exclude_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "X"
+
 [node name="VSeparator2" type="VSeparator" parent="toolbar"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
@@ -136,10 +140,10 @@ position_offset = Vector2(172, 450)
 
 [node name="timeline" parent="GraphEdit" groups=["generic_group"] instance=ExtResource("8_t677l")]
 layout_mode = 1
-offset_left = 792.0
-offset_top = 426.0
-offset_right = 1144.0
-offset_bottom = 563.0
+offset_left = -360.0
+offset_top = -142.0
+offset_right = -8.0
+offset_bottom = -5.0
 mouse_filter = 1
 position_offset = Vector2(792, 426)
 
@@ -227,6 +231,7 @@ dialog_text = "Delete selected node(s)?"
 [connection signal="pressed" from="toolbar/experiment_button" to="." method="_on_experiment_button_pressed"]
 [connection signal="pressed" from="toolbar/health_button" to="." method="_on_health_button_pressed"]
 [connection signal="pressed" from="toolbar/comment_button" to="." method="_on_comment_button_pressed"]
+[connection signal="pressed" from="toolbar/exclude_button" to="." method="_on_exclude_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="toolbar/load_button" to="." method="_on_load_button_pressed"]
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]

@@ -38,6 +38,9 @@ func _on_operator_button_pressed():
 func _on_genotype_button_pressed():
 	Global.create_node("genotype",Global.genotype_node, Global.genotype_index, Vector2(50,50), "genotype")
 
+func _on_exclude_button_pressed():
+		Global.create_node("exclude",Global.exclude_node, Global.exclude_index, Vector2(50,50), "exclude")
+
 
 # -------------------- GLOBAL FUNCTIONS
 func _on_graph_edit_connection_request(from_node, from_port, to_node, to_port):
@@ -199,3 +202,6 @@ func _on_confirmation_dialog_confirmed():
 
 func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
+
+
+

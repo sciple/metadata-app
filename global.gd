@@ -9,6 +9,7 @@ var comment_index = -1
 var treatment_index = -1
 var operator_index = -1
 var genotype_index = -1
+var exclude_index = -1
 var node_elements = {}
 
 var total_number_of_subjects = 0
@@ -21,6 +22,7 @@ var comment_node = load("res://comment_plus/comment_plus.tscn")
 var treatment_node = load("res://treatment/treatment.tscn")
 var operator_node = load("res://operator/operator.tscn")
 var genotype_node = load("res://genotype/genotype.tscn")
+var exclude_node = load("res://exclude/exclude.tscn")
 
 var main_graph
 

@@ -28,16 +28,16 @@ corner_radius_bottom_left = 3
 
 [node name="operator" type="GraphNode" groups=["operator"]]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 322.0
-offset_right = 303.0
-offset_bottom = 432.0
+offset_left = 107.0
+offset_top = 35.0
+offset_right = 322.0
+offset_bottom = 145.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_ai2sp")
 theme_override_styles/panel_selected = ExtResource("1_ai2sp")
 theme_override_styles/titlebar = ExtResource("2_7up66")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(88, 322)
+position_offset = Vector2(100, 20)
 title = "Operator"
 slot/0/left_enabled = false
 slot/0/left_type = 0

@@ -59,16 +59,16 @@ bg_color = Color(1, 1, 1, 1)
 
 [node name="experiment_1" type="GraphNode" groups=["experiment"]]
 layout_mode = 0
-offset_left = 1160.0
-offset_top = 560.0
-offset_right = 1439.0
-offset_bottom = 846.0
+offset_left = 1227.0
+offset_top = 575.0
+offset_right = 1506.0
+offset_bottom = 861.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_no5ii")
 theme_override_styles/panel_selected = ExtResource("1_no5ii")
 theme_override_styles/titlebar = ExtResource("2_vaxmy")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(1160, 560)
+position_offset = Vector2(1220, 560)
 resizable = true
 title = "Experiment"
 slot/0/left_enabled = true
@@ -159,12 +159,14 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+text = "2024-08-10"
 placeholder_text = "start date"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 10
 script = ExtResource("5_pt2jl")
 
 [node name="stop_date" type="LineEdit" parent="HBoxContainer" instance=ExtResource("4_1sxnp")]
@@ -177,12 +179,14 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+text = "2024-08-10"
 placeholder_text = "stop date"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 10
 script = ExtResource("5_pt2jl")
 
 [node name="option_button" type="OptionButton" parent="." instance=ExtResource("6_vhi00")]
@@ -223,7 +227,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
 theme_override_colors/font_shadow_color = Color(0.937255, 0.937255, 0.937255, 1)
 theme_override_font_sizes/font_size = 14
-text = "..."
+text = "D:\\readme.txt"
 
 [node name="HSeparator2" type="HSeparator" parent="."]
 layout_mode = 2
@@ -247,6 +251,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/selection_color = Color(0.486407, 0.828254, 1, 1)
 theme_override_colors/caret_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/word_highlighted_color = Color(0, 0.345098, 0.470588, 1)
+text = "pooled samples (hippocampus, DG + CA3)"
 placeholder_text = "Description, SOP ID, protocol ..."
 wrap_mode = 1
 

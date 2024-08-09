@@ -24,7 +24,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26l2x"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbxd0"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -35,7 +35,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n432h"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffsg6"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -46,7 +46,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejcn4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0n543"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -57,7 +57,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opc2n"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmpi5"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -70,10 +70,10 @@ corner_radius_bottom_left = 3
 
 [node name="cage_0" type="GraphNode" groups=["cage"]]
 layout_mode = 0
-offset_left = 840.0
-offset_top = 300.0
-offset_right = 1003.0
-offset_bottom = 560.0
+offset_left = 847.0
+offset_top = 315.0
+offset_right = 1010.0
+offset_bottom = 575.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_0afj2")
 theme_override_styles/panel_selected = ExtResource("1_0afj2")
@@ -175,7 +175,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_26l2x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xbxd0")
 text = "764"
 alignment = 1
 context_menu_enabled = false
@@ -192,7 +192,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_n432h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ffsg6")
 text = "2345"
 alignment = 1
 context_menu_enabled = false
@@ -209,7 +209,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_ejcn4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0n543")
 text = "5432"
 alignment = 1
 context_menu_enabled = false
@@ -241,7 +241,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_opc2n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmpi5")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
