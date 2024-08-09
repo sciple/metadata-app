@@ -108,6 +108,10 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 layout_mode = 2
 text = "Export"
 
+[node name="package_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Package"
+
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
 anchors_preset = 15
