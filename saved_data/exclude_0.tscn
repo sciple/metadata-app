@@ -14,16 +14,16 @@ expand_margin_bottom = 1.0
 
 [node name="exclude_0" type="GraphNode" groups=["exclude"]]
 layout_mode = 0
-offset_left = 1040.21
-offset_top = 262.42
-offset_right = 1112.21
-offset_bottom = 323.42
+offset_left = 1080.0
+offset_top = 660.0
+offset_right = 1152.0
+offset_bottom = 721.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_7dona")
 theme_override_styles/panel_selected = ExtResource("1_7dona")
 theme_override_styles/titlebar = ExtResource("2_3ymc1")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(1040, 260)
+position_offset = Vector2(1080, 660)
 title = "Exclude"
 slot/0/left_enabled = true
 slot/0/left_type = 0

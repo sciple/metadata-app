@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_0afj2"]
 [ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_i6n7s"]
@@ -13,7 +13,7 @@ corner_radius_top_right = 3
 expand_margin_top = 3.0
 expand_margin_bottom = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d26xn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhlj3"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -24,7 +24,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6l5sd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yidlf"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -35,7 +35,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ww7cr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3h563"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -46,7 +46,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey2xr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iau2n"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -57,7 +57,18 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grhdp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynvkw"]
+content_margin_left = 2.0
+content_margin_top = 4.0
+content_margin_right = 2.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrm58"]
 content_margin_left = 2.0
 content_margin_top = 4.0
 content_margin_right = 2.0
@@ -70,10 +81,10 @@ corner_radius_bottom_left = 3
 
 [node name="cage_0" type="GraphNode" groups=["cage"]]
 layout_mode = 0
-offset_left = 840.21
-offset_top = 302.42
-offset_right = 1003.21
-offset_bottom = 562.42
+offset_left = 840.0
+offset_top = 300.0
+offset_right = 1003.0
+offset_bottom = 560.0
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_0afj2")
 theme_override_styles/panel_selected = ExtResource("1_0afj2")
@@ -153,7 +164,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nhlj3")
 text = "ear 1234"
 alignment = 1
 context_menu_enabled = false
@@ -175,7 +186,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_6l5sd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yidlf")
 text = "764"
 alignment = 1
 context_menu_enabled = false
@@ -192,14 +203,14 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_ww7cr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3h563")
 text = "2345"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-caret_column = 4
+caret_column = 3
 script = ExtResource("5_p8hda")
 
 [node name="subject_3" type="LineEdit" parent="." instance=ExtResource("4_dguu6")]
@@ -209,7 +220,7 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_ey2xr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iau2n")
 text = "5432"
 alignment = 1
 context_menu_enabled = false
@@ -226,12 +237,14 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ynvkw")
+text = "7658"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 4
 script = ExtResource("5_p8hda")
 
 [node name="subject_5" type="LineEdit" parent="." instance=ExtResource("4_dguu6")]
@@ -241,14 +254,12 @@ theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_grhdp")
-text = "7658"
+theme_override_styles/normal = SubResource("StyleBoxFlat_jrm58")
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-caret_column = 4
 script = ExtResource("5_p8hda")
 
 [connection signal="text_changed" from="cage_id" to="." method="_on_cage_id_text_changed"]
