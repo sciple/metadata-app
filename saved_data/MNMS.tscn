@@ -45,10 +45,10 @@ bg_color = Color(1, 1, 1, 1)
 
 [node name="MNMS" type="GraphNode" groups=["mnms"]]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 155.0
-offset_right = 321.0
-offset_bottom = 450.0
+offset_left = 20.21
+offset_top = 142.42
+offset_right = 314.21
+offset_bottom = 437.42
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_535nl")
 theme_override_styles/panel_selected = ExtResource("1_535nl")

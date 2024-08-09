@@ -27,10 +27,10 @@ corner_radius_bottom_left = 3
 
 [node name="project" type="GraphNode" groups=["generic_group"]]
 layout_mode = 0
-offset_left = 427.0
-offset_top = 35.0
-offset_right = 652.0
-offset_bottom = 181.0
+offset_left = 420.21
+offset_top = 22.42
+offset_right = 645.21
+offset_bottom = 168.42
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_wg46d")
 theme_override_styles/panel_selected = ExtResource("1_wg46d")

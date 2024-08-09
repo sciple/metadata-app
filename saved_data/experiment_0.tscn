@@ -59,10 +59,10 @@ bg_color = Color(1, 1, 1, 1)
 
 [node name="experiment_0" type="GraphNode" groups=["experiment"]]
 layout_mode = 0
-offset_left = 1227.0
-offset_top = 275.0
-offset_right = 1506.0
-offset_bottom = 561.0
+offset_left = 1220.21
+offset_top = 262.42
+offset_right = 1499.21
+offset_bottom = 548.42
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_2rib0")
 theme_override_styles/panel_selected = ExtResource("1_2rib0")

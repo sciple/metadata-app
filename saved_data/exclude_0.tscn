@@ -14,10 +14,10 @@ expand_margin_bottom = 1.0
 
 [node name="exclude_0" type="GraphNode" groups=["exclude"]]
 layout_mode = 0
-offset_left = 1047.0
-offset_top = 275.0
-offset_right = 1119.0
-offset_bottom = 336.0
+offset_left = 1040.21
+offset_top = 262.42
+offset_right = 1112.21
+offset_bottom = 323.42
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("1_7dona")
 theme_override_styles/panel_selected = ExtResource("1_7dona")
