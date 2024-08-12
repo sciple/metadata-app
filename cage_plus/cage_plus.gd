@@ -19,27 +19,35 @@ func get_subjects():
 	print(n_of_subjects)
 				
 
-func change_subject_color(subject_number):
-	if subject_number != 0:
-		var subject = get_node("subject_" + str(subject_number))
-		subject.change_color()
-	else:
-		var cage_id = get_node("cage_id")
-		cage_id.change_color()
-		for i in range(1,6):
-			var subject = get_node("subject_" + str(i))
-			subject.change_color()
+func change_color(treatment_list):
+	#input is list from treatment_plus node
+	#check that the node is the intended recipient of the connecitons
+	for con in treatment_list:
+		if self.name in con["to_node"]:
+			print("it is me (", self.name, ") that has to change")
+			if con["to_port"] != 0:
+				var subject = get_node("subject_" + str(con["to_port"]))
+				subject.change_color()
+			else:
+				var cage_id = get_node("cage_id")
+				cage_id.change_color()
+				for i in range(1,6):
+					var subject = get_node("subject_" + str(i))
+					subject.change_color()
 
-func revert_subject_color(subject_number):
-	if subject_number != 0:
-		var subject = get_node("subject_" + str(subject_number))
-		subject.revert_color()
-	else:
-		var cage_id = get_node("cage_id")
-		cage_id.revert_color()
-		for i in range(1,6):
-			var subject = get_node("subject_" + str(i))
-			subject.revert_color()
+func revert_color(treatment_list):
+	print("reverting color")
+	for con in treatment_list:
+		if self.name in con["to_node"]:
+			if con["to_port"] != 0:
+				var subject = get_node("subject_" + str(con["to_port"]))
+				subject.revert_color()
+			else:
+				var cage_id = get_node("cage_id")
+				cage_id.revert_color()
+				for i in range(1,6):
+					var subject = get_node("subject_" + str(i))
+					subject.revert_color()
 
 #---------- update title bar upon inseritng data in the fields
 
@@ -65,3 +73,6 @@ func _on_subject_4_text_changed(new_text):
 func _on_subject_5_text_changed(new_text):
 	get_subjects()
 	update_title_id()
+
+
+

@@ -60,10 +60,17 @@ func get_connections():
 	
 func get_cage_connections():
 	self.get_connections()
-	print(connections_list)
+	print()
+	print("ALL connections", connections_list)
+	print()
+	var tmp_connections = []
 	for con in connections_list:
 		if "cage" in con["to_node"]:
 			print("only cages", con)
+			# return only connections to cages
+			tmp_connections.append(con)
+	return tmp_connections
+		
 	
 	
 	
