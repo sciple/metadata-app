@@ -96,6 +96,7 @@ layout_mode = 2
 [node name="subject_5" parent="." index="7" instance=ExtResource("3_xjb8k")]
 layout_mode = 2
 
+[connection signal="node_selected" from="." to="." method="_on_node_selected"]
 [connection signal="text_changed" from="cage_id" to="." method="_on_cage_id_text_changed"]
 [connection signal="text_changed" from="subject_1" to="." method="_on_subject_1_text_changed"]
 [connection signal="text_changed" from="subject_2" to="." method="_on_subject_2_text_changed"]

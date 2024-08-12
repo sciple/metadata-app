@@ -19,7 +19,7 @@ var cage_node = load("res://cage_plus/cage_plus.tscn")
 var experiment_node = load("res://experiment_plus/experiment_plus.tscn")
 var health_node = load("res://health_plus/health_plus.tscn")
 var comment_node = load("res://comment_plus/comment_plus.tscn")
-var treatment_node = load("res://treatment/treatment.tscn")
+var treatment_node = load("res://treatment_plus/treatment_plus.tscn")
 var operator_node = load("res://operator/operator.tscn")
 var genotype_node = load("res://genotype/genotype.tscn")
 var exclude_node = load("res://exclude/exclude.tscn")
@@ -32,6 +32,7 @@ var green_color = Color.hex(0x709124ff)
 
 var color_list = [red_color, blue_color, green_color]
 
+var connections_list
 
 func _ready():
 	# get the main node graph to enable foreign access
@@ -52,3 +53,22 @@ func init_node_elements():
 func init_subjects():
 	self.cages = {}
 	self.total_number_of_subjects = 0
+
+func get_connections():
+	# get all available connections (upon requests)
+	connections_list = self.main_graph.get_connection_list()
+	
+func get_cage_connections():
+	self.get_connections()
+	print(connections_list)
+	for con in connections_list:
+		if "cage" in con["to_node"]:
+			print("only cages", con)
+	
+	
+	
+	
+	
+	
+	
+	

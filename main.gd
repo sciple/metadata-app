@@ -30,7 +30,7 @@ func _on_comment_button_pressed():
 	Global.create_node("comment_plus",Global.comment_node, Global.comment_index, Vector2(50,50), "comment")
 
 func _on_treatment_button_pressed():
-	Global.create_node("treatment",Global.treatment_node, Global.treatment_index, Vector2(50,50), "treatment")
+	Global.create_node("treatment_plus",Global.treatment_node, Global.treatment_index, Vector2(50,50), "treatment")
 
 func _on_operator_button_pressed():
 	Global.create_node("operator",Global.operator_node, Global.operator_index, Vector2(50,50), "operator")
