@@ -26,11 +26,13 @@ var exclude_node = load("res://exclude/exclude.tscn")
 
 var main_graph
 
-var red_color = Color.hex(0xff2f40ff)
-var blue_color = Color.hex(0x005878ff)
-var green_color = Color.hex(0x709124ff)
+var red_color = Color.hex(0xff99a2ff)
+var blue_color = Color.hex(0x01c2b6ff)
+var green_color = Color.hex(0xb9d10bff)
 
 var color_list = [red_color, blue_color, green_color]
+var color_cursor = 0
+
 
 var connections_list
 
@@ -71,9 +73,15 @@ func get_cage_connections():
 			tmp_connections.append(con)
 	return tmp_connections
 		
+func assign_treatment_color():
+	self.update_color_cursor()
+	return self.color_list[color_cursor]
 	
-	
-	
+func update_color_cursor():
+	if self.color_cursor < len(self.color_list) - 1:
+		self.color_cursor += 1
+	else:
+		color_cursor = 0
 	
 	
 	

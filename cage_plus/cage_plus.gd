@@ -19,7 +19,7 @@ func get_subjects():
 	print(n_of_subjects)
 				
 
-func change_color(treatment_list):
+func change_color(treatment_list, selection_color):
 	#input is list from treatment_plus node
 	#check that the node is the intended recipient of the connecitons
 	for con in treatment_list:
@@ -27,13 +27,13 @@ func change_color(treatment_list):
 			print("it is me (", self.name, ") that has to change")
 			if con["to_port"] != 0:
 				var subject = get_node("subject_" + str(con["to_port"]))
-				subject.change_color()
+				subject.change_color(selection_color)
 			else:
 				var cage_id = get_node("cage_id")
-				cage_id.change_color()
+				cage_id.change_color(selection_color)
 				for i in range(1,6):
 					var subject = get_node("subject_" + str(i))
-					subject.change_color()
+					subject.change_color(selection_color)
 
 func revert_color(treatment_list):
 	print("reverting color")

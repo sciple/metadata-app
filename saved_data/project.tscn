@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_wg46d"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_ndc8p"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_b5bpb"]
-[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_wvbl7"]
-[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_qk5f6"]
-[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_l2aap"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_lhutu"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_3fuem"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_5qht4"]
+[ext_resource type="PackedScene" path="res://node_element/one_line_field.tscn" id="4_2eyy6"]
+[ext_resource type="Script" path="res://node_element/one_line_field.gd" id="5_csyfu"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="6_x7103"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -27,16 +27,16 @@ corner_radius_bottom_left = 3
 
 [node name="project" type="GraphNode" groups=["generic_group"]]
 layout_mode = 0
-offset_left = 420.0
-offset_top = 20.0
-offset_right = 645.0
-offset_bottom = 166.0
+offset_left = 416.0
+offset_top = 11.9999
+offset_right = 602.0
+offset_bottom = 124.0
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_wg46d")
-theme_override_styles/panel_selected = ExtResource("1_wg46d")
-theme_override_styles/titlebar = ExtResource("2_ndc8p")
+theme_override_styles/panel = ExtResource("1_lhutu")
+theme_override_styles/panel_selected = ExtResource("1_lhutu")
+theme_override_styles/titlebar = ExtResource("2_3fuem")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
-position_offset = Vector2(420, 20)
+position_offset = Vector2(416, 12)
 resizable = true
 title = "Project ID"
 slot/0/left_enabled = true
@@ -57,9 +57,9 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
-script = ExtResource("3_b5bpb")
+script = ExtResource("3_5qht4")
 
-[node name="one_line_field" type="LineEdit" parent="." instance=ExtResource("4_wvbl7")]
+[node name="one_line_field" type="LineEdit" parent="." instance=ExtResource("4_2eyy6")]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
@@ -67,17 +67,15 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
-text = "LR-DNF-05"
 placeholder_text = "Project ID"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
-caret_column = 9
-script = ExtResource("5_qk5f6")
+script = ExtResource("5_csyfu")
 
-[node name="comments" type="TextEdit" parent="." instance=ExtResource("6_l2aap")]
+[node name="comments" type="TextEdit" parent="." instance=ExtResource("6_x7103")]
 custom_minimum_size = Vector2(90, 40)
 layout_mode = 2
 size_flags_horizontal = 3

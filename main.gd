@@ -123,29 +123,6 @@ func clear_graph():
 			node.free()
 
 
-#func save():
-	#Global.init_subjects()
-	#Global.init_node_elements()
-	#get_cages() # collects all cages to be pushed to the global store
-	#print(Global.node_elements)
-	#update_global_stats()
-	#print()
-	
-	#var connection_list = G.get_connection_list()
-	#print(connection_list)
-	#for i in range(0, connection_list.size()):
-		## node obtained form the connection list
-		#var from = G.get_node(NodePath(connection_list[i]['from_node']))
-		#var to = G.get_node(NodePath(connection_list[i]['to_node']))
-		#print(from.name, ' >>> ', to.name)
-		
-		#if to.has_method("report"):
-			# the FROM node shouldbe passed to report
-			# then the report should generate an extra column
-			# in the report with the name of the FROM node
-			#to.report()
-	
-
 func get_cages():
 	# loop over all cages
 	# this function should be applied independently for all different groups of nodes
