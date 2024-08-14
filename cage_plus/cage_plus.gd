@@ -3,10 +3,11 @@ extends "res://node_element/node_element.gd"
 var n_of_subjects = 0
 var cage_id
 
+func _ready():
+	Global.debug(self, self.title)
 
 func update_title_id():
 	cage_id = get_node("cage_id").text
-	#if cage_id != "Cage ID":
 	self.title = "Cage ID: " + cage_id + " (" + str(n_of_subjects) + ")"
 
 func get_subjects():

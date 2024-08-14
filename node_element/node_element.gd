@@ -13,6 +13,8 @@ func _ready():
 	# every inherited node must belong to a group
 	node_type = self.get_groups()[0]
 	print(self.node_type, " node type: ", node_type)
+	
+	print(self.title, " name: ", self.name)
 	print("--------------------------------------")
 	
 	#if self.node_type == "treatment":

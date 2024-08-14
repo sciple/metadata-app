@@ -84,6 +84,9 @@ func update_color_cursor():
 		color_cursor = 0
 	
 	
-	
+func debug(self_instance, info_to_print):
+	# must be used as Global.debug(self)
+	var tmp = self_instance.get_path()
+	print("source script: ", tmp, " | " , info_to_print)
 	
 	

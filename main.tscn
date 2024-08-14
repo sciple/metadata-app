@@ -112,6 +112,10 @@ text = "Export"
 layout_mode = 2
 text = "Package"
 
+[node name="stats_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+layout_mode = 2
+text = "Stats"
+
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -238,6 +242,7 @@ dialog_text = "Delete selected node(s)?"
 [connection signal="pressed" from="toolbar/exclude_button" to="." method="_on_exclude_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="toolbar/load_button" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="toolbar/stats_button" to="." method="_on_stats_button_pressed"]
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
 [connection signal="copy_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_copy_nodes_request"]
 [connection signal="delete_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_delete_nodes_request"]
