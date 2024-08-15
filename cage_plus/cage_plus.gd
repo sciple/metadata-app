@@ -12,7 +12,6 @@ func update_title_id():
 
 func get_subjects():
 	n_of_subjects = 0
-	#if cage_id != "Cage ID":
 	for i in range(5):
 		var subject = get_node("subject_" + str(i + 1))
 		if subject.text != "":
