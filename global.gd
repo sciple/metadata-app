@@ -34,7 +34,7 @@ var color_list = [red_color, blue_color, green_color]
 var color_cursor = 0
 
 
-var connections_list
+var connections_list =[]
 
 func _ready():
 	# get the main node graph to enable foreign access

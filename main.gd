@@ -172,11 +172,15 @@ func _on_graph_edit_node_deselected(node):
 
 func _on_graph_edit_delete_nodes_request(nodes):
 	$ConfirmationDialog.visible = true
-	#get_node("GraphEdit/ConfirmationDialog").visible=true
 
 func _on_confirmation_dialog_confirmed():
 	for node in selected_nodes.keys():
 		if selected_nodes[node]:
+			print(Global.connections_list)
+			if len(Global.connections_list) != 0:
+				for con in Global.connections_list:
+					if node.name == con["from_node"]:
+						Global.main_graph.disconnect_node(con["from_node"], con["from_port"], con["to_node"],con["to_port"])
 			node.queue_free()
 	selected_nodes = {}
 
