@@ -20,8 +20,11 @@ func get_subjects():
 				
 
 func change_color(treatment_list, selection_color):
-	#input is list from treatment_plus node
-	#check that the node is the intended recipient of the connecitons
+	# input is list from treatment_plus node
+	# check that the node is the intended recipient of the connecitons
+	# should be decomposed into two functions:
+	# get_connections() -> return list of connections
+	# change_color(get_connections)
 	for con in treatment_list:
 		if self.name in con["to_node"]:
 			print("it is me (", self.name, ") that has to change")
@@ -36,6 +39,8 @@ func change_color(treatment_list, selection_color):
 					subject.change_color(selection_color)
 
 func revert_color(treatment_list):
+	# get_connections() -> return list of connections
+	# change_color(get_connections)
 	print("reverting color")
 	for con in treatment_list:
 		if self.name in con["to_node"]:
@@ -48,6 +53,12 @@ func revert_color(treatment_list):
 				for i in range(1,6):
 					var subject = get_node("subject_" + str(i))
 					subject.revert_color()
+
+func erase_all_colors():
+	for i in range(1,6):
+		var subject = get_node("subject_" + str(i))
+		subject.revert_color()
+
 
 #---------- update title bar upon inseritng data in the fields
 

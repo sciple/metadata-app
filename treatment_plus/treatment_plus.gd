@@ -21,10 +21,12 @@ func _on_node_selected():
 	print()
 	print("node specific connections",node_specific_connections)
 	
+	#if len(node_specific_connections) > 0:
 	for con in node_specific_connections:
 		var tmp_cage = Global.main_graph.get_node(NodePath(con["to_node"]))
 		print(tmp_cage)
-		tmp_cage.change_color(node_specific_connections, self.selection_color)
+		if tmp_cage != null:
+			tmp_cage.change_color(node_specific_connections, self.selection_color)
 	
 
 func _on_node_deselected():
@@ -33,4 +35,5 @@ func _on_node_deselected():
 	for con in node_specific_connections:
 		var tmp_cage = Global.main_graph.get_node(NodePath(con["to_node"]))
 		print(tmp_cage)
-		tmp_cage.revert_color(node_specific_connections)
+		if tmp_cage != null:
+			tmp_cage.revert_color(node_specific_connections)

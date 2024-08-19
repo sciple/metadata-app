@@ -126,18 +126,28 @@ func clear_graph():
 			node.free()
 
 
-func get_cages():
-	# loop over all cages
-	# this function should be applied independently for all different groups of nodes
-	print('execute: get_cages()')
-	connection_list = Global.main_graph.get_connection_list() # get list of all connections
-	for i in connection_list:
-		var cage = Global.main_graph.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
-		if cage.is_in_group("cage"):# get only nodes of type: "cage"
-			cage.get_subjects()
-			cage.update_title_id()
-			cage.update_node()
-	
+#func get_cages():
+	## loop over all cages
+	## this function should be applied independently for all different groups of nodes
+	#print('execute: get_cages()')
+	#connection_list = Global.main_graph.get_connection_list() # get list of all connections
+	#for i in connection_list:
+		#var cage = Global.main_graph.get_node(NodePath(i['to_node'])) # only nodes that are connected (i.e. receive a connection on the left)
+		#if cage.is_in_group("cage"):# get only nodes of type: "cage"
+			#cage.get_subjects()
+			#cage.update_title_id()
+			#cage.update_node()
+			
+			
+func get_all_available_cages():
+	var list_of_cages = []
+	print("get_all_available_cages ...")
+	var all_nodes = Global.main_graph.get_children()
+	for i in all_nodes:
+		if i.is_in_group("cage"):
+			print(i.name)
+			list_of_cages.append(i)
+	return list_of_cages
 	
 func update_global_stats():
 	for cage in Global.cages:
@@ -181,8 +191,16 @@ func _on_confirmation_dialog_confirmed():
 				for con in Global.connections_list:
 					if node.name == con["from_node"]:
 						Global.main_graph.disconnect_node(con["from_node"], con["from_port"], con["to_node"],con["to_port"])
+						#print("node (to be removed) : ", node)
+						#print("to be removed from : ", Global.connections_list)
+						#Global.connections_list.remove(con) # to be tested
 			node.queue_free()
 	selected_nodes = {}
+	
+	# hack to revert color of individual cage slots after deleting a treatment node
+	var available_cages = self.get_all_available_cages()
+	for cage in available_cages:
+		cage.erase_all_colors()
 
 func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
