@@ -76,12 +76,14 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+text = "jflakjfdl;jk"
 placeholder_text = "Name"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 12
 script = ExtResource("5_y5g3i")
 
 [node name="HSeparator" type="HSeparator" parent="."]

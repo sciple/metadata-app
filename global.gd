@@ -83,6 +83,23 @@ func update_color_cursor():
 	else:
 		color_cursor = 0
 	
+func read_csv_file(path_to_file):
+	var file = FileAccess.open(path_to_file, FileAccess.READ)
+	var csv = []
+	var headers
+	#while !file.eof_reached():
+	var csv_row = file.get_csv_line("\t")
+	csv.append(csv_row)
+		#file.close()
+		#csv.pop_back() #remove last empty array get_csv_line() has created 
+		##headers = Array(csv[0])
+	#print(csv_rows, len(csv_rows))
+	print(csv_row[0].split('\t\"'))
+	#print(csv_rows[0].split('\t\"').strip_edges())
+	#print(csv_rows[0])
+	
+	
+	
 	
 func debug(self_instance, info_to_print):
 	# must be used as Global.debug(self)

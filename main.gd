@@ -206,7 +206,5 @@ func _on_confirmation_dialog_canceled():
 	selected_nodes = {}
 
 
-
-
-
-
+func _on_export_button_pressed():
+	Global.read_csv_file("res://pyrat/pyrat_export.csv")

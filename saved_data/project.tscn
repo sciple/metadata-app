@@ -67,12 +67,14 @@ theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_d26xn")
+text = "asdfsdg"
 placeholder_text = "Project ID"
 alignment = 1
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 clear_button_enabled = true
 caret_blink = true
+caret_column = 7
 script = ExtResource("5_rxv2i")
 
 [node name="comments" type="TextEdit" parent="." instance=ExtResource("6_awsym")]

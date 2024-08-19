@@ -1,0 +1,101 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_pxerl"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_2fy76"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_j4v5r"]
+[ext_resource type="PackedScene" path="res://node_element/option_button.tscn" id="4_4a170"]
+[ext_resource type="PackedScene" path="res://node_element/comments.tscn" id="5_u1jgk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
+bg_color = Color(0.998417, 0.182963, 0.249426, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_top = 3.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lwad"]
+bg_color = Color(0.111747, 0.534092, 0.722951, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qcgd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y61af"]
+bg_color = Color(0.317647, 0.498039, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnj8d"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wayaf"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxdn0"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm6do"]
+bg_color = Color(0.199563, 0.560937, 0.817641, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc0o8"]
+bg_color = Color(0.202698, 0.548856, 0.84226, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2un0"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="genotype_0" type="GraphNode" groups=["genotype"]]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 160.0
+offset_right = 622.0
+offset_bottom = 266.0
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("1_pxerl")
+theme_override_styles/panel_selected = ExtResource("1_pxerl")
+theme_override_styles/titlebar = ExtResource("2_2fy76")
+theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
+position_offset = Vector2(420, 160)
+title = "Genotype"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(0.133333, 0.133333, 0.133333, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("3_j4v5r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="option_button" type="OptionButton" parent="VBoxContainer" instance=ExtResource("4_4a170")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_7lwad")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qcgd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y61af")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mnj8d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wayaf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uxdn0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_cm6do")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vc0o8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_x2un0")
+alignment = 1
+item_count = 1
+selected = 0
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+popup/item_0/separator = true
+
+[node name="comments" type="TextEdit" parent="VBoxContainer" instance=ExtResource("5_u1jgk")]
+custom_minimum_size = Vector2(90, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/selection_color = Color(0.486407, 0.828254, 1, 1)
+theme_override_colors/caret_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/word_highlighted_color = Color(0, 0.345098, 0.470588, 1)
+placeholder_text = "type name"
+wrap_mode = 1
