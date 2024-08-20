@@ -33,8 +33,11 @@ var green_color = Color.hex(0xb9d10bff)
 var color_list = [red_color, blue_color, green_color]
 var color_cursor = 0
 
-
 var connections_list =[]
+
+var imported_csv = [] # to store the file content exported from AMS
+
+
 
 func _ready():
 	# get the main node graph to enable foreign access
@@ -83,22 +86,7 @@ func update_color_cursor():
 	else:
 		color_cursor = 0
 	
-func read_csv_file(path_to_file):
-	var file = FileAccess.open(path_to_file, FileAccess.READ)
-	var csv = []
-	var headers
-	#while !file.eof_reached():
-	var csv_row = file.get_csv_line("\t")
-	csv.append(csv_row)
-		#file.close()
-		#csv.pop_back() #remove last empty array get_csv_line() has created 
-		##headers = Array(csv[0])
-	#print(csv_rows, len(csv_rows))
-	print(csv_row[0].split('\t\"'))
-	#print(csv_rows[0].split('\t\"').strip_edges())
-	#print(csv_rows[0])
-	
-	
+
 	
 	
 func debug(self_instance, info_to_print):
