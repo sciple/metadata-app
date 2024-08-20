@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://durnn6ny6mljg"
+
+[deps]
+
+files=["res://pyrat/pyrat_export.Age (d).translation", "res://pyrat/pyrat_export.Cage.translation", "res://pyrat/pyrat_export.Sex.translation"]
+
+source_file="res://pyrat/pyrat_export.csv"
+dest_files=["res://pyrat/pyrat_export.Age (d).translation", "res://pyrat/pyrat_export.Cage.translation", "res://pyrat/pyrat_export.Sex.translation"]
+
+[params]
+
+compress=true
+delimiter=0

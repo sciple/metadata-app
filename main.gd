@@ -18,28 +18,28 @@ func _ready():
 
 # -------------------- BUTTONS
 func _on_cage_button_pressed():
-	Global.create_node("cage", Global.cage_node, Global.cage_index, Vector2(50,50), "cage")
+	Global.create_node("cage", "cage", Global.cage_node, Global.cage_index, Vector2(50,50), "cage")
 	
 func _on_experiment_button_pressed():
-	Global.create_node("experiment",Global.experiment_node, Global.experiment_index, Vector2(50,50), "experiment")
+	Global.create_node("experiment","Experiment",Global.experiment_node, Global.experiment_index, Vector2(50,50), "experiment")
 
 func _on_health_button_pressed():
-	Global.create_node("health_plus",Global.health_node, Global.health_index, Vector2(50,50), "health")
+	Global.create_node("experiment","Health_issue",Global.health_node, Global.health_index, Vector2(50,50), "health")
 
 func _on_comment_button_pressed():
-	Global.create_node("comment_plus",Global.comment_node, Global.comment_index, Vector2(50,50), "comment")
+	Global.create_node("comment_plus","Comment", Global.comment_node, Global.comment_index, Vector2(50,50), "comment")
 
 func _on_treatment_button_pressed():
-	Global.create_node("treatment_plus",Global.treatment_node, Global.treatment_index, Vector2(50,50), "treatment")
+	Global.create_node("treatment_plus", "Treatment", Global.treatment_node, Global.treatment_index, Vector2(50,50), "treatment")
 
 func _on_operator_button_pressed():
-	Global.create_node("operator",Global.operator_node, Global.operator_index, Vector2(50,50), "operator")
+	Global.create_node("operator","Operator",Global.operator_node, Global.operator_index, Vector2(50,50), "operator")
 
 func _on_genotype_button_pressed():
-	Global.create_node("genotype",Global.genotype_node, Global.genotype_index, Vector2(50,50), "genotype")
+	Global.create_node("genotype","Genotype",Global.genotype_node, Global.genotype_index, Vector2(50,50), "genotype")
 
 func _on_exclude_button_pressed():
-		Global.create_node("exclude",Global.exclude_node, Global.exclude_index, Vector2(50,50), "exclude")
+		Global.create_node("exclude","Exclude", Global.exclude_node, Global.exclude_index, Vector2(50,50), "exclude")
 
 func _on_stats_button_pressed():
 	print(Global.cages)
@@ -51,6 +51,7 @@ func _on_graph_edit_connection_request(from_node, from_port, to_node, to_port):
 
 func _on_graph_edit_disconnection_request(from_node, from_port, to_node, to_port):
 	$GraphEdit.disconnect_node(from_node, from_port, to_node, to_port)
+	self.reset_cage_colors()
 
 
 func save_data():
@@ -197,6 +198,13 @@ func _on_confirmation_dialog_confirmed():
 			node.queue_free()
 	selected_nodes = {}
 	
+	self.reset_cage_colors()
+	# hack to revert color of individual cage slots after deleting a treatment node
+	#var available_cages = self.get_all_available_cages()
+	#for cage in available_cages:
+		#cage.erase_all_colors()
+
+func reset_cage_colors():
 	# hack to revert color of individual cage slots after deleting a treatment node
 	var available_cages = self.get_all_available_cages()
 	for cage in available_cages:

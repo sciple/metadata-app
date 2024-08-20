@@ -60,6 +60,14 @@ func erase_all_colors():
 		subject.revert_color()
 
 
+func import_cage_data(cage_id, list_of_subjects):
+	get_node("cage_id").text = cage_id
+	for i in range(1, len(list_of_subjects)):
+		var line_field = get_node("subject_" + str(i))
+		line_field.text = list_of_subjects[i]
+	self.get_subjects()
+	self.update_title_id()
+
 #---------- update title bar upon inseritng data in the fields
 
 func _on_cage_id_text_changed(new_text):

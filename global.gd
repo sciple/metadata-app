@@ -44,13 +44,16 @@ func _ready():
 	var tmp = get_tree().root.get_node("Main")
 	main_graph = tmp.get_node("GraphEdit")
 
-func create_node(node_name, node_type, node_index, node_position=Vector2(50,50), node_group="generic"):
+func create_node(node_name=null, node_title=null, node_type=null, node_index=null, node_position=Vector2(50,50), node_group="generic"):
 	var node = node_type.instantiate()
 	node_index += 1
 	get_node("../Main/GraphEdit").add_child(node)
 	node.position_offset = node_position
 	node.name = node_name + "_" + str(node_index)
+	node.title = node_title
+	#node.title = node_name + "_" + str(node_index) # may have to be removed or added as extra parameter in the function declaration
 	node.add_to_group(node_group)
+	return node
 
 func init_node_elements():
 	self.node_elements = {}

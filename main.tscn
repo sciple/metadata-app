@@ -104,9 +104,9 @@ text = "Load"
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_xcq4h")
 
-[node name="export_button" parent="toolbar" instance=ExtResource("2_iovf6")]
+[node name="import_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
-text = "Export"
+text = "Import"
 
 [node name="package_button" parent="toolbar" instance=ExtResource("2_iovf6")]
 layout_mode = 2
@@ -242,7 +242,7 @@ dialog_text = "Delete selected node(s)?"
 [connection signal="pressed" from="toolbar/exclude_button" to="." method="_on_exclude_button_pressed"]
 [connection signal="pressed" from="toolbar/save_button" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="toolbar/load_button" to="." method="_on_load_button_pressed"]
-[connection signal="pressed" from="toolbar/export_button" to="." method="_on_export_button_pressed"]
+[connection signal="pressed" from="toolbar/import_button" to="." method="_on_export_button_pressed"]
 [connection signal="pressed" from="toolbar/stats_button" to="." method="_on_stats_button_pressed"]
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
 [connection signal="copy_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_copy_nodes_request"]
