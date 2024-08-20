@@ -14,6 +14,7 @@ GUI for managing MNMS-compliant metadata
 - [CRITICAL] Audit logging of changes
 - [CRITICAL] connect cage IDs to assign the cages to the same group/treatment
 - [CRITICAL] Import data (_.csv_, ._xls_) from AMS export
+- Imported cages should reuce their node size based on the number of subjects present in the cage
 - Global stats (cages/subjects per treatment/experiment)
 - Export the data as JSON-LD
 - Offset newly created windows
