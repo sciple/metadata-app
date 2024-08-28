@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_3pbxu"]
-[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_j0wl1"]
-[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_cpy5g"]
+[ext_resource type="StyleBox" path="res://node_element/node_element.tres" id="1_mkrv2"]
+[ext_resource type="StyleBox" path="res://node_element/node_element_title_bar.tres" id="2_xgjo7"]
+[ext_resource type="Script" path="res://node_element/node_element.gd" id="3_muajx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2kkl"]
 bg_color = Color(0.998417, 0.182963, 0.249426, 1)
@@ -13,15 +13,14 @@ expand_margin_bottom = 1.0
 
 [node name="sex_plus" type="GraphNode" groups=["generic_group"]]
 layout_mode = 0
-offset_left = 329.045
-offset_top = 473.518
-offset_right = 458.045
-offset_bottom = 566.518
-scale = Vector2(0.909091, 0.909091)
+offset_left = 172.0
+offset_top = 450.0
+offset_right = 301.0
+offset_bottom = 543.0
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_3pbxu")
-theme_override_styles/panel_selected = ExtResource("1_3pbxu")
-theme_override_styles/titlebar = ExtResource("2_j0wl1")
+theme_override_styles/panel = ExtResource("1_mkrv2")
+theme_override_styles/panel_selected = ExtResource("1_mkrv2")
+theme_override_styles/titlebar = ExtResource("2_xgjo7")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_e2kkl")
 position_offset = Vector2(172, 450)
 title = "Sex"
@@ -52,7 +51,7 @@ slot/2/right_type = 0
 slot/2/right_color = Color(0.133333, 0.133333, 0.133333, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
-script = ExtResource("3_cpy5g")
+script = ExtResource("3_muajx")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
