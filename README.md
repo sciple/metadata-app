@@ -2,6 +2,8 @@
 
 GUI for managing MNMS-compliant metadata
 
+<mark> _2024-08-30_: Please note that the project is undergoing heavy refactoring and it **will soon be branched out to Version 2.0**. The current interface struggles to handle more than 6 cages</mark>
+
 ![screenshot of the GUI](screenshot.PNG "Main interface")
 
 > Please review the [the code of conduct](CODE_OF_CONDUCT.md) to understand how to behave properly here and follow the [contributing guidelines](CONTRIBUTING.md).

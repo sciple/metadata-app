@@ -1,5 +1,9 @@
 extends Node
 
+# Any use of the software for purposes other than academic research, including for commercial purposes, shall be requested in advance from Unil
+# please contact pactt.digital@chuv.ch for any inquiries
+
+
 var global_index = -1
 var cage_index = -1
 var experiment_index = -1
