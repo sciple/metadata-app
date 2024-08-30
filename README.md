@@ -2,7 +2,9 @@
 
 GUI for managing MNMS-compliant metadata
 
-<mark> _2024-08-30_: Please note that the project is undergoing heavy refactoring and it **will soon be branched out to Version 2.0**. The current interface struggles to handle more than 6 cages</mark>
+<mark> _2024-08-30_: Please note that the project is undergoing heavy refactoring and it **will soon be branched out to Version 2.0**. The current interface does not scale well to scenarios with more than 6 cages.</mark>
+
+<br>
 
 ![screenshot of the GUI](screenshot.PNG "Main interface")
 
